@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://desl3ix1lirpt"]
+
+[ext_resource type="Texture2D" uid="uid://covywg463liuk" path="res://sprites/blank.png" id="1_uob8d"]
+[ext_resource type="Theme" uid="uid://ci77qser1elpq" path="res://themes-fonts/letter-theme.tres" id="2_kn5up"]
+
+[sub_resource type="SystemFont" id="SystemFont_1pq6p"]
+
+[node name="Scene" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+offset = Vector2(432, 243)
+transform = Transform2D(1, 0, 0, 1, 432, 243)
+
+[node name="Carta" type="Sprite2D" parent="CanvasLayer"]
+texture = ExtResource("1_uob8d")
+
+[node name="Control" type="Control" parent="CanvasLayer/Carta"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -108.0
+offset_top = -81.0
+offset_right = -180.0
+offset_bottom = -135.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Carta/Control"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_kn5up")
+theme_type_variation = &"main"
+theme_override_fonts/normal_font = SubResource("SystemFont_1pq6p")
+theme_override_font_sizes/normal_font_size = 10
+text = "Texto to guapo"
+scroll_active = false
+autowrap_mode = 0
+deselect_on_focus_loss_enabled = false

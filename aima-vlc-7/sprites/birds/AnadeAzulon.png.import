@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckt6mn4tvkf08"
-path="res://.godot/imported/blank-card.png-56591699403b698f841014949ddaf224.ctex"
+uid="uid://c57du0b3ap7kc"
+path="res://.godot/imported/AnadeAzulon.png-749c0b50b34ee05ff567dda35ce8b5a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/blank-card.png"
-dest_files=["res://.godot/imported/blank-card.png-56591699403b698f841014949ddaf224.ctex"]
+source_file="res://sprites/birds/AnadeAzulon.png"
+dest_files=["res://.godot/imported/AnadeAzulon.png-749c0b50b34ee05ff567dda35ce8b5a5.ctex"]
 
 [params]
 

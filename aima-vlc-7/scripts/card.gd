@@ -2,7 +2,6 @@ extends Area2D
 
 var _bird
 var _name
-var _spriteRoute
 @onready var sprite: Sprite2D = $CardImage/Sprite
 var _description
 @onready var description: RichTextLabel = $CardImage/Container/Description
@@ -13,9 +12,6 @@ var isBig : bool = false
 @onready var exit_button: Button = $ExitButton
 @onready var select_button: Button = $SelectButton
 @onready var cards: Node2D = %Cards
-
-#var _birds : Array = ["ànec collverd", "cotxa fumada", "gavià de potes grogues", "teuladí", "gafarró", "garsa comuna"]
-
 	
 
 # Called when the node enters the scene tree for the first time.

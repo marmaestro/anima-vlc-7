@@ -4,7 +4,7 @@
 			"source": "sprites/birds/urraca.png",
 			"common_name": "URRACA",
 			"scientific_name": "Pica pica",
-			"traits": { "trait_1": "", "trait_2": "", "trait_3": "" },
+			"traits": { "trait_1": "URRACA_1", "trait_2": "URRACA_2", "trait_3": "URRACA_3" },
 			"objects": { "object_1": "" }
 		  },
 
@@ -12,7 +12,7 @@
 			"source": "sprites/birds/gaviota.png",
 			"common_name": "GAVIOTA",
 			"scientific_name": "",
-			"traits": { "trait_1": "", "trait_2": "", "trait_3": "" },
+			"traits": { "trait_1": "GAVIOTA_1", "trait_2": "GAVIOTA_2", "trait_3": "GAVIOTA_3" },
 			"objects": { "object_1": "" }
 		  },
 
@@ -20,7 +20,7 @@
 			"source": "sprites/birds/pato.png",
 			"common_name": "PATO",
 			"scientific_name": "",
-			"traits": { "trait_1": "", "trait_2": "", "trait_3": "" },
+			"traits": { "trait_1": "PATO_1", "trait_2": "PATO_2", "trait_3": "PATO_3" },
 			"objects": { "object_1": "" }
 		  },
 
@@ -28,7 +28,7 @@
 			"source": "sprites/birds/gorrion.png",
 			"common_name": "GORRION",
 			"scientific_name": "",
-			"traits": { "trait_1": "", "trait_2": "", "trait_3": "" },
+			"traits": { "trait_1": "GORRION_1", "trait_2": "GORRION_2", "trait_3": "GORRION_3" },
 			"objects": { "object_1": "" }
 		  },
 
@@ -36,7 +36,7 @@
 			"source": "sprites/birds/colirrojo.png",
 			"common_name": "COLIRROJO",
 			"scientific_name": "",
-			"traits": { "trait_1": "", "trait_2": "", "trait_3": "" },
+			"traits": { "trait_1": "COLIRROJO_1", "trait_2": "COLIRROJO_2", "trait_3": "COLIRROJO_3" },
 			"objects": { "object_1": "" }
 		  },
 
@@ -44,7 +44,39 @@
 			"source": "sprites/birds/verdecillo.png",
 			"common_name": "VERDECILLO",
 			"scientific_name": "",
-			"traits": { "trait_1": "", "trait_2": "", "trait_3": "" },
+			"traits": { "trait_1": "VERDECILLO_1", "trait_2": "VERDECILLO_2", "trait_3": "VERDECILLO_3" },
+			"objects": { "object_1": "" }
+		  }
+
+		  {
+			"source": "sprites/birds/paloma.png",
+			"common_name": "PALOMA",
+			"scientific_name": "",
+			"traits": { "trait_1": "PALOMA_1", "trait_2": "PALOMA_2", "trait_3": "PALOMA_3" },
+			"objects": { "object_1": "" }
+		  },
+
+		  {
+			"source": "sprites/birds/tortola.png",
+			"common_name": "TORTOLA",
+			"scientific_name": "",
+			"traits": { "trait_1": "TORTOLA_1", "trait_2": "TORTOLA_2", "trait_3": "TORTOLA_3" },
+			"objects": { "object_1": "" }
+		  },
+
+		  {
+			"source": "sprites/birds/abubilla.png",
+			"common_name": "ABUBILLA",
+			"scientific_name": "",
+			"traits": { "trait_1": "ABUBILLA_1", "trait_2": "ABUBILLA_2", "trait_3": "ABUBILLA_3" },
+			"objects": { "object_1": "" }
+		  },
+
+		  {
+			"source": "sprites/birds/lavandera.png",
+			"common_name": "LAVANDERA",
+			"scientific_name": "",
+			"traits": { "trait_1": "LAVANDERA_1", "trait_2": "LAVANDERA_2", "trait_3": "LAVANDERA_3" },
 			"objects": { "object_1": "" }
 		  }
 		]

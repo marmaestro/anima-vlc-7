@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://boi2812xarodr" path="res://sprites/birds/gorrion.png" id="3_8hw1w"]
 [ext_resource type="Theme" uid="uid://ci77qser1elpq" path="res://themes-fonts/letter-theme.tres" id="4_vukv5"]
 [ext_resource type="FontFile" uid="uid://bsikcrvoehepe" path="res://fonts/Spectral-Regular.ttf" id="5_2to82"]
-[ext_resource type="Theme" uid="uid://yhek5gfshxwo" path="res://themes-fonts/buttons.tres" id="5_mixft"]
+[ext_resource type="Theme" path="res://themes-fonts/buttons.tres" id="5_mixft"]
 [ext_resource type="FontFile" uid="uid://cww05vwhr0yqf" path="res://fonts/Spectral-Italic.ttf" id="6_la5m1"]
 [ext_resource type="FontFile" uid="uid://rke8of3xkujm" path="res://fonts/Spectral-BoldItalic.ttf" id="7_hjgkr"]
 [ext_resource type="FontFile" uid="uid://b3dxbwaivdqwl" path="res://fonts/Spectral-Bold.ttf" id="8_ntyc0"]
@@ -194,9 +194,9 @@ theme_type_variation = &"main"
 theme_override_constants/line_separation = -2
 theme_override_fonts/normal_font = ExtResource("5_2to82")
 theme_override_font_sizes/normal_font_size = 14
-text = "Descomfiat, no deixa que cap humà s'aprope molt a ell o la seva familia.
-Conegut pel seu aspecte elegant. La seva dansa nupcial és coneguda.
-Fan la sesta durant la vesprada i a mengen quan cau la nit."
+text = "Territorial i molt agressiva. No li agraden els desconeguts.
+Preferix menjar peixos menuts i petits mamífers com ratolíns.
+Viu en qualsevol lloc. N'hi ha exemplars fins a la meseta."
 fit_content = true
 scroll_active = false
 autowrap_mode = 2
@@ -290,7 +290,7 @@ offset_bottom = 176.0
 theme = ExtResource("5_mixft")
 theme_override_fonts/font = ExtResource("5_2to82")
 theme_override_styles/normal = SubResource("StyleBoxFlat_qqigk")
-text = "Seleccionar"
+text = "SELECIONAR"
 
 [node name="ExitButton" type="Button" parent="."]
 offset_left = 90.0

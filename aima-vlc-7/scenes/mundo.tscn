@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://desl3ix1lirpt"]
+[gd_scene load_steps=25 format=3 uid="uid://desl3ix1lirpt"]
 
 [ext_resource type="Script" path="res://scripts/letter.gd" id="1_7ddfu"]
 [ext_resource type="Texture2D" uid="uid://covywg463liuk" path="res://placeholders/blank.png" id="1_uob8d"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://scripts/card.gd" id="4_aeab4"]
 [ext_resource type="Script" path="res://scripts/cards.gd" id="5_0875m"]
 [ext_resource type="Texture2D" uid="uid://boi2812xarodr" path="res://sprites/birds/gorrion.png" id="5_g07ae"]
+[ext_resource type="PackedScene" uid="uid://b6ponyxusda0t" path="res://scenes/card.tscn" id="9_lgdg0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rlslu"]
 size = Vector2(296, 221)
@@ -229,6 +230,10 @@ subpixel_positioning = 0
 
 [sub_resource type="Theme" id="Theme_ocqri"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wni0u"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+
 [node name="Scene" type="Node2D"]
 
 [node name="Letter" type="Area2D" parent="."]
@@ -357,6 +362,7 @@ offset_top = 153.0
 offset_right = 79.0
 offset_bottom = 176.0
 theme = SubResource("Theme_ocqri")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wni0u")
 text = "Seleccionar"
 
 [node name="ExitButton" type="Button" parent="Cards/Card"]
@@ -503,6 +509,15 @@ offset_top = -175.0
 offset_right = 127.0
 offset_bottom = -152.0
 text = "X"
+
+[node name="Card4" parent="Cards" instance=ExtResource("9_lgdg0")]
+position = Vector2(216, 263)
+
+[node name="Card5" parent="Cards" instance=ExtResource("9_lgdg0")]
+position = Vector2(432, 263)
+
+[node name="Card6" parent="Cards" instance=ExtResource("9_lgdg0")]
+position = Vector2(648, 263)
 
 [connection signal="pressed" from="Letter/Letter/Next" to="Letter" method="_on_next_pressed"]
 [connection signal="mouse_shape_entered" from="Cards/Card" to="Cards/Card" method="_on_mouse_shape_entered"]

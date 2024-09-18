@@ -1,9 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://b6ponyxusda0t"]
+[gd_scene load_steps=19 format=3 uid="uid://b6ponyxusda0t"]
 
 [ext_resource type="Script" path="res://scripts/card.gd" id="1_vowdo"]
 [ext_resource type="Texture2D" uid="uid://byqo7unvp5dig" path="res://sprites/birds/Carta.png" id="2_yq1g8"]
 [ext_resource type="Texture2D" uid="uid://boi2812xarodr" path="res://sprites/birds/gorrion.png" id="3_8hw1w"]
 [ext_resource type="Theme" uid="uid://ci77qser1elpq" path="res://themes-fonts/letter-theme.tres" id="4_vukv5"]
+[ext_resource type="FontFile" uid="uid://bsikcrvoehepe" path="res://fonts/Spectral-Regular.ttf" id="5_2to82"]
+[ext_resource type="Theme" uid="uid://yhek5gfshxwo" path="res://themes-fonts/buttons.tres" id="5_mixft"]
+[ext_resource type="FontFile" uid="uid://cww05vwhr0yqf" path="res://fonts/Spectral-Italic.ttf" id="6_la5m1"]
+[ext_resource type="FontFile" uid="uid://rke8of3xkujm" path="res://fonts/Spectral-BoldItalic.ttf" id="7_hjgkr"]
+[ext_resource type="FontFile" uid="uid://b3dxbwaivdqwl" path="res://fonts/Spectral-Bold.ttf" id="8_ntyc0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4cgt8"]
 size = Vector2(23.3766, 20.3045)
@@ -116,7 +121,19 @@ _data = {
 [sub_resource type="SystemFont" id="SystemFont_e2ijq"]
 subpixel_positioning = 0
 
-[sub_resource type="Theme" id="Theme_nbhdd"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qqigk"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ab3v4"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="Card" type="Area2D"]
 position = Vector2(288, 263)
@@ -148,7 +165,7 @@ texture = ExtResource("3_8hw1w")
 layout_mode = 3
 anchor_left = 0.332343
 anchor_top = 0.642214
-anchor_right = 0.624009
+anchor_right = 0.630954
 anchor_bottom = 0.868551
 offset_left = -432.144
 offset_top = -243.116
@@ -162,18 +179,27 @@ metadata/_edit_use_anchors_ = true
 [node name="Description" type="RichTextLabel" parent="CardImage/Container"]
 clip_contents = false
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_top = -0.082
+anchor_right = 0.956
+anchor_bottom = 1.118
+offset_left = -3.0
+offset_top = 0.0199986
+offset_right = 0.0879974
+offset_bottom = 0.0200119
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_vukv5")
 theme_type_variation = &"main"
-theme_override_fonts/normal_font = SubResource("SystemFont_e2ijq")
-theme_override_font_sizes/normal_font_size = 10
-text = "Texto to guapo"
+theme_override_constants/line_separation = -2
+theme_override_fonts/normal_font = ExtResource("5_2to82")
+theme_override_font_sizes/normal_font_size = 14
+text = "Descomfiat, no deixa que cap humà s'aprope molt a ell o la seva familia.
+Conegut pel seu aspecte elegant. La seva dansa nupcial és coneguda.
+Fan la sesta durant la vesprada i a mengen quan cau la nit."
+fit_content = true
 scroll_active = false
-autowrap_mode = 0
+autowrap_mode = 2
 deselect_on_focus_loss_enabled = false
 
 [node name="Container2" type="Control" parent="CardImage"]
@@ -197,13 +223,22 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -3.38344
+offset_bottom = -3.38344
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_vukv5")
 theme_type_variation = &"main"
 theme_override_fonts/normal_font = SubResource("SystemFont_e2ijq")
+theme_override_fonts/italics_font = ExtResource("6_la5m1")
+theme_override_fonts/bold_italics_font = ExtResource("7_hjgkr")
+theme_override_fonts/bold_font = ExtResource("8_ntyc0")
+theme_override_font_sizes/bold_italics_font_size = 18
 theme_override_font_sizes/normal_font_size = 10
-text = "Nombre cientifico to guapo"
+theme_override_font_sizes/bold_font_size = 20
+bbcode_enabled = true
+text = "[b][i]Streptopelia Decaocto[i][b]
+"
 scroll_active = false
 autowrap_mode = 0
 deselect_on_focus_loss_enabled = false
@@ -214,10 +249,10 @@ anchor_left = 0.332343
 anchor_top = 0.545476
 anchor_right = 0.624009
 anchor_bottom = 0.591
-offset_left = -432.144
-offset_top = -470.277
-offset_right = -432.144
-offset_bottom = -470.402
+offset_left = -432.136
+offset_top = -476.581
+offset_right = -432.136
+offset_bottom = -476.706
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
@@ -229,13 +264,20 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -3.15201
+offset_bottom = -3.15201
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("4_vukv5")
 theme_type_variation = &"main"
-theme_override_fonts/normal_font = SubResource("SystemFont_e2ijq")
-theme_override_font_sizes/normal_font_size = 10
-text = "Nombre to guapo"
+theme_override_fonts/normal_font = ExtResource("5_2to82")
+theme_override_fonts/italics_font = ExtResource("6_la5m1")
+theme_override_fonts/bold_italics_font = ExtResource("7_hjgkr")
+theme_override_fonts/bold_font = ExtResource("8_ntyc0")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "[b]Lavandera blanca j"
 scroll_active = false
 autowrap_mode = 0
 deselect_on_focus_loss_enabled = false
@@ -245,15 +287,20 @@ offset_left = -79.0
 offset_top = 153.0
 offset_right = 79.0
 offset_bottom = 176.0
+theme = ExtResource("5_mixft")
+theme_override_fonts/font = ExtResource("5_2to82")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qqigk")
 text = "Seleccionar"
 
 [node name="ExitButton" type="Button" parent="."]
-offset_left = 108.0
-offset_top = -180.0
-offset_right = 143.0
-offset_bottom = -149.0
-theme = SubResource("Theme_nbhdd")
-theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+offset_left = 90.0
+offset_top = -170.0
+offset_right = 125.0
+offset_bottom = -139.0
+scale = Vector2(0.539376, 0.539376)
+theme = ExtResource("5_mixft")
+theme_override_fonts/font = ExtResource("5_2to82")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ab3v4")
 text = "X"
 
 [connection signal="mouse_shape_entered" from="." to="." method="_on_mouse_shape_entered"]

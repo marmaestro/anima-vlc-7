@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cuqdgi71u3oo6"
-path="res://.godot/imported/GaviotaPatiamarilla.png-19a7e9233f9a84ad66dd29e7e343f1d3.ctex"
+uid="uid://c1jvna8y80ihc"
+path="res://.godot/imported/garsa comuna.png-d02ba94c401c21bf8e7ff555b2762c09.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/birds/GaviotaPatiamarilla.png"
-dest_files=["res://.godot/imported/GaviotaPatiamarilla.png-19a7e9233f9a84ad66dd29e7e343f1d3.ctex"]
+source_file="res://sprites/birds/garsa comuna.png"
+dest_files=["res://.godot/imported/garsa comuna.png-d02ba94c401c21bf8e7ff555b2762c09.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b62bnfdyg0fy1"
-path="res://.godot/imported/ColirrojoTizon.png-315ac23c44d7d33fb95bfd87d79ea3db.ctex"
+uid="uid://bt8d405r2xxhj"
+path="res://.godot/imported/gafarró.png-16db24aaf7b0379ccd45fa78c71152f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/birds/ColirrojoTizon.png"
-dest_files=["res://.godot/imported/ColirrojoTizon.png-315ac23c44d7d33fb95bfd87d79ea3db.ctex"]
+source_file="res://sprites/birds/gafarró.png"
+dest_files=["res://.godot/imported/gafarró.png-16db24aaf7b0379ccd45fa78c71152f1.ctex"]
 
 [params]
 

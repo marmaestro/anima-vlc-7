@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1jvna8y80ihc"
-path="res://.godot/imported/UrracaComun.png-a877778b20000c82299c9dbc2fda9f79.ctex"
+uid="uid://c57du0b3ap7kc"
+path="res://.godot/imported/ànec collverd.png-5ac43e0fa2bfedb91e7de66cfa03a17d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/birds/UrracaComun.png"
-dest_files=["res://.godot/imported/UrracaComun.png-a877778b20000c82299c9dbc2fda9f79.ctex"]
+source_file="res://sprites/birds/ànec collverd.png"
+dest_files=["res://.godot/imported/ànec collverd.png-5ac43e0fa2bfedb91e7de66cfa03a17d.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://boi2812xarodr"
-path="res://.godot/imported/GorrionComun.png-3cb57b34dd438b431e3566650c5336f7.ctex"
+uid="uid://cuqdgi71u3oo6"
+path="res://.godot/imported/gavià de potes grogues.png-ad5dd261870efe2114bc2af2797f137e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/birds/GorrionComun.png"
-dest_files=["res://.godot/imported/GorrionComun.png-3cb57b34dd438b431e3566650c5336f7.ctex"]
+source_file="res://sprites/birds/gavià de potes grogues.png"
+dest_files=["res://.godot/imported/gavià de potes grogues.png-ad5dd261870efe2114bc2af2797f137e.ctex"]
 
 [params]
 

@@ -1,12 +1,67 @@
-[gd_scene load_steps=7 format=3 uid="uid://desl3ix1lirpt"]
+[gd_scene load_steps=13 format=3 uid="uid://desl3ix1lirpt"]
 
 [ext_resource type="Texture2D" uid="uid://covywg463liuk" path="res://placeholders/blank.png" id="1_uob8d"]
+[ext_resource type="Texture2D" uid="uid://bt8d405r2xxhj" path="res://sprites/birds/gafarró.png" id="2_gtvdf"]
 [ext_resource type="Theme" uid="uid://ci77qser1elpq" path="res://themes-fonts/letter-theme.tres" id="2_kn5up"]
 [ext_resource type="Texture2D" uid="uid://ckt6mn4tvkf08" path="res://placeholders/blank-card.png" id="3_fls5y"]
-[ext_resource type="Script" path="res://scripts/card.gd" id="4_vohw1"]
-[ext_resource type="Texture2D" uid="uid://boi2812xarodr" path="res://sprites/birds/GorrionComun.png" id="5_g07ae"]
+[ext_resource type="Script" path="res://scenes/card.gd" id="4_aeab4"]
+[ext_resource type="Texture2D" uid="uid://boi2812xarodr" path="res://sprites/birds/teuladí.png" id="5_g07ae"]
 
 [sub_resource type="SystemFont" id="SystemFont_1pq6p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4cgt8"]
+
+[sub_resource type="Animation" id="Animation_ju10r"]
+resource_name = "getBigger"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6iot7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="Animation" id="Animation_kdmg3"]
+resource_name = "getSmaller"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_voscp"]
+_data = {
+"RESET": SubResource("Animation_6iot7"),
+"getBigger": SubResource("Animation_ju10r"),
+"getSmaller": SubResource("Animation_kdmg3")
+}
 
 [node name="Scene" type="Node2D"]
 
@@ -18,6 +73,11 @@ transform = Transform2D(1, 0, 0, 1, 432, 243)
 
 [node name="Letter" type="Sprite2D" parent="Canvas Letter"]
 texture = ExtResource("1_uob8d")
+
+[node name="Object" type="Sprite2D" parent="Canvas Letter/Letter"]
+position = Vector2(71, -19)
+scale = Vector2(0.160494, 0.160494)
+texture = ExtResource("2_gtvdf")
 
 [node name="Container" type="Control" parent="Canvas Letter/Letter"]
 layout_mode = 3
@@ -50,21 +110,36 @@ scroll_active = false
 autowrap_mode = 0
 deselect_on_focus_loss_enabled = false
 
-[node name="Canvas Character" type="CanvasLayer" parent="."]
-layer = 2
-offset = Vector2(432, 243)
-transform = Transform2D(1, 0, 0, 1, 432, 243)
+[node name="Button" type="Button" parent="Canvas Letter/Letter"]
+offset_left = 69.0
+offset_top = 83.0
+offset_right = 122.0
+offset_bottom = 99.0
 
-[node name="Card" type="Sprite2D" parent="Canvas Character"]
+[node name="Card" type="Area2D" parent="."]
+position = Vector2(437, 203)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("4_aeab4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Card"]
+scale = Vector2(9.24, 14.7509)
+shape = SubResource("RectangleShape2D_4cgt8")
+
+[node name="sizeAnimator" type="AnimationPlayer" parent="Card"]
+root_node = NodePath("../CardImage")
+libraries = {
+"": SubResource("AnimationLibrary_voscp")
+}
+
+[node name="CardImage" type="Sprite2D" parent="Card"]
 texture = ExtResource("3_fls5y")
-script = ExtResource("4_vohw1")
 
-[node name="Sprite" type="Sprite2D" parent="Canvas Character/Card"]
+[node name="Sprite" type="Sprite2D" parent="Card/CardImage"]
 position = Vector2(0, -77)
 scale = Vector2(0.238683, 0.238683)
 texture = ExtResource("5_g07ae")
 
-[node name="Container" type="Control" parent="Canvas Character/Card"]
+[node name="Container" type="Control" parent="Card/CardImage"]
 layout_mode = 3
 anchor_left = 0.05
 anchor_top = 0.461
@@ -79,7 +154,7 @@ grow_vertical = 2
 size_flags_horizontal = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="Description" type="RichTextLabel" parent="Canvas Character/Card/Container"]
+[node name="Description" type="RichTextLabel" parent="Card/CardImage/Container"]
 clip_contents = false
 layout_mode = 1
 anchors_preset = 15
@@ -95,3 +170,19 @@ text = "Texto to guapo"
 scroll_active = false
 autowrap_mode = 0
 deselect_on_focus_loss_enabled = false
+
+[node name="SelectButton" type="Button" parent="Card"]
+offset_left = -79.0
+offset_top = 153.0
+offset_right = 79.0
+offset_bottom = 176.0
+
+[node name="ExitButton" type="Button" parent="Card"]
+offset_left = 105.0
+offset_top = -175.0
+offset_right = 127.0
+offset_bottom = -152.0
+
+[connection signal="mouse_shape_entered" from="Card" to="Card" method="_on_mouse_shape_entered"]
+[connection signal="mouse_shape_exited" from="Card" to="Card" method="_on_mouse_shape_exited"]
+[connection signal="pressed" from="Card/ExitButton" to="Card" method="_on_exit_button_pressed"]

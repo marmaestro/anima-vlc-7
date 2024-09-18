@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c57du0b3ap7kc"
-path="res://.godot/imported/AnadeAzulon.png-749c0b50b34ee05ff567dda35ce8b5a5.ctex"
+uid="uid://b62bnfdyg0fy1"
+path="res://.godot/imported/cotxa fumada.png-dd1f8f6628ab66ea03604f540bc19d90.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/birds/AnadeAzulon.png"
-dest_files=["res://.godot/imported/AnadeAzulon.png-749c0b50b34ee05ff567dda35ce8b5a5.ctex"]
+source_file="res://sprites/birds/cotxa fumada.png"
+dest_files=["res://.godot/imported/cotxa fumada.png-dd1f8f6628ab66ea03604f540bc19d90.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://desl3ix1lirpt"]
+[gd_scene load_steps=23 format=3 uid="uid://desl3ix1lirpt"]
 
 [ext_resource type="Script" path="res://scripts/letter.gd" id="1_7ddfu"]
 [ext_resource type="Texture2D" uid="uid://covywg463liuk" path="res://placeholders/blank.png" id="1_uob8d"]
@@ -227,6 +227,8 @@ _data = {
 [sub_resource type="SystemFont" id="SystemFont_e2ijq"]
 subpixel_positioning = 0
 
+[sub_resource type="Theme" id="Theme_ocqri"]
+
 [node name="Scene" type="Node2D"]
 
 [node name="Letter" type="Area2D" parent="."]
@@ -354,6 +356,7 @@ offset_left = -79.0
 offset_top = 153.0
 offset_right = 79.0
 offset_bottom = 176.0
+theme = SubResource("Theme_ocqri")
 text = "Seleccionar"
 
 [node name="ExitButton" type="Button" parent="Cards/Card"]

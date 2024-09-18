@@ -22,6 +22,10 @@ func _on_next_pressed() -> void:
 	card.generateNewBird()
 	card_2.generateNewBird()
 	card_3.generateNewBird()
+	card.animationSmall()
+	card_2.animationSmall()
+	card_3.animationSmall()
+
 
 func generateLetter() -> void:
 	description.text = objects[randi_range(0,3)]

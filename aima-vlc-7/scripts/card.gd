@@ -52,10 +52,9 @@ func _on_mouse_shape_entered(shape_idx: int) -> void:
 
 func _on_exit_button_pressed() -> void:
 	print("exit")
+	animationSmall()
+
+func animationSmall() -> void:
 	isBig = false
 	exit_button.visible = false
 	size_animator.play("getSmaller")
-
-
-func _on_select_button_pressed() -> void:
-	pass # Replace with function body.

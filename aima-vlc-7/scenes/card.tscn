@@ -1,11 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://b6ponyxusda0t"]
+[gd_scene load_steps=13 format=3 uid="uid://b6ponyxusda0t"]
 
 [ext_resource type="Script" path="res://scripts/card.gd" id="1_vowdo"]
-[ext_resource type="Texture2D" uid="uid://ckt6mn4tvkf08" path="res://placeholders/blank-card.png" id="2_27un2"]
+[ext_resource type="Texture2D" uid="uid://byqo7unvp5dig" path="res://sprites/birds/Carta.png" id="2_yq1g8"]
 [ext_resource type="Texture2D" uid="uid://boi2812xarodr" path="res://sprites/birds/gorrion.png" id="3_8hw1w"]
 [ext_resource type="Theme" uid="uid://ci77qser1elpq" path="res://themes-fonts/letter-theme.tres" id="4_vukv5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4cgt8"]
+size = Vector2(23.3766, 20.3045)
 
 [sub_resource type="Animation" id="Animation_6iot7"]
 length = 0.001
@@ -115,12 +116,15 @@ _data = {
 [sub_resource type="SystemFont" id="SystemFont_e2ijq"]
 subpixel_positioning = 0
 
+[sub_resource type="Theme" id="Theme_nbhdd"]
+
 [node name="Card" type="Area2D"]
 position = Vector2(288, 263)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_vowdo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2.24548)
 scale = Vector2(9.24, 14.7509)
 shape = SubResource("RectangleShape2D_4cgt8")
 
@@ -131,23 +135,25 @@ libraries = {
 }
 
 [node name="CardImage" type="Sprite2D" parent="."]
-texture = ExtResource("2_27un2")
+position = Vector2(12, -1.81251)
+scale = Vector2(0.634517, 0.634517)
+texture = ExtResource("2_yq1g8")
 
 [node name="Sprite" type="Sprite2D" parent="CardImage"]
-position = Vector2(0, -77)
-scale = Vector2(0.238683, 0.238683)
+position = Vector2(-20.6243, -85.3996)
+scale = Vector2(0.352745, 0.352745)
 texture = ExtResource("3_8hw1w")
 
 [node name="Container" type="Control" parent="CardImage"]
 layout_mode = 3
-anchor_left = 0.05
-anchor_top = 0.461
-anchor_right = 0.95
-anchor_bottom = 0.96
-offset_left = -90.0
-offset_top = -143.0
-offset_right = -90.0
-offset_bottom = -143.0
+anchor_left = 0.332343
+anchor_top = 0.642214
+anchor_right = 0.624009
+anchor_bottom = 0.868551
+offset_left = -432.144
+offset_top = -243.116
+offset_right = -432.144
+offset_bottom = -243.116
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
@@ -170,6 +176,70 @@ scroll_active = false
 autowrap_mode = 0
 deselect_on_focus_loss_enabled = false
 
+[node name="Container2" type="Control" parent="CardImage"]
+layout_mode = 3
+anchor_left = 0.332343
+anchor_top = 0.545476
+anchor_right = 0.624009
+anchor_bottom = 0.591
+offset_left = -432.144
+offset_top = -243.102
+offset_right = -432.144
+offset_bottom = -243.226
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Scientific" type="RichTextLabel" parent="CardImage/Container2"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_vukv5")
+theme_type_variation = &"main"
+theme_override_fonts/normal_font = SubResource("SystemFont_e2ijq")
+theme_override_font_sizes/normal_font_size = 10
+text = "Nombre cientifico to guapo"
+scroll_active = false
+autowrap_mode = 0
+deselect_on_focus_loss_enabled = false
+
+[node name="Container3" type="Control" parent="CardImage"]
+layout_mode = 3
+anchor_left = 0.332343
+anchor_top = 0.545476
+anchor_right = 0.624009
+anchor_bottom = 0.591
+offset_left = -432.144
+offset_top = -470.277
+offset_right = -432.144
+offset_bottom = -470.402
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Name" type="RichTextLabel" parent="CardImage/Container3"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_vukv5")
+theme_type_variation = &"main"
+theme_override_fonts/normal_font = SubResource("SystemFont_e2ijq")
+theme_override_font_sizes/normal_font_size = 10
+text = "Nombre to guapo"
+scroll_active = false
+autowrap_mode = 0
+deselect_on_focus_loss_enabled = false
+
 [node name="SelectButton" type="Button" parent="."]
 offset_left = -79.0
 offset_top = 153.0
@@ -178,10 +248,12 @@ offset_bottom = 176.0
 text = "Seleccionar"
 
 [node name="ExitButton" type="Button" parent="."]
-offset_left = 105.0
-offset_top = -175.0
-offset_right = 127.0
-offset_bottom = -152.0
+offset_left = 108.0
+offset_top = -180.0
+offset_right = 143.0
+offset_bottom = -149.0
+theme = SubResource("Theme_nbhdd")
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
 text = "X"
 
 [connection signal="mouse_shape_entered" from="." to="." method="_on_mouse_shape_entered"]

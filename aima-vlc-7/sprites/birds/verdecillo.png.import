@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cuqdgi71u3oo6"
-path="res://.godot/imported/gavià de potes grogues.png-ad5dd261870efe2114bc2af2797f137e.ctex"
+uid="uid://bt8d405r2xxhj"
+path="res://.godot/imported/verdecillo.png-01eefe7e882002c49081d8eeb47ade7d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/birds/gavià de potes grogues.png"
-dest_files=["res://.godot/imported/gavià de potes grogues.png-ad5dd261870efe2114bc2af2797f137e.ctex"]
+source_file="res://sprites/birds/verdecillo.png"
+dest_files=["res://.godot/imported/verdecillo.png-01eefe7e882002c49081d8eeb47ade7d.ctex"]
 
 [params]
 

@@ -1,0 +1,34 @@
+{
+	"trinkets":
+		[
+			{
+				"source": "sprites/trinkets/.png",
+				"name": "MONEDA",
+				"assigned_bird": ""
+			},
+			
+			{
+				"source": "sprites/trinkets/.png",
+				"name": "LECHUGA",
+				"assigned_bird": ""
+			},
+			
+			{
+				"source": "sprites/trinkets/.png",
+				"name": "RAMA",
+				"assigned_bird": ""
+			},
+			
+			{
+				"source": "sprites/trinkets/.png",
+				"name": "PELUSA",
+				"assigned_bird": ""
+			},
+			
+			{
+				"source": "sprites/trinkets/.png",
+				"name": "PATATA",
+				"assigned_bird": ""
+			},
+		]
+}

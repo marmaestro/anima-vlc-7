@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bt8d405r2xxhj"
-path="res://.godot/imported/gafarró.png-16db24aaf7b0379ccd45fa78c71152f1.ctex"
+uid="uid://cuqdgi71u3oo6"
+path="res://.godot/imported/gaviota.png-dc6dee4edbf05d04fd04519b73cfbdaf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/birds/gafarró.png"
-dest_files=["res://.godot/imported/gafarró.png-16db24aaf7b0379ccd45fa78c71152f1.ctex"]
+source_file="res://sprites/birds/gaviota.png"
+dest_files=["res://.godot/imported/gaviota.png-dc6dee4edbf05d04fd04519b73cfbdaf.ctex"]
 
 [params]
 

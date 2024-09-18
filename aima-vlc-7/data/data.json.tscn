@@ -1,13 +1,13 @@
-[gd_scene load_steps=22 format=3 uid="uid://desl3ix1lirpt"]
+[gd_scene load_steps=22 format=3 uid="uid://cin642ehvsgx7"]
 
-[ext_resource type="Script" path="res://scripts/letter.gd" id="1_7ddfu"]
-[ext_resource type="Texture2D" uid="uid://covywg463liuk" path="res://placeholders/blank.png" id="1_uob8d"]
-[ext_resource type="Texture2D" uid="uid://bt8d405r2xxhj" path="res://sprites/birds/verdecillo.png" id="2_gtvdf"]
-[ext_resource type="Theme" uid="uid://ci77qser1elpq" path="res://themes-fonts/letter-theme.tres" id="2_kn5up"]
-[ext_resource type="Texture2D" uid="uid://ckt6mn4tvkf08" path="res://placeholders/blank-card.png" id="3_fls5y"]
-[ext_resource type="Script" path="res://scripts/card.gd" id="4_aeab4"]
-[ext_resource type="Script" path="res://scripts/cards.gd" id="5_0875m"]
-[ext_resource type="Texture2D" uid="uid://boi2812xarodr" path="res://sprites/birds/gorrion.png" id="5_g07ae"]
+[ext_resource type="Script" path="res://scripts/letter.gd" id="1_i5cl1"]
+[ext_resource type="Texture2D" uid="uid://covywg463liuk" path="res://placeholders/blank.png" id="2_5cvr7"]
+[ext_resource type="Texture2D" uid="uid://bt8d405r2xxhj" path="res://sprites/birds/verdecillo.png" id="3_3oaqv"]
+[ext_resource type="Theme" uid="uid://ci77qser1elpq" path="res://themes-fonts/letter-theme.tres" id="4_j84ef"]
+[ext_resource type="Script" path="res://scripts/cards.gd" id="5_iid5m"]
+[ext_resource type="Script" path="res://scripts/card.gd" id="6_o4040"]
+[ext_resource type="Texture2D" uid="uid://ckt6mn4tvkf08" path="res://placeholders/blank-card.png" id="7_dat1l"]
+[ext_resource type="Texture2D" uid="uid://boi2812xarodr" path="res://sprites/birds/gorrion.png" id="8_hr8cg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rlslu"]
 size = Vector2(296, 221)
@@ -232,7 +232,7 @@ subpixel_positioning = 0
 [node name="Letter" type="Area2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(432, 132)
-script = ExtResource("1_7ddfu")
+script = ExtResource("1_i5cl1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Letter"]
 position = Vector2(1, -0.5)
@@ -244,12 +244,12 @@ libraries = {
 }
 
 [node name="Letter" type="Sprite2D" parent="Letter"]
-texture = ExtResource("1_uob8d")
+texture = ExtResource("2_5cvr7")
 
 [node name="Object" type="Sprite2D" parent="Letter/Letter"]
 position = Vector2(71, -19)
 scale = Vector2(0.160494, 0.160494)
-texture = ExtResource("2_gtvdf")
+texture = ExtResource("3_3oaqv")
 
 [node name="Container" type="Control" parent="Letter/Letter"]
 layout_mode = 3
@@ -273,7 +273,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_kn5up")
+theme = ExtResource("4_j84ef")
 theme_type_variation = &"main"
 theme_override_fonts/normal_font = SubResource("SystemFont_1pq6p")
 theme_override_font_sizes/normal_font_size = 10
@@ -292,12 +292,12 @@ text = "Següent"
 [node name="Cards" type="Node2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(0, 84)
-script = ExtResource("5_0875m")
+script = ExtResource("5_iid5m")
 
 [node name="Card" type="Area2D" parent="Cards"]
 position = Vector2(216, 263)
 scale = Vector2(0.5, 0.5)
-script = ExtResource("4_aeab4")
+script = ExtResource("6_o4040")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card"]
 scale = Vector2(9.24, 14.7509)
@@ -310,12 +310,12 @@ libraries = {
 }
 
 [node name="CardImage" type="Sprite2D" parent="Cards/Card"]
-texture = ExtResource("3_fls5y")
+texture = ExtResource("7_dat1l")
 
 [node name="Sprite" type="Sprite2D" parent="Cards/Card/CardImage"]
 position = Vector2(0, -77)
 scale = Vector2(0.238683, 0.238683)
-texture = ExtResource("5_g07ae")
+texture = ExtResource("8_hr8cg")
 
 [node name="Container" type="Control" parent="Cards/Card/CardImage"]
 layout_mode = 3
@@ -340,7 +340,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_kn5up")
+theme = ExtResource("4_j84ef")
 theme_type_variation = &"main"
 theme_override_fonts/normal_font = SubResource("SystemFont_e2ijq")
 theme_override_font_sizes/normal_font_size = 10
@@ -366,7 +366,7 @@ text = "X"
 [node name="Card2" type="Area2D" parent="Cards"]
 position = Vector2(432, 263)
 scale = Vector2(0.5, 0.5)
-script = ExtResource("4_aeab4")
+script = ExtResource("6_o4040")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card2"]
 scale = Vector2(9.24, 14.7509)
@@ -379,12 +379,12 @@ libraries = {
 }
 
 [node name="CardImage" type="Sprite2D" parent="Cards/Card2"]
-texture = ExtResource("3_fls5y")
+texture = ExtResource("7_dat1l")
 
 [node name="Sprite" type="Sprite2D" parent="Cards/Card2/CardImage"]
 position = Vector2(0, -77)
 scale = Vector2(0.238683, 0.238683)
-texture = ExtResource("5_g07ae")
+texture = ExtResource("8_hr8cg")
 
 [node name="Container" type="Control" parent="Cards/Card2/CardImage"]
 layout_mode = 3
@@ -409,7 +409,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_kn5up")
+theme = ExtResource("4_j84ef")
 theme_type_variation = &"main"
 theme_override_fonts/normal_font = SubResource("SystemFont_e2ijq")
 theme_override_font_sizes/normal_font_size = 10
@@ -435,7 +435,7 @@ text = "X"
 [node name="Card3" type="Area2D" parent="Cards"]
 position = Vector2(648, 263)
 scale = Vector2(0.5, 0.5)
-script = ExtResource("4_aeab4")
+script = ExtResource("6_o4040")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card3"]
 scale = Vector2(9.24, 14.7509)
@@ -448,12 +448,12 @@ libraries = {
 }
 
 [node name="CardImage" type="Sprite2D" parent="Cards/Card3"]
-texture = ExtResource("3_fls5y")
+texture = ExtResource("7_dat1l")
 
 [node name="Sprite" type="Sprite2D" parent="Cards/Card3/CardImage"]
 position = Vector2(0, -77)
 scale = Vector2(0.238683, 0.238683)
-texture = ExtResource("5_g07ae")
+texture = ExtResource("8_hr8cg")
 
 [node name="Container" type="Control" parent="Cards/Card3/CardImage"]
 layout_mode = 3
@@ -478,7 +478,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_kn5up")
+theme = ExtResource("4_j84ef")
 theme_type_variation = &"main"
 theme_override_fonts/normal_font = SubResource("SystemFont_e2ijq")
 theme_override_font_sizes/normal_font_size = 10

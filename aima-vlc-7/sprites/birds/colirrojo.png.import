@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b62bnfdyg0fy1"
-path="res://.godot/imported/cotxa fumada.png-dd1f8f6628ab66ea03604f540bc19d90.ctex"
+path="res://.godot/imported/colirrojo.png-354d3ac3c9322677788a896ff7d1c1c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/birds/cotxa fumada.png"
-dest_files=["res://.godot/imported/cotxa fumada.png-dd1f8f6628ab66ea03604f540bc19d90.ctex"]
+source_file="res://sprites/birds/colirrojo.png"
+dest_files=["res://.godot/imported/colirrojo.png-354d3ac3c9322677788a896ff7d1c1c8.ctex"]
 
 [params]
 

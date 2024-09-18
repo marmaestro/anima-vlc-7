@@ -1,0 +1,51 @@
+{ "birds":
+		[
+		  {
+			"source": "sprites/birds/urraca.png",
+			"common_name": "URRACA",
+			"scientific_name": "Pica pica",
+			"traits": { "trait_1": "", "trait_2": "", "trait_3": "" },
+			"objects": { "object_1": "" }
+		  },
+
+		  {
+			"source": "sprites/birds/gaviota.png",
+			"common_name": "GAVIOTA",
+			"scientific_name": "",
+			"traits": { "trait_1": "", "trait_2": "", "trait_3": "" },
+			"objects": { "object_1": "" }
+		  },
+
+		  {
+			"source": "sprites/birds/pato.png",
+			"common_name": "PATO",
+			"scientific_name": "",
+			"traits": { "trait_1": "", "trait_2": "", "trait_3": "" },
+			"objects": { "object_1": "" }
+		  },
+
+		  {
+			"source": "sprites/birds/gorrion.png",
+			"common_name": "GORRION",
+			"scientific_name": "",
+			"traits": { "trait_1": "", "trait_2": "", "trait_3": "" },
+			"objects": { "object_1": "" }
+		  },
+
+		  {
+			"source": "sprites/birds/colirrojo.png",
+			"common_name": "COLIRROJO",
+			"scientific_name": "",
+			"traits": { "trait_1": "", "trait_2": "", "trait_3": "" },
+			"objects": { "object_1": "" }
+		  },
+
+		  {
+			"source": "sprites/birds/verdecillo.png",
+			"common_name": "VERDECILLO",
+			"scientific_name": "",
+			"traits": { "trait_1": "", "trait_2": "", "trait_3": "" },
+			"objects": { "object_1": "" }
+		  }
+		]
+}

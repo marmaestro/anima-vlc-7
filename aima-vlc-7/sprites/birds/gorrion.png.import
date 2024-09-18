@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2kaxp4em4red"
-path="res://.godot/imported/GaviotaCocinera.png-eb9589839387e1781fbe1dedb2b37c6b.ctex"
+uid="uid://boi2812xarodr"
+path="res://.godot/imported/gorrion.png-484fdd26a7c41063c5d45f48aa7a8096.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/birds/GaviotaCocinera.png"
-dest_files=["res://.godot/imported/GaviotaCocinera.png-eb9589839387e1781fbe1dedb2b37c6b.ctex"]
+source_file="res://sprites/birds/gorrion.png"
+dest_files=["res://.godot/imported/gorrion.png-484fdd26a7c41063c5d45f48aa7a8096.ctex"]
 
 [params]
 

@@ -1,15 +1,150 @@
-[gd_scene load_steps=13 format=3 uid="uid://desl3ix1lirpt"]
+[gd_scene load_steps=22 format=3 uid="uid://desl3ix1lirpt"]
 
+[ext_resource type="Script" path="res://scripts/letter.gd" id="1_7ddfu"]
 [ext_resource type="Texture2D" uid="uid://covywg463liuk" path="res://placeholders/blank.png" id="1_uob8d"]
 [ext_resource type="Texture2D" uid="uid://bt8d405r2xxhj" path="res://sprites/birds/gafarró.png" id="2_gtvdf"]
 [ext_resource type="Theme" uid="uid://ci77qser1elpq" path="res://themes-fonts/letter-theme.tres" id="2_kn5up"]
 [ext_resource type="Texture2D" uid="uid://ckt6mn4tvkf08" path="res://placeholders/blank-card.png" id="3_fls5y"]
-[ext_resource type="Script" path="res://scenes/card.gd" id="4_aeab4"]
+[ext_resource type="Script" path="res://scripts/card.gd" id="4_aeab4"]
+[ext_resource type="Script" path="res://scripts/cards.gd" id="5_0875m"]
 [ext_resource type="Texture2D" uid="uid://boi2812xarodr" path="res://sprites/birds/teuladí.png" id="5_g07ae"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rlslu"]
+size = Vector2(296, 221)
+
+[sub_resource type="Animation" id="Animation_saalr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(432, 132)]
+}
+
+[sub_resource type="Animation" id="Animation_p8tdy"]
+resource_name = "getSmaller"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.5, 1.5), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(432, 243), Vector2(432, 132)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"cardsVisible"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_leemx"]
+resource_name = "bif"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.5, 1.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(432, 243)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1gbjb"]
+_data = {
+"RESET": SubResource("Animation_saalr"),
+"big": SubResource("Animation_leemx"),
+"getSmaller": SubResource("Animation_p8tdy")
+}
 
 [sub_resource type="SystemFont" id="SystemFont_1pq6p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4cgt8"]
+
+[sub_resource type="Animation" id="Animation_6iot7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [263.0]
+}
 
 [sub_resource type="Animation" id="Animation_ju10r"]
 resource_name = "getBigger"
@@ -25,20 +160,17 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(0.5, 0.5), Vector2(1, 1)]
 }
-
-[sub_resource type="Animation" id="Animation_6iot7"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("..:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0.5, 0.5)]
+"values": [263.0, 200.0]
 }
 
 [sub_resource type="Animation" id="Animation_kdmg3"]
@@ -55,31 +187,71 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(1, 1), Vector2(0.5, 0.5)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [200.0, 263.0]
+}
+
+[sub_resource type="Animation" id="Animation_5wu7b"]
+resource_name = "small"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_voscp"]
 _data = {
 "RESET": SubResource("Animation_6iot7"),
 "getBigger": SubResource("Animation_ju10r"),
-"getSmaller": SubResource("Animation_kdmg3")
+"getSmaller": SubResource("Animation_kdmg3"),
+"small": SubResource("Animation_5wu7b")
 }
+
+[sub_resource type="SystemFont" id="SystemFont_e2ijq"]
+subpixel_positioning = 0
 
 [node name="Scene" type="Node2D"]
 
-[node name="Canvas Letter" type="CanvasLayer" parent="."]
-layer = 2
-visible = false
-offset = Vector2(432, 243)
-transform = Transform2D(1, 0, 0, 1, 432, 243)
+[node name="Letter" type="Area2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(432, 132)
+script = ExtResource("1_7ddfu")
 
-[node name="Letter" type="Sprite2D" parent="Canvas Letter"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Letter"]
+position = Vector2(1, -0.5)
+shape = SubResource("RectangleShape2D_rlslu")
+
+[node name="letterAnimator" type="AnimationPlayer" parent="Letter"]
+libraries = {
+"": SubResource("AnimationLibrary_1gbjb")
+}
+
+[node name="Letter" type="Sprite2D" parent="Letter"]
 texture = ExtResource("1_uob8d")
 
-[node name="Object" type="Sprite2D" parent="Canvas Letter/Letter"]
+[node name="Object" type="Sprite2D" parent="Letter/Letter"]
 position = Vector2(71, -19)
 scale = Vector2(0.160494, 0.160494)
 texture = ExtResource("2_gtvdf")
 
-[node name="Container" type="Control" parent="Canvas Letter/Letter"]
+[node name="Container" type="Control" parent="Letter/Letter"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -93,7 +265,7 @@ grow_vertical = 2
 size_flags_horizontal = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="Text" type="RichTextLabel" parent="Canvas Letter/Letter/Container"]
+[node name="Description" type="RichTextLabel" parent="Letter/Letter/Container"]
 clip_contents = false
 layout_mode = 1
 anchors_preset = 15
@@ -110,36 +282,42 @@ scroll_active = false
 autowrap_mode = 0
 deselect_on_focus_loss_enabled = false
 
-[node name="Button" type="Button" parent="Canvas Letter/Letter"]
-offset_left = 69.0
-offset_top = 83.0
-offset_right = 122.0
-offset_bottom = 99.0
+[node name="Next" type="Button" parent="Letter/Letter"]
+offset_left = 64.0
+offset_top = 69.3333
+offset_right = 135.0
+offset_bottom = 100.333
+text = "Següent"
 
-[node name="Card" type="Area2D" parent="."]
-position = Vector2(437, 203)
+[node name="Cards" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, 84)
+script = ExtResource("5_0875m")
+
+[node name="Card" type="Area2D" parent="Cards"]
+position = Vector2(216, 263)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("4_aeab4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Card"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card"]
 scale = Vector2(9.24, 14.7509)
 shape = SubResource("RectangleShape2D_4cgt8")
 
-[node name="sizeAnimator" type="AnimationPlayer" parent="Card"]
+[node name="sizeAnimator" type="AnimationPlayer" parent="Cards/Card"]
 root_node = NodePath("../CardImage")
 libraries = {
 "": SubResource("AnimationLibrary_voscp")
 }
 
-[node name="CardImage" type="Sprite2D" parent="Card"]
+[node name="CardImage" type="Sprite2D" parent="Cards/Card"]
 texture = ExtResource("3_fls5y")
 
-[node name="Sprite" type="Sprite2D" parent="Card/CardImage"]
+[node name="Sprite" type="Sprite2D" parent="Cards/Card/CardImage"]
 position = Vector2(0, -77)
 scale = Vector2(0.238683, 0.238683)
 texture = ExtResource("5_g07ae")
 
-[node name="Container" type="Control" parent="Card/CardImage"]
+[node name="Container" type="Control" parent="Cards/Card/CardImage"]
 layout_mode = 3
 anchor_left = 0.05
 anchor_top = 0.461
@@ -154,7 +332,7 @@ grow_vertical = 2
 size_flags_horizontal = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="Description" type="RichTextLabel" parent="Card/CardImage/Container"]
+[node name="Description" type="RichTextLabel" parent="Cards/Card/CardImage/Container"]
 clip_contents = false
 layout_mode = 1
 anchors_preset = 15
@@ -164,25 +342,172 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_kn5up")
 theme_type_variation = &"main"
-theme_override_fonts/normal_font = SubResource("SystemFont_1pq6p")
+theme_override_fonts/normal_font = SubResource("SystemFont_e2ijq")
 theme_override_font_sizes/normal_font_size = 10
 text = "Texto to guapo"
 scroll_active = false
 autowrap_mode = 0
 deselect_on_focus_loss_enabled = false
 
-[node name="SelectButton" type="Button" parent="Card"]
+[node name="SelectButton" type="Button" parent="Cards/Card"]
 offset_left = -79.0
 offset_top = 153.0
 offset_right = 79.0
 offset_bottom = 176.0
+text = "Seleccionar"
 
-[node name="ExitButton" type="Button" parent="Card"]
+[node name="ExitButton" type="Button" parent="Cards/Card"]
 offset_left = 105.0
 offset_top = -175.0
 offset_right = 127.0
 offset_bottom = -152.0
+text = "X"
 
-[connection signal="mouse_shape_entered" from="Card" to="Card" method="_on_mouse_shape_entered"]
-[connection signal="mouse_shape_exited" from="Card" to="Card" method="_on_mouse_shape_exited"]
-[connection signal="pressed" from="Card/ExitButton" to="Card" method="_on_exit_button_pressed"]
+[node name="Card2" type="Area2D" parent="Cards"]
+position = Vector2(432, 263)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("4_aeab4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card2"]
+scale = Vector2(9.24, 14.7509)
+shape = SubResource("RectangleShape2D_4cgt8")
+
+[node name="sizeAnimator" type="AnimationPlayer" parent="Cards/Card2"]
+root_node = NodePath("../CardImage")
+libraries = {
+"": SubResource("AnimationLibrary_voscp")
+}
+
+[node name="CardImage" type="Sprite2D" parent="Cards/Card2"]
+texture = ExtResource("3_fls5y")
+
+[node name="Sprite" type="Sprite2D" parent="Cards/Card2/CardImage"]
+position = Vector2(0, -77)
+scale = Vector2(0.238683, 0.238683)
+texture = ExtResource("5_g07ae")
+
+[node name="Container" type="Control" parent="Cards/Card2/CardImage"]
+layout_mode = 3
+anchor_left = 0.05
+anchor_top = 0.461
+anchor_right = 0.95
+anchor_bottom = 0.96
+offset_left = -90.0
+offset_top = -143.0
+offset_right = -90.0
+offset_bottom = -143.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Description" type="RichTextLabel" parent="Cards/Card2/CardImage/Container"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_kn5up")
+theme_type_variation = &"main"
+theme_override_fonts/normal_font = SubResource("SystemFont_e2ijq")
+theme_override_font_sizes/normal_font_size = 10
+text = "Texto to guapo"
+scroll_active = false
+autowrap_mode = 0
+deselect_on_focus_loss_enabled = false
+
+[node name="SelectButton" type="Button" parent="Cards/Card2"]
+offset_left = -79.0
+offset_top = 153.0
+offset_right = 79.0
+offset_bottom = 176.0
+text = "Seleccionar"
+
+[node name="ExitButton" type="Button" parent="Cards/Card2"]
+offset_left = 105.0
+offset_top = -175.0
+offset_right = 127.0
+offset_bottom = -152.0
+text = "X"
+
+[node name="Card3" type="Area2D" parent="Cards"]
+position = Vector2(648, 263)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("4_aeab4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card3"]
+scale = Vector2(9.24, 14.7509)
+shape = SubResource("RectangleShape2D_4cgt8")
+
+[node name="sizeAnimator" type="AnimationPlayer" parent="Cards/Card3"]
+root_node = NodePath("../CardImage")
+libraries = {
+"": SubResource("AnimationLibrary_voscp")
+}
+
+[node name="CardImage" type="Sprite2D" parent="Cards/Card3"]
+texture = ExtResource("3_fls5y")
+
+[node name="Sprite" type="Sprite2D" parent="Cards/Card3/CardImage"]
+position = Vector2(0, -77)
+scale = Vector2(0.238683, 0.238683)
+texture = ExtResource("5_g07ae")
+
+[node name="Container" type="Control" parent="Cards/Card3/CardImage"]
+layout_mode = 3
+anchor_left = 0.05
+anchor_top = 0.461
+anchor_right = 0.95
+anchor_bottom = 0.96
+offset_left = -90.0
+offset_top = -143.0
+offset_right = -90.0
+offset_bottom = -143.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Description" type="RichTextLabel" parent="Cards/Card3/CardImage/Container"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_kn5up")
+theme_type_variation = &"main"
+theme_override_fonts/normal_font = SubResource("SystemFont_e2ijq")
+theme_override_font_sizes/normal_font_size = 10
+text = "Texto to guapo"
+scroll_active = false
+autowrap_mode = 0
+deselect_on_focus_loss_enabled = false
+
+[node name="SelectButton" type="Button" parent="Cards/Card3"]
+offset_left = -79.0
+offset_top = 153.0
+offset_right = 79.0
+offset_bottom = 176.0
+text = "Seleccionar"
+
+[node name="ExitButton" type="Button" parent="Cards/Card3"]
+offset_left = 105.0
+offset_top = -175.0
+offset_right = 127.0
+offset_bottom = -152.0
+text = "X"
+
+[connection signal="pressed" from="Letter/Letter/Next" to="Letter" method="_on_next_pressed"]
+[connection signal="mouse_shape_entered" from="Cards/Card" to="Cards/Card" method="_on_mouse_shape_entered"]
+[connection signal="pressed" from="Cards/Card/SelectButton" to="Letter" method="_on_select_button_pressed"]
+[connection signal="pressed" from="Cards/Card/ExitButton" to="Cards/Card" method="_on_exit_button_pressed"]
+[connection signal="mouse_shape_entered" from="Cards/Card2" to="Cards/Card2" method="_on_mouse_shape_entered"]
+[connection signal="pressed" from="Cards/Card2/SelectButton" to="Letter" method="_on_select_button_pressed"]
+[connection signal="pressed" from="Cards/Card2/ExitButton" to="Cards/Card2" method="_on_exit_button_pressed"]
+[connection signal="mouse_shape_entered" from="Cards/Card3" to="Cards/Card3" method="_on_mouse_shape_entered"]
+[connection signal="pressed" from="Cards/Card3/SelectButton" to="Letter" method="_on_select_button_pressed"]
+[connection signal="pressed" from="Cards/Card3/ExitButton" to="Cards/Card3" method="_on_exit_button_pressed"]

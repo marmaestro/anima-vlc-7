@@ -1,10 +1,11 @@
 extends Area2D
 
 var _bird
-var _name
+@onready var _name: RichTextLabel = $CardImage/Container3/Name
+@onready var _scientific: RichTextLabel = $CardImage/Container2/Scientific
+
 @onready var sprite: Sprite2D = $CardImage/Sprite
-var _description
-@onready var description: RichTextLabel = $CardImage/Container/Description
+@onready var _description: RichTextLabel = $CardImage/Container/Description
 var _neededObject
 
 @onready var size_animator: AnimationPlayer = $sizeAnimator
@@ -32,10 +33,10 @@ func generateNewBird() -> void:
 	var i : int = randi_range(0,5)
 	if (!cards.isBirdInList(i)):
 		_bird = Bird.new(i)
-		_name = _bird.common_name
+		_name.text = _bird.common_name
+		_scientific.text = _bird.scientific_name
 		sprite.texture = _bird.picture
-		_description = _bird.traits
-		description.text = _description
+		_description.text =  _bird.traits
 	else: generateNewBird()
 
 

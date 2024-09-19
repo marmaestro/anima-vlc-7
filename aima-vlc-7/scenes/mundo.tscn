@@ -1,14 +1,18 @@
-[gd_scene load_steps=25 format=3 uid="uid://desl3ix1lirpt"]
+[gd_scene load_steps=29 format=3 uid="uid://desl3ix1lirpt"]
 
 [ext_resource type="Script" path="res://scripts/letter.gd" id="1_7ddfu"]
 [ext_resource type="Texture2D" uid="uid://covywg463liuk" path="res://placeholders/blank.png" id="1_uob8d"]
 [ext_resource type="Texture2D" uid="uid://bt8d405r2xxhj" path="res://sprites/birds/verdecillo.png" id="2_gtvdf"]
 [ext_resource type="Theme" uid="uid://ci77qser1elpq" path="res://themes-fonts/letter-theme.tres" id="2_kn5up"]
-[ext_resource type="Texture2D" uid="uid://ckt6mn4tvkf08" path="res://placeholders/blank-card.png" id="3_fls5y"]
 [ext_resource type="Script" path="res://scripts/card.gd" id="4_aeab4"]
 [ext_resource type="Script" path="res://scripts/cards.gd" id="5_0875m"]
 [ext_resource type="Texture2D" uid="uid://boi2812xarodr" path="res://sprites/birds/gorrion.png" id="5_g07ae"]
-[ext_resource type="PackedScene" uid="uid://b6ponyxusda0t" path="res://scenes/card.tscn" id="9_lgdg0"]
+[ext_resource type="Texture2D" uid="uid://byqo7unvp5dig" path="res://sprites/birds/Carta.png" id="9_fmxa3"]
+[ext_resource type="FontFile" uid="uid://bsikcrvoehepe" path="res://fonts/Spectral-Regular.ttf" id="10_55s7r"]
+[ext_resource type="FontFile" uid="uid://cww05vwhr0yqf" path="res://fonts/Spectral-Italic.ttf" id="11_58ess"]
+[ext_resource type="FontFile" uid="uid://rke8of3xkujm" path="res://fonts/Spectral-BoldItalic.ttf" id="12_00m0d"]
+[ext_resource type="FontFile" uid="uid://b3dxbwaivdqwl" path="res://fonts/Spectral-Bold.ttf" id="13_m1pwu"]
+[ext_resource type="Theme" uid="uid://yhek5gfshxwo" path="res://themes-fonts/buttons.tres" id="14_o87vs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rlslu"]
 size = Vector2(296, 221)
@@ -118,9 +122,10 @@ _data = {
 
 [sub_resource type="SystemFont" id="SystemFont_1pq6p"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4cgt8"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ghbw6"]
+size = Vector2(23.3766, 20.3045)
 
-[sub_resource type="Animation" id="Animation_6iot7"]
+[sub_resource type="Animation" id="Animation_lyfdh"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -147,7 +152,7 @@ tracks/1/keys = {
 "values": [263.0]
 }
 
-[sub_resource type="Animation" id="Animation_ju10r"]
+[sub_resource type="Animation" id="Animation_anaks"]
 resource_name = "getBigger"
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -174,7 +179,7 @@ tracks/1/keys = {
 "values": [263.0, 200.0]
 }
 
-[sub_resource type="Animation" id="Animation_kdmg3"]
+[sub_resource type="Animation" id="Animation_lhfbs"]
 resource_name = "getSmaller"
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -201,7 +206,7 @@ tracks/1/keys = {
 "values": [200.0, 263.0]
 }
 
-[sub_resource type="Animation" id="Animation_5wu7b"]
+[sub_resource type="Animation" id="Animation_rr54h"]
 resource_name = "small"
 length = 0.01
 tracks/0/type = "value"
@@ -217,22 +222,30 @@ tracks/0/keys = {
 "values": [Vector2(0.5, 0.5)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_voscp"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a2xb7"]
 _data = {
-"RESET": SubResource("Animation_6iot7"),
-"getBigger": SubResource("Animation_ju10r"),
-"getSmaller": SubResource("Animation_kdmg3"),
-"small": SubResource("Animation_5wu7b")
+"RESET": SubResource("Animation_lyfdh"),
+"getBigger": SubResource("Animation_anaks"),
+"getSmaller": SubResource("Animation_lhfbs"),
+"small": SubResource("Animation_rr54h")
 }
 
-[sub_resource type="SystemFont" id="SystemFont_e2ijq"]
+[sub_resource type="SystemFont" id="SystemFont_5bwjj"]
 subpixel_positioning = 0
 
-[sub_resource type="Theme" id="Theme_ocqri"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wni0u"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qqigk"]
 bg_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ab3v4"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="Scene" type="Node2D"]
 
@@ -308,33 +321,36 @@ scale = Vector2(0.5, 0.5)
 script = ExtResource("4_aeab4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card"]
+position = Vector2(0, -2.24548)
 scale = Vector2(9.24, 14.7509)
-shape = SubResource("RectangleShape2D_4cgt8")
+shape = SubResource("RectangleShape2D_ghbw6")
 
 [node name="sizeAnimator" type="AnimationPlayer" parent="Cards/Card"]
 root_node = NodePath("../CardImage")
 libraries = {
-"": SubResource("AnimationLibrary_voscp")
+"": SubResource("AnimationLibrary_a2xb7")
 }
 
 [node name="CardImage" type="Sprite2D" parent="Cards/Card"]
-texture = ExtResource("3_fls5y")
+position = Vector2(12, -1.81251)
+scale = Vector2(0.634517, 0.634517)
+texture = ExtResource("9_fmxa3")
 
 [node name="Sprite" type="Sprite2D" parent="Cards/Card/CardImage"]
-position = Vector2(0, -77)
-scale = Vector2(0.238683, 0.238683)
+position = Vector2(-20.6243, -85.3996)
+scale = Vector2(0.352745, 0.352745)
 texture = ExtResource("5_g07ae")
 
 [node name="Container" type="Control" parent="Cards/Card/CardImage"]
 layout_mode = 3
-anchor_left = 0.05
-anchor_top = 0.461
-anchor_right = 0.95
-anchor_bottom = 0.96
-offset_left = -90.0
-offset_top = -143.0
-offset_right = -90.0
-offset_bottom = -143.0
+anchor_left = 0.332343
+anchor_top = 0.642214
+anchor_right = 0.630954
+anchor_bottom = 0.868551
+offset_left = -432.144
+offset_top = -243.116
+offset_right = -432.144
+offset_bottom = -243.116
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
@@ -343,16 +359,105 @@ metadata/_edit_use_anchors_ = true
 [node name="Description" type="RichTextLabel" parent="Cards/Card/CardImage/Container"]
 clip_contents = false
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_top = -0.082
+anchor_right = 0.956
+anchor_bottom = 1.118
+offset_left = -3.0
+offset_top = 0.0199986
+offset_right = 0.0879974
+offset_bottom = 0.0200119
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_kn5up")
 theme_type_variation = &"main"
-theme_override_fonts/normal_font = SubResource("SystemFont_e2ijq")
+theme_override_constants/line_separation = -2
+theme_override_fonts/normal_font = ExtResource("10_55s7r")
+theme_override_font_sizes/normal_font_size = 14
+text = "Territorial i molt agressiva. No li agraden els desconeguts.
+Preferix menjar peixos menuts i petits mamífers com ratolíns.
+Viu en qualsevol lloc. N'hi ha exemplars fins a la meseta."
+fit_content = true
+scroll_active = false
+autowrap_mode = 2
+deselect_on_focus_loss_enabled = false
+
+[node name="Container2" type="Control" parent="Cards/Card/CardImage"]
+layout_mode = 3
+anchor_left = 0.332343
+anchor_top = 0.545476
+anchor_right = 0.624009
+anchor_bottom = 0.591
+offset_left = -432.144
+offset_top = -243.102
+offset_right = -432.144
+offset_bottom = -243.226
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Scientific" type="RichTextLabel" parent="Cards/Card/CardImage/Container2"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.38344
+offset_bottom = -3.38344
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_kn5up")
+theme_type_variation = &"main"
+theme_override_fonts/normal_font = SubResource("SystemFont_5bwjj")
+theme_override_fonts/italics_font = ExtResource("11_58ess")
+theme_override_fonts/bold_italics_font = ExtResource("12_00m0d")
+theme_override_fonts/bold_font = ExtResource("13_m1pwu")
+theme_override_font_sizes/bold_italics_font_size = 18
 theme_override_font_sizes/normal_font_size = 10
-text = "Texto to guapo"
+theme_override_font_sizes/bold_font_size = 20
+bbcode_enabled = true
+text = "[b][i]Streptopelia Decaocto[i][b]
+"
+scroll_active = false
+autowrap_mode = 0
+deselect_on_focus_loss_enabled = false
+
+[node name="Container3" type="Control" parent="Cards/Card/CardImage"]
+layout_mode = 3
+anchor_left = 0.332343
+anchor_top = 0.545476
+anchor_right = 0.624009
+anchor_bottom = 0.591
+offset_left = -432.136
+offset_top = -476.581
+offset_right = -432.136
+offset_bottom = -476.706
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Name" type="RichTextLabel" parent="Cards/Card/CardImage/Container3"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.15201
+offset_bottom = -3.15201
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_kn5up")
+theme_type_variation = &"main"
+theme_override_fonts/normal_font = ExtResource("10_55s7r")
+theme_override_fonts/italics_font = ExtResource("11_58ess")
+theme_override_fonts/bold_italics_font = ExtResource("12_00m0d")
+theme_override_fonts/bold_font = ExtResource("13_m1pwu")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "[b]Lavandera blanca j"
 scroll_active = false
 autowrap_mode = 0
 deselect_on_focus_loss_enabled = false
@@ -362,15 +467,20 @@ offset_left = -79.0
 offset_top = 153.0
 offset_right = 79.0
 offset_bottom = 176.0
-theme = SubResource("Theme_ocqri")
-theme_override_styles/normal = SubResource("StyleBoxFlat_wni0u")
-text = "Seleccionar"
+theme = ExtResource("14_o87vs")
+theme_override_fonts/font = ExtResource("10_55s7r")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qqigk")
+text = "SELECCIONAR"
 
 [node name="ExitButton" type="Button" parent="Cards/Card"]
-offset_left = 105.0
-offset_top = -175.0
-offset_right = 127.0
-offset_bottom = -152.0
+offset_left = 90.0
+offset_top = -170.0
+offset_right = 125.0
+offset_bottom = -139.0
+scale = Vector2(0.539376, 0.539376)
+theme = ExtResource("14_o87vs")
+theme_override_fonts/font = ExtResource("10_55s7r")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ab3v4")
 text = "X"
 
 [node name="Card2" type="Area2D" parent="Cards"]
@@ -379,33 +489,36 @@ scale = Vector2(0.5, 0.5)
 script = ExtResource("4_aeab4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card2"]
+position = Vector2(0, -2.24548)
 scale = Vector2(9.24, 14.7509)
-shape = SubResource("RectangleShape2D_4cgt8")
+shape = SubResource("RectangleShape2D_ghbw6")
 
 [node name="sizeAnimator" type="AnimationPlayer" parent="Cards/Card2"]
 root_node = NodePath("../CardImage")
 libraries = {
-"": SubResource("AnimationLibrary_voscp")
+"": SubResource("AnimationLibrary_a2xb7")
 }
 
 [node name="CardImage" type="Sprite2D" parent="Cards/Card2"]
-texture = ExtResource("3_fls5y")
+position = Vector2(12, -1.81251)
+scale = Vector2(0.634517, 0.634517)
+texture = ExtResource("9_fmxa3")
 
 [node name="Sprite" type="Sprite2D" parent="Cards/Card2/CardImage"]
-position = Vector2(0, -77)
-scale = Vector2(0.238683, 0.238683)
+position = Vector2(-20.6243, -85.3996)
+scale = Vector2(0.352745, 0.352745)
 texture = ExtResource("5_g07ae")
 
 [node name="Container" type="Control" parent="Cards/Card2/CardImage"]
 layout_mode = 3
-anchor_left = 0.05
-anchor_top = 0.461
-anchor_right = 0.95
-anchor_bottom = 0.96
-offset_left = -90.0
-offset_top = -143.0
-offset_right = -90.0
-offset_bottom = -143.0
+anchor_left = 0.332343
+anchor_top = 0.642214
+anchor_right = 0.630954
+anchor_bottom = 0.868551
+offset_left = -432.144
+offset_top = -243.116
+offset_right = -432.144
+offset_bottom = -243.116
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
@@ -414,16 +527,105 @@ metadata/_edit_use_anchors_ = true
 [node name="Description" type="RichTextLabel" parent="Cards/Card2/CardImage/Container"]
 clip_contents = false
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_top = -0.082
+anchor_right = 0.956
+anchor_bottom = 1.118
+offset_left = -3.0
+offset_top = 0.0199986
+offset_right = 0.0879974
+offset_bottom = 0.0200119
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_kn5up")
 theme_type_variation = &"main"
-theme_override_fonts/normal_font = SubResource("SystemFont_e2ijq")
+theme_override_constants/line_separation = -2
+theme_override_fonts/normal_font = ExtResource("10_55s7r")
+theme_override_font_sizes/normal_font_size = 14
+text = "Territorial i molt agressiva. No li agraden els desconeguts.
+Preferix menjar peixos menuts i petits mamífers com ratolíns.
+Viu en qualsevol lloc. N'hi ha exemplars fins a la meseta."
+fit_content = true
+scroll_active = false
+autowrap_mode = 2
+deselect_on_focus_loss_enabled = false
+
+[node name="Container2" type="Control" parent="Cards/Card2/CardImage"]
+layout_mode = 3
+anchor_left = 0.332343
+anchor_top = 0.545476
+anchor_right = 0.624009
+anchor_bottom = 0.591
+offset_left = -432.144
+offset_top = -243.102
+offset_right = -432.144
+offset_bottom = -243.226
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Scientific" type="RichTextLabel" parent="Cards/Card2/CardImage/Container2"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.38344
+offset_bottom = -3.38344
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_kn5up")
+theme_type_variation = &"main"
+theme_override_fonts/normal_font = SubResource("SystemFont_5bwjj")
+theme_override_fonts/italics_font = ExtResource("11_58ess")
+theme_override_fonts/bold_italics_font = ExtResource("12_00m0d")
+theme_override_fonts/bold_font = ExtResource("13_m1pwu")
+theme_override_font_sizes/bold_italics_font_size = 18
 theme_override_font_sizes/normal_font_size = 10
-text = "Texto to guapo"
+theme_override_font_sizes/bold_font_size = 20
+bbcode_enabled = true
+text = "[b][i]Streptopelia Decaocto[i][b]
+"
+scroll_active = false
+autowrap_mode = 0
+deselect_on_focus_loss_enabled = false
+
+[node name="Container3" type="Control" parent="Cards/Card2/CardImage"]
+layout_mode = 3
+anchor_left = 0.332343
+anchor_top = 0.545476
+anchor_right = 0.624009
+anchor_bottom = 0.591
+offset_left = -432.136
+offset_top = -476.581
+offset_right = -432.136
+offset_bottom = -476.706
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Name" type="RichTextLabel" parent="Cards/Card2/CardImage/Container3"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.15201
+offset_bottom = -3.15201
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_kn5up")
+theme_type_variation = &"main"
+theme_override_fonts/normal_font = ExtResource("10_55s7r")
+theme_override_fonts/italics_font = ExtResource("11_58ess")
+theme_override_fonts/bold_italics_font = ExtResource("12_00m0d")
+theme_override_fonts/bold_font = ExtResource("13_m1pwu")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "[b]Lavandera blanca j"
 scroll_active = false
 autowrap_mode = 0
 deselect_on_focus_loss_enabled = false
@@ -433,13 +635,20 @@ offset_left = -79.0
 offset_top = 153.0
 offset_right = 79.0
 offset_bottom = 176.0
-text = "Seleccionar"
+theme = ExtResource("14_o87vs")
+theme_override_fonts/font = ExtResource("10_55s7r")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qqigk")
+text = "SELECCIONAR"
 
 [node name="ExitButton" type="Button" parent="Cards/Card2"]
-offset_left = 105.0
-offset_top = -175.0
-offset_right = 127.0
-offset_bottom = -152.0
+offset_left = 90.0
+offset_top = -170.0
+offset_right = 125.0
+offset_bottom = -139.0
+scale = Vector2(0.539376, 0.539376)
+theme = ExtResource("14_o87vs")
+theme_override_fonts/font = ExtResource("10_55s7r")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ab3v4")
 text = "X"
 
 [node name="Card3" type="Area2D" parent="Cards"]
@@ -448,33 +657,36 @@ scale = Vector2(0.5, 0.5)
 script = ExtResource("4_aeab4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card3"]
+position = Vector2(0, -2.24548)
 scale = Vector2(9.24, 14.7509)
-shape = SubResource("RectangleShape2D_4cgt8")
+shape = SubResource("RectangleShape2D_ghbw6")
 
 [node name="sizeAnimator" type="AnimationPlayer" parent="Cards/Card3"]
 root_node = NodePath("../CardImage")
 libraries = {
-"": SubResource("AnimationLibrary_voscp")
+"": SubResource("AnimationLibrary_a2xb7")
 }
 
 [node name="CardImage" type="Sprite2D" parent="Cards/Card3"]
-texture = ExtResource("3_fls5y")
+position = Vector2(12, -1.81251)
+scale = Vector2(0.634517, 0.634517)
+texture = ExtResource("9_fmxa3")
 
 [node name="Sprite" type="Sprite2D" parent="Cards/Card3/CardImage"]
-position = Vector2(0, -77)
-scale = Vector2(0.238683, 0.238683)
+position = Vector2(-20.6243, -85.3996)
+scale = Vector2(0.352745, 0.352745)
 texture = ExtResource("5_g07ae")
 
 [node name="Container" type="Control" parent="Cards/Card3/CardImage"]
 layout_mode = 3
-anchor_left = 0.05
-anchor_top = 0.461
-anchor_right = 0.95
-anchor_bottom = 0.96
-offset_left = -90.0
-offset_top = -143.0
-offset_right = -90.0
-offset_bottom = -143.0
+anchor_left = 0.332343
+anchor_top = 0.642214
+anchor_right = 0.630954
+anchor_bottom = 0.868551
+offset_left = -432.144
+offset_top = -243.116
+offset_right = -432.144
+offset_bottom = -243.116
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
@@ -483,16 +695,105 @@ metadata/_edit_use_anchors_ = true
 [node name="Description" type="RichTextLabel" parent="Cards/Card3/CardImage/Container"]
 clip_contents = false
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_top = -0.082
+anchor_right = 0.956
+anchor_bottom = 1.118
+offset_left = -3.0
+offset_top = 0.0199986
+offset_right = 0.0879974
+offset_bottom = 0.0200119
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_kn5up")
 theme_type_variation = &"main"
-theme_override_fonts/normal_font = SubResource("SystemFont_e2ijq")
+theme_override_constants/line_separation = -2
+theme_override_fonts/normal_font = ExtResource("10_55s7r")
+theme_override_font_sizes/normal_font_size = 14
+text = "Territorial i molt agressiva. No li agraden els desconeguts.
+Preferix menjar peixos menuts i petits mamífers com ratolíns.
+Viu en qualsevol lloc. N'hi ha exemplars fins a la meseta."
+fit_content = true
+scroll_active = false
+autowrap_mode = 2
+deselect_on_focus_loss_enabled = false
+
+[node name="Container2" type="Control" parent="Cards/Card3/CardImage"]
+layout_mode = 3
+anchor_left = 0.332343
+anchor_top = 0.545476
+anchor_right = 0.624009
+anchor_bottom = 0.591
+offset_left = -432.144
+offset_top = -243.102
+offset_right = -432.144
+offset_bottom = -243.226
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Scientific" type="RichTextLabel" parent="Cards/Card3/CardImage/Container2"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.38344
+offset_bottom = -3.38344
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_kn5up")
+theme_type_variation = &"main"
+theme_override_fonts/normal_font = SubResource("SystemFont_5bwjj")
+theme_override_fonts/italics_font = ExtResource("11_58ess")
+theme_override_fonts/bold_italics_font = ExtResource("12_00m0d")
+theme_override_fonts/bold_font = ExtResource("13_m1pwu")
+theme_override_font_sizes/bold_italics_font_size = 18
 theme_override_font_sizes/normal_font_size = 10
-text = "Texto to guapo"
+theme_override_font_sizes/bold_font_size = 20
+bbcode_enabled = true
+text = "[b][i]Streptopelia Decaocto[i][b]
+"
+scroll_active = false
+autowrap_mode = 0
+deselect_on_focus_loss_enabled = false
+
+[node name="Container3" type="Control" parent="Cards/Card3/CardImage"]
+layout_mode = 3
+anchor_left = 0.332343
+anchor_top = 0.545476
+anchor_right = 0.624009
+anchor_bottom = 0.591
+offset_left = -432.136
+offset_top = -476.581
+offset_right = -432.136
+offset_bottom = -476.706
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Name" type="RichTextLabel" parent="Cards/Card3/CardImage/Container3"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.15201
+offset_bottom = -3.15201
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_kn5up")
+theme_type_variation = &"main"
+theme_override_fonts/normal_font = ExtResource("10_55s7r")
+theme_override_fonts/italics_font = ExtResource("11_58ess")
+theme_override_fonts/bold_italics_font = ExtResource("12_00m0d")
+theme_override_fonts/bold_font = ExtResource("13_m1pwu")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 25
+bbcode_enabled = true
+text = "[b]Lavandera blanca j"
 scroll_active = false
 autowrap_mode = 0
 deselect_on_focus_loss_enabled = false
@@ -502,23 +803,21 @@ offset_left = -79.0
 offset_top = 153.0
 offset_right = 79.0
 offset_bottom = 176.0
-text = "Seleccionar"
+theme = ExtResource("14_o87vs")
+theme_override_fonts/font = ExtResource("10_55s7r")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qqigk")
+text = "SELECCIONAR"
 
 [node name="ExitButton" type="Button" parent="Cards/Card3"]
-offset_left = 105.0
-offset_top = -175.0
-offset_right = 127.0
-offset_bottom = -152.0
+offset_left = 90.0
+offset_top = -170.0
+offset_right = 125.0
+offset_bottom = -139.0
+scale = Vector2(0.539376, 0.539376)
+theme = ExtResource("14_o87vs")
+theme_override_fonts/font = ExtResource("10_55s7r")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ab3v4")
 text = "X"
-
-[node name="Card4" parent="Cards" instance=ExtResource("9_lgdg0")]
-position = Vector2(216, 263)
-
-[node name="Card5" parent="Cards" instance=ExtResource("9_lgdg0")]
-position = Vector2(432, 263)
-
-[node name="Card6" parent="Cards" instance=ExtResource("9_lgdg0")]
-position = Vector2(648, 263)
 
 [connection signal="pressed" from="Letter/Letter/Next" to="Letter" method="_on_next_pressed"]
 [connection signal="mouse_shape_entered" from="Cards/Card" to="Cards/Card" method="_on_mouse_shape_entered"]

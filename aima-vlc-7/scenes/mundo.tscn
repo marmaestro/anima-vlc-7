@@ -12,7 +12,7 @@
 [ext_resource type="FontFile" uid="uid://cww05vwhr0yqf" path="res://fonts/Spectral-Italic.ttf" id="11_58ess"]
 [ext_resource type="FontFile" uid="uid://rke8of3xkujm" path="res://fonts/Spectral-BoldItalic.ttf" id="12_00m0d"]
 [ext_resource type="FontFile" uid="uid://b3dxbwaivdqwl" path="res://fonts/Spectral-Bold.ttf" id="13_m1pwu"]
-[ext_resource type="Theme" uid="uid://yhek5gfshxwo" path="res://themes-fonts/buttons.tres" id="14_o87vs"]
+[ext_resource type="Theme" path="res://themes-fonts/buttons.tres" id="14_o87vs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rlslu"]
 size = Vector2(333, 250)
@@ -432,9 +432,6 @@ theme_type_variation = &"main"
 theme_override_constants/line_separation = -2
 theme_override_fonts/normal_font = ExtResource("10_55s7r")
 theme_override_font_sizes/normal_font_size = 14
-text = "Territorial i molt agressiva. No li agraden els desconeguts.
-Preferix menjar peixos menuts i petits mamífers com ratolíns.
-Viu en qualsevol lloc. N'hi ha exemplars fins a la meseta."
 fit_content = true
 scroll_active = false
 autowrap_mode = 2
@@ -474,9 +471,6 @@ theme_override_fonts/bold_font = ExtResource("13_m1pwu")
 theme_override_font_sizes/bold_italics_font_size = 18
 theme_override_font_sizes/normal_font_size = 18
 theme_override_font_sizes/bold_font_size = 20
-bbcode_enabled = true
-text = "[b][i]Streptopelia Decaocto[i][b]
-"
 scroll_active = false
 autowrap_mode = 0
 deselect_on_focus_loss_enabled = false
@@ -514,8 +508,6 @@ theme_override_fonts/bold_italics_font = ExtResource("12_00m0d")
 theme_override_fonts/bold_font = ExtResource("13_m1pwu")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 25
-bbcode_enabled = true
-text = "[b]Lavandera blanca j"
 scroll_active = false
 autowrap_mode = 0
 deselect_on_focus_loss_enabled = false
@@ -600,9 +592,6 @@ theme_type_variation = &"main"
 theme_override_constants/line_separation = -2
 theme_override_fonts/normal_font = ExtResource("10_55s7r")
 theme_override_font_sizes/normal_font_size = 14
-text = "Territorial i molt agressiva. No li agraden els desconeguts.
-Preferix menjar peixos menuts i petits mamífers com ratolíns.
-Viu en qualsevol lloc. N'hi ha exemplars fins a la meseta."
 fit_content = true
 scroll_active = false
 autowrap_mode = 2
@@ -642,9 +631,6 @@ theme_override_fonts/bold_font = ExtResource("13_m1pwu")
 theme_override_font_sizes/bold_italics_font_size = 18
 theme_override_font_sizes/normal_font_size = 18
 theme_override_font_sizes/bold_font_size = 20
-bbcode_enabled = true
-text = "[b][i]Streptopelia Decaocto[i][b]
-"
 scroll_active = false
 autowrap_mode = 0
 deselect_on_focus_loss_enabled = false
@@ -662,7 +648,6 @@ offset_bottom = -476.706
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
-metadata/_edit_use_anchors_ = true
 
 [node name="Name" type="RichTextLabel" parent="Cards/Card2/CardImage/Container3"]
 clip_contents = false
@@ -682,8 +667,6 @@ theme_override_fonts/bold_italics_font = ExtResource("12_00m0d")
 theme_override_fonts/bold_font = ExtResource("13_m1pwu")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 25
-bbcode_enabled = true
-text = "[b]Lavandera blanca j"
 scroll_active = false
 autowrap_mode = 0
 deselect_on_focus_loss_enabled = false
@@ -768,9 +751,6 @@ theme_type_variation = &"main"
 theme_override_constants/line_separation = -2
 theme_override_fonts/normal_font = ExtResource("10_55s7r")
 theme_override_font_sizes/normal_font_size = 14
-text = "Territorial i molt agressiva. No li agraden els desconeguts.
-Preferix menjar peixos menuts i petits mamífers com ratolíns.
-Viu en qualsevol lloc. N'hi ha exemplars fins a la meseta."
 fit_content = true
 scroll_active = false
 autowrap_mode = 2
@@ -810,9 +790,6 @@ theme_override_fonts/bold_font = ExtResource("13_m1pwu")
 theme_override_font_sizes/bold_italics_font_size = 18
 theme_override_font_sizes/normal_font_size = 18
 theme_override_font_sizes/bold_font_size = 20
-bbcode_enabled = true
-text = "[b][i]Streptopelia Decaocto[i][b]
-"
 scroll_active = false
 autowrap_mode = 0
 deselect_on_focus_loss_enabled = false
@@ -850,8 +827,6 @@ theme_override_fonts/bold_italics_font = ExtResource("12_00m0d")
 theme_override_fonts/bold_font = ExtResource("13_m1pwu")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 25
-bbcode_enabled = true
-text = "[b]Lavandera blanca j"
 scroll_active = false
 autowrap_mode = 0
 deselect_on_focus_loss_enabled = false

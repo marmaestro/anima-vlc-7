@@ -12,9 +12,9 @@ func _init(index : int):
 	var data = json.data.birds[index]
 	
 	picture = load("res://" + data.source)
-	common_name = data.common_name
+	common_name = tr(data.common_name)
 	scientific_name = data.scientific_name
-	traits = data.traits.trait_1 + "\n" + data.traits.trait_2 + "\n" + data.traits.trait_3
+	traits = tr(data.traits.trait_1) + "\n" + tr(data.traits.trait_2) + "\n" + tr(data.traits.trait_3)
 	
 
 	

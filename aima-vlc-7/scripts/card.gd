@@ -1,18 +1,18 @@
 extends Area2D
 
 var _bird
-@onready var _name: RichTextLabel = $CardImage/Container3/Name
-@onready var _scientific: RichTextLabel = $CardImage/Container2/Scientific
+@onready var _name : RichTextLabel = $CardImage/Container3/Name
+@onready var _scientific : RichTextLabel = $CardImage/Container2/Scientific
 
-@onready var sprite: Sprite2D = $CardImage/Sprite
-@onready var _description: RichTextLabel = $CardImage/Container/Description
+@onready var sprite : Sprite2D = $CardImage/Sprite
+@onready var _description : RichTextLabel = $CardImage/Container/Description
 var _neededObject
 
-@onready var size_animator: AnimationPlayer = $sizeAnimator
+@onready var size_animator : AnimationPlayer = $sizeAnimator
 var isBig : bool = false
-@onready var exit_button: Button = $ExitButton
-@onready var select_button: Button = $SelectButton
-@onready var cards: Node2D = %Cards
+@onready var exit_button : Button = $ExitButton
+@onready var select_button : Button = $SelectButton
+@onready var cards : Node2D = %Cards
 	
 
 # Called when the node enters the scene tree for the first time.
@@ -33,11 +33,8 @@ func generateNewBird() -> void:
 	var i : int = randi_range(0,9)
 	if (!cards.isBirdInList(i)):
 		_bird = Bird.new(i)
-		_name.text = _bird.common_name
-		
-		_scientific.text = _bird.scientific_name
+		_setNames()
 		sprite.texture = _bird.picture
-		_description.text =  _bird.traits
 	else: generateNewBird()
 
 
@@ -56,3 +53,18 @@ func animationSmall() -> void:
 	isBig = false
 	exit_button.visible = false
 	size_animator.play("getSmaller")
+	
+func _setNames() -> void:
+	
+	_name.clear()
+	_name.push_bold()
+	_name.pop()
+	_name.add_text(_bird.common_name)
+	
+	_scientific.clear()
+	_scientific.push_bold_italics()
+	_scientific.pop()
+	_scientific.add_text(_bird.scientific_name)
+	
+	_description.clear()
+	_description.add_text(_bird.traits)

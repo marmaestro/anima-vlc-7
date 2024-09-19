@@ -4,6 +4,7 @@ var _identifier
 var picture
 var name
 var assignedBird
+var description
 
 func _init(index : int):
 	_identifier = index
@@ -12,4 +13,5 @@ func _init(index : int):
 	
 	picture = load("res://" + data.source)
 	name = data.name
-	assignedBird = data.assignedBird
+	assignedBird = data.assigned_bird
+	description = data.description

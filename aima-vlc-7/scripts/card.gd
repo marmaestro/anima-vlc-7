@@ -30,7 +30,7 @@ func _physics_process(delta: float) -> void:
 	if(space): generateNewBird()
 		
 func generateNewBird() -> void:
-	var i : int = randi_range(0,5)
+	var i : int = randi_range(0,9)
 	if (!cards.isBirdInList(i)):
 		_bird = Bird.new(i)
 		_name.text = _bird.common_name

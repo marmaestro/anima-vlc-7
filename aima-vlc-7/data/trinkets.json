@@ -2,33 +2,68 @@
 	"trinkets":
 		[
 			{
-				"source": "sprites/trinkets/.png",
-				"name": "MONEDA",
-				"assigned_bird": ""
+				"source": "sprites/trinkets/espejo.png",
+				"name": "ESPEJO",
+				"assigned_bird": "URRACA",
+				"description":"ESPEJO_D"
 			},
 			
 			{
-				"source": "sprites/trinkets/.png",
-				"name": "LECHUGA",
-				"assigned_bird": ""
+				"source": "sprites/trinkets/pescado.png",
+				"name": "PESCADO",
+				"assigned_bird": "GAVIOTA",
+				"description":"PESCADO_D"
 			},
 			
 			{
-				"source": "sprites/trinkets/.png",
-				"name": "RAMA",
-				"assigned_bird": ""
+				"source": "sprites/trinkets/pajarita.png",
+				"name": "PAJARITA",
+				"assigned_bird": "PATO",
+				"description":"PAJARITA_D"
 			},
 			
 			{
-				"source": "sprites/trinkets/.png",
-				"name": "PELUSA",
-				"assigned_bird": ""
+				"source": "sprites/trinkets/langosta.png",
+				"name": "LANGOSTA",
+				"assigned_bird": "GORRION",
+				"description":"LANGOSTA_D"
 			},
 			
 			{
-				"source": "sprites/trinkets/.png",
-				"name": "PATATA",
-				"assigned_bird": ""
+				"source": "sprites/trinkets/semillas.png",
+				"name": "SEMILLAS",
+				"assigned_bird": "VERDECILLO",
+				"description":"SEMILLAS_D"
+			},
+			{
+				"source": "sprites/trinkets/semillas.png",
+				"name": "SEMILLAS",
+				"assigned_bird": "PALOMA",
+				"description":"LANGOSTA_D"
+			},
+			{
+				"source": "sprites/trinkets/semillas.png",
+				"name": "SEMILLAS",
+				"assigned_bird": "TORTOLA",
+				"description":"LANGOSTA_D"
+			},
+			{
+				"source": "sprites/trinkets/semillas.png",
+				"name": "SEMILLAS",
+				"assigned_bird": "ABUBILLA",
+				"description":"LANGOSTA_D"
+			},
+			{
+				"source": "sprites/trinkets/semillas.png",
+				"name": "SEMILLAS",
+				"assigned_bird": "LAVANDERA",
+				"description":"LANGOSTA_D"
+			},
+			{
+				"source": "sprites/trinkets/semillas.png",
+				"name": "SEMILLAS",
+				"assigned_bird": "LAVANDERA",
+				"description":"LANGOSTA_D"
 			},
 		]
 }

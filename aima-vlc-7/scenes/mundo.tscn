@@ -278,7 +278,7 @@ texture = ExtResource("2_gtvdf")
 [node name="Container" type="Control" parent="Letter/Letter"]
 layout_mode = 3
 anchor_left = 0.206
-anchor_top = 0.119
+anchor_top = 0.219823
 anchor_right = 0.522
 anchor_bottom = 0.825
 offset_left = -431.984
@@ -308,6 +308,43 @@ scroll_active = false
 autowrap_mode = 0
 deselect_on_focus_loss_enabled = false
 
+[node name="Container2" type="Control" parent="Letter/Letter"]
+layout_mode = 3
+anchor_left = 0.206
+anchor_top = 0.219823
+anchor_right = 0.522
+anchor_bottom = 0.825
+offset_left = -431.984
+offset_top = -289.555
+offset_right = -432.008
+offset_bottom = -289.671
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Name" type="RichTextLabel" parent="Letter/Letter/Container2"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -3.05176e-05
+offset_bottom = -256.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_kn5up")
+theme_type_variation = &"main"
+theme_override_fonts/normal_font = ExtResource("10_55s7r")
+theme_override_fonts/bold_font = ExtResource("13_m1pwu")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 20
+text = "Texto to guapo
+"
+scroll_active = false
+autowrap_mode = 0
+deselect_on_focus_loss_enabled = false
+
 [node name="Next" type="Button" parent="Letter/Letter"]
 anchors_preset = -1
 anchor_left = -0.0461348
@@ -324,6 +361,12 @@ theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_ak8l7")
 text = "SIGUIENTE"
 metadata/_edit_use_anchors_ = true
+
+[node name="Points" type="RichTextLabel" parent="Letter"]
+offset_left = -410.0
+offset_top = -122.0
+offset_right = -370.0
+offset_bottom = -82.0
 
 [node name="Cards" type="Node2D" parent="."]
 unique_name_in_owner = true
@@ -836,11 +879,11 @@ text = "X"
 
 [connection signal="pressed" from="Letter/Letter/Next" to="Letter" method="_on_next_pressed"]
 [connection signal="mouse_shape_entered" from="Cards/Card" to="Cards/Card" method="_on_mouse_shape_entered"]
-[connection signal="pressed" from="Cards/Card/SelectButton" to="Letter" method="_on_select_button_pressed"]
+[connection signal="pressed" from="Cards/Card/SelectButton" to="Letter" method="_on_select_button1_pressed"]
 [connection signal="pressed" from="Cards/Card/ExitButton" to="Cards/Card" method="_on_exit_button_pressed"]
 [connection signal="mouse_shape_entered" from="Cards/Card2" to="Cards/Card2" method="_on_mouse_shape_entered"]
-[connection signal="pressed" from="Cards/Card2/SelectButton" to="Letter" method="_on_select_button_pressed"]
+[connection signal="pressed" from="Cards/Card2/SelectButton" to="Letter" method="_on_select_button2_pressed"]
 [connection signal="pressed" from="Cards/Card2/ExitButton" to="Cards/Card2" method="_on_exit_button_pressed"]
 [connection signal="mouse_shape_entered" from="Cards/Card3" to="Cards/Card3" method="_on_mouse_shape_entered"]
-[connection signal="pressed" from="Cards/Card3/SelectButton" to="Letter" method="_on_select_button_pressed"]
+[connection signal="pressed" from="Cards/Card3/SelectButton" to="Letter" method="_on_select_button3_pressed"]
 [connection signal="pressed" from="Cards/Card3/ExitButton" to="Cards/Card3" method="_on_exit_button_pressed"]

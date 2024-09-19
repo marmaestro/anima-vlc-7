@@ -1,0 +1,176 @@
+[gd_scene load_steps=11 format=3 uid="uid://bc3asag6niaki"]
+
+[ext_resource type="Script" path="res://scripts/letter.gd" id="1_nypxb"]
+[ext_resource type="Texture2D" uid="uid://covywg463liuk" path="res://placeholders/blank.png" id="2_3iilo"]
+[ext_resource type="Texture2D" uid="uid://bt8d405r2xxhj" path="res://sprites/birds/verdecillo.png" id="3_t4ek3"]
+[ext_resource type="Theme" uid="uid://ci77qser1elpq" path="res://themes-fonts/letter-theme.tres" id="4_l2upp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rlslu"]
+size = Vector2(296, 221)
+
+[sub_resource type="Animation" id="Animation_saalr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(432, 132)]
+}
+
+[sub_resource type="Animation" id="Animation_leemx"]
+resource_name = "bif"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.5, 1.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(432, 243)]
+}
+
+[sub_resource type="Animation" id="Animation_p8tdy"]
+resource_name = "getSmaller"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.5, 1.5), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(432, 243), Vector2(432, 132)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"cardsVisible"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1gbjb"]
+_data = {
+"RESET": SubResource("Animation_saalr"),
+"big": SubResource("Animation_leemx"),
+"getSmaller": SubResource("Animation_p8tdy")
+}
+
+[sub_resource type="SystemFont" id="SystemFont_1pq6p"]
+
+[node name="Letter" type="Area2D"]
+position = Vector2(432, 132)
+script = ExtResource("1_nypxb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -0.5)
+shape = SubResource("RectangleShape2D_rlslu")
+
+[node name="letterAnimator" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_1gbjb")
+}
+
+[node name="Letter" type="Sprite2D" parent="."]
+texture = ExtResource("2_3iilo")
+
+[node name="Object" type="Sprite2D" parent="Letter"]
+position = Vector2(71, -19)
+scale = Vector2(0.160494, 0.160494)
+texture = ExtResource("3_t4ek3")
+
+[node name="Container" type="Control" parent="Letter"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -108.0
+offset_top = -81.0
+offset_right = -180.0
+offset_bottom = -135.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Description" type="RichTextLabel" parent="Letter/Container"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_l2upp")
+theme_type_variation = &"main"
+theme_override_fonts/normal_font = SubResource("SystemFont_1pq6p")
+theme_override_font_sizes/normal_font_size = 10
+text = "Texto to guapo
+"
+scroll_active = false
+autowrap_mode = 0
+deselect_on_focus_loss_enabled = false
+
+[node name="Next" type="Button" parent="Letter"]
+offset_left = 64.0
+offset_top = 69.3333
+offset_right = 135.0
+offset_bottom = 100.333
+text = "SIGUIENTE"
+
+[connection signal="pressed" from="Letter/Next" to="." method="_on_next_pressed"]

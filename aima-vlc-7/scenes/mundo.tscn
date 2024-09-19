@@ -1,13 +1,13 @@
 [gd_scene load_steps=29 format=3 uid="uid://desl3ix1lirpt"]
 
 [ext_resource type="Script" path="res://scripts/letter.gd" id="1_7ddfu"]
-[ext_resource type="Texture2D" uid="uid://covywg463liuk" path="res://placeholders/blank.png" id="1_uob8d"]
+[ext_resource type="Texture2D" uid="uid://c50hygp4axwhs" path="res://sprites/Letter.png" id="2_0l2ob"]
 [ext_resource type="Texture2D" uid="uid://bt8d405r2xxhj" path="res://sprites/birds/verdecillo.png" id="2_gtvdf"]
 [ext_resource type="Theme" uid="uid://ci77qser1elpq" path="res://themes-fonts/letter-theme.tres" id="2_kn5up"]
 [ext_resource type="Script" path="res://scripts/card.gd" id="4_aeab4"]
 [ext_resource type="Script" path="res://scripts/cards.gd" id="5_0875m"]
 [ext_resource type="Texture2D" uid="uid://boi2812xarodr" path="res://sprites/birds/gorrion.png" id="5_g07ae"]
-[ext_resource type="Texture2D" uid="uid://byqo7unvp5dig" path="res://sprites/birds/Carta.png" id="9_fmxa3"]
+[ext_resource type="Texture2D" uid="uid://byqo7unvp5dig" path="res://sprites/Carta.png" id="9_fmxa3"]
 [ext_resource type="FontFile" uid="uid://bsikcrvoehepe" path="res://fonts/Spectral-Regular.ttf" id="10_55s7r"]
 [ext_resource type="FontFile" uid="uid://cww05vwhr0yqf" path="res://fonts/Spectral-Italic.ttf" id="11_58ess"]
 [ext_resource type="FontFile" uid="uid://rke8of3xkujm" path="res://fonts/Spectral-BoldItalic.ttf" id="12_00m0d"]
@@ -15,7 +15,7 @@
 [ext_resource type="Theme" uid="uid://yhek5gfshxwo" path="res://themes-fonts/buttons.tres" id="14_o87vs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rlslu"]
-size = Vector2(296, 221)
+size = Vector2(333, 250)
 
 [sub_resource type="Animation" id="Animation_saalr"]
 length = 0.001
@@ -120,7 +120,12 @@ _data = {
 "getSmaller": SubResource("Animation_p8tdy")
 }
 
-[sub_resource type="SystemFont" id="SystemFont_1pq6p"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ak8l7"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ghbw6"]
 size = Vector2(23.3766, 20.3045)
@@ -255,7 +260,7 @@ position = Vector2(432, 132)
 script = ExtResource("1_7ddfu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Letter"]
-position = Vector2(1, -0.5)
+position = Vector2(-2.5, 3)
 shape = SubResource("RectangleShape2D_rlslu")
 
 [node name="letterAnimator" type="AnimationPlayer" parent="Letter"]
@@ -264,22 +269,25 @@ libraries = {
 }
 
 [node name="Letter" type="Sprite2D" parent="Letter"]
-texture = ExtResource("1_uob8d")
+position = Vector2(-6, 4)
+scale = Vector2(0.530864, 0.530864)
+texture = ExtResource("2_0l2ob")
 
 [node name="Object" type="Sprite2D" parent="Letter/Letter"]
-position = Vector2(71, -19)
-scale = Vector2(0.160494, 0.160494)
+position = Vector2(169.535, -43.3256)
+scale = Vector2(0.302326, 0.302326)
 texture = ExtResource("2_gtvdf")
 
 [node name="Container" type="Control" parent="Letter/Letter"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -108.0
-offset_top = -81.0
-offset_right = -180.0
-offset_bottom = -135.0
+anchor_left = 0.206
+anchor_top = 0.119
+anchor_right = 0.522
+anchor_bottom = 0.825
+offset_left = -431.984
+offset_top = -242.834
+offset_right = -432.008
+offset_bottom = -242.95
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
@@ -295,8 +303,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_kn5up")
 theme_type_variation = &"main"
-theme_override_fonts/normal_font = SubResource("SystemFont_1pq6p")
-theme_override_font_sizes/normal_font_size = 10
+theme_override_fonts/normal_font = ExtResource("10_55s7r")
+theme_override_font_sizes/normal_font_size = 20
 text = "Texto to guapo
 "
 scroll_active = false
@@ -304,11 +312,21 @@ autowrap_mode = 0
 deselect_on_focus_loss_enabled = false
 
 [node name="Next" type="Button" parent="Letter/Letter"]
-offset_left = 64.0
-offset_top = 69.3333
-offset_right = 135.0
-offset_bottom = 100.333
+anchors_preset = -1
+anchor_left = -0.0461348
+anchor_top = -0.000143357
+anchor_right = 0.0163652
+anchor_bottom = 0.0389513
+offset_left = 145.349
+offset_top = 123.07
+offset_right = 235.349
+offset_bottom = 154.07
+theme = ExtResource("14_o87vs")
+theme_override_fonts/font = ExtResource("10_55s7r")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_ak8l7")
 text = "SIGUIENTE"
+metadata/_edit_use_anchors_ = true
 
 [node name="Cards" type="Node2D" parent="."]
 unique_name_in_owner = true
@@ -316,7 +334,7 @@ position = Vector2(0, 84)
 script = ExtResource("5_0875m")
 
 [node name="Card" type="Area2D" parent="Cards"]
-position = Vector2(216, 263)
+position = Vector2(200, 263)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("4_aeab4")
 
@@ -652,7 +670,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ab3v4")
 text = "X"
 
 [node name="Card3" type="Area2D" parent="Cards"]
-position = Vector2(648, 263)
+position = Vector2(664, 263)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("4_aeab4")
 

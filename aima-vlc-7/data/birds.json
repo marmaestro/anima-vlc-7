@@ -5,7 +5,7 @@
 			"common_name": "URRACA",
 			"scientific_name": "Pica Pica",
 			"traits": { "trait_1": "URRACA_1", "trait_2": "URRACA_2", "trait_3": "URRACA_3" },
-			"objects": { "object_1": "" }
+			"objects": { "object_1": "ESPEJO" }
 		  },
 
 		  {
@@ -13,7 +13,7 @@
 			"common_name": "GAVIOTA",
 			"scientific_name": "Larus Michahellis",
 			"traits": { "trait_1": "GAVIOTA_1", "trait_2": "GAVIOTA_2", "trait_3": "GAVIOTA_3" },
-			"objects": { "object_1": "" }
+			"objects": { "object_1": "PESCADO" }
 		  },
 
 		  {
@@ -21,7 +21,7 @@
 			"common_name": "PATO",
 			"scientific_name": "Anas Platyrhynchos",
 			"traits": { "trait_1": "PATO_1", "trait_2": "PATO_2", "trait_3": "PATO_3" },
-			"objects": { "object_1": "" }
+			"objects": { "object_1": "PAJARITA" }
 		  },
 
 		  {
@@ -29,7 +29,7 @@
 			"common_name": "GORRION",
 			"scientific_name": "Passer Domesticus",
 			"traits": { "trait_1": "GORRION_1", "trait_2": "GORRION_2", "trait_3": "GORRION_3" },
-			"objects": { "object_1": "" }
+			"objects": { "object_1": "LANGOSTA" }
 		  },
 
 		  {
@@ -37,7 +37,7 @@
 			"common_name": "COLIRROJO",
 			"scientific_name": "Phoenicurus Ochruros",
 			"traits": { "trait_1": "COLIRROJO_1", "trait_2": "COLIRROJO_2", "trait_3": "COLIRROJO_3" },
-			"objects": { "object_1": "" }
+			"objects": { "object_1": "PALA" }
 		  },
 
 		  {
@@ -45,7 +45,7 @@
 			"common_name": "VERDECILLO",
 			"scientific_name": "Serinus Serinus",
 			"traits": { "trait_1": "VERDECILLO_1", "trait_2": "VERDECILLO_2", "trait_3": "VERDECILLO_3" },
-			"objects": { "object_1": "" }
+			"objects": { "object_1": "SEMILLAS" }
 		  },
 
 		  {

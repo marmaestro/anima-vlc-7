@@ -33,7 +33,8 @@ Space={
 
 locale/translation_remaps={}
 locale/translations=PackedStringArray("res://translations/text_8.ca.translation", "res://translations/text_8.es.translation")
-locale/test="ca"
+locale/test="es"
+locale/fallback="ca"
 
 [rendering]
 

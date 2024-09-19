@@ -34,6 +34,7 @@ func generateNewBird() -> void:
 	if (!cards.isBirdInList(i)):
 		_bird = Bird.new(i)
 		_name.text = _bird.common_name
+		
 		_scientific.text = _bird.scientific_name
 		sprite.texture = _bird.picture
 		_description.text =  _bird.traits

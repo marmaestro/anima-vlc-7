@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://desl3ix1lirpt"]
+[gd_scene load_steps=28 format=3 uid="uid://desl3ix1lirpt"]
 
 [ext_resource type="Script" path="res://scripts/letter.gd" id="1_7ddfu"]
 [ext_resource type="Texture2D" uid="uid://c50hygp4axwhs" path="res://sprites/Letter.png" id="2_0l2ob"]
@@ -235,9 +235,6 @@ _data = {
 "small": SubResource("Animation_rr54h")
 }
 
-[sub_resource type="SystemFont" id="SystemFont_5bwjj"]
-subpixel_positioning = 0
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qqigk"]
 bg_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 10
@@ -427,12 +424,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_kn5up")
 theme_type_variation = &"main"
-theme_override_fonts/normal_font = SubResource("SystemFont_5bwjj")
+theme_override_fonts/normal_font = ExtResource("10_55s7r")
 theme_override_fonts/italics_font = ExtResource("11_58ess")
 theme_override_fonts/bold_italics_font = ExtResource("12_00m0d")
 theme_override_fonts/bold_font = ExtResource("13_m1pwu")
 theme_override_font_sizes/bold_italics_font_size = 18
-theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/normal_font_size = 18
 theme_override_font_sizes/bold_font_size = 20
 bbcode_enabled = true
 text = "[b][i]Streptopelia Decaocto[i][b]
@@ -595,12 +592,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_kn5up")
 theme_type_variation = &"main"
-theme_override_fonts/normal_font = SubResource("SystemFont_5bwjj")
+theme_override_fonts/normal_font = ExtResource("10_55s7r")
 theme_override_fonts/italics_font = ExtResource("11_58ess")
 theme_override_fonts/bold_italics_font = ExtResource("12_00m0d")
 theme_override_fonts/bold_font = ExtResource("13_m1pwu")
 theme_override_font_sizes/bold_italics_font_size = 18
-theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/normal_font_size = 18
 theme_override_font_sizes/bold_font_size = 20
 bbcode_enabled = true
 text = "[b][i]Streptopelia Decaocto[i][b]
@@ -763,12 +760,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_kn5up")
 theme_type_variation = &"main"
-theme_override_fonts/normal_font = SubResource("SystemFont_5bwjj")
+theme_override_fonts/normal_font = ExtResource("10_55s7r")
 theme_override_fonts/italics_font = ExtResource("11_58ess")
 theme_override_fonts/bold_italics_font = ExtResource("12_00m0d")
 theme_override_fonts/bold_font = ExtResource("13_m1pwu")
 theme_override_font_sizes/bold_italics_font_size = 18
-theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/normal_font_size = 18
 theme_override_font_sizes/bold_font_size = 20
 bbcode_enabled = true
 text = "[b][i]Streptopelia Decaocto[i][b]

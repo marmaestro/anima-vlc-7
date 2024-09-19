@@ -1,6 +1,6 @@
 extends Node2D
 
-const TOTAL_BIRDS : int = 6
+const TOTAL_BIRDS : int = 10
 var _birds : Array[Bird]
 var birdList : Array[int]
 

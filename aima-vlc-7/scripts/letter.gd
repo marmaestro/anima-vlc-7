@@ -1,5 +1,7 @@
 extends Area2D
 
+#var _trinket : Trinket
+
 @onready var cards: Node2D = %Cards
 @onready var letter_animator: AnimationPlayer = $letterAnimator
 @onready var next: Button = $Letter/Next
@@ -29,6 +31,8 @@ func _on_next_pressed() -> void:
 
 func generateLetter() -> void:
 	description.text = objects[randi_range(0,3)]
+	#_setText()
+	
 	letter_animator.play("big")
 	cardsInvisible()
 	
@@ -44,3 +48,12 @@ func cardsInvisible() -> void:
 func _on_select_button_pressed() -> void:
 	cards.clearBirdList()
 	generateLetter()
+
+#func _setText() -> void:
+	#_description.clear()
+	#_description.push_bold()
+	#_description.pop()
+	#_description.add_text(_trinket.name)
+	#
+	#_description.clear()
+	#_description.add_text(_trinket.description)

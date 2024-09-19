@@ -30,40 +30,45 @@
 			},
 			
 			{
+				"source": "sprites/trinkets/pala.png",
+				"name": "PALA",
+				"assigned_bird": "COLIRROJO",
+				"description":"PALA_D"
+			},
+			
+			{
 				"source": "sprites/trinkets/semillas.png",
 				"name": "SEMILLAS",
 				"assigned_bird": "VERDECILLO",
 				"description":"SEMILLAS_D"
 			},
+			
 			{
-				"source": "sprites/trinkets/semillas.png",
-				"name": "SEMILLAS",
+				"source": "sprites/trinkets/carta.png",
+				"name": "CARTA",
 				"assigned_bird": "PALOMA",
-				"description":"LANGOSTA_D"
+				"description":"CARTA_D"
 			},
+			
 			{
-				"source": "sprites/trinkets/semillas.png",
-				"name": "SEMILLAS",
+				"source": "sprites/trinkets/gafas.png",
+				"name": "GAFAS",
 				"assigned_bird": "TORTOLA",
-				"description":"LANGOSTA_D"
+				"description":"GAFAS_D"
 			},
+			
 			{
-				"source": "sprites/trinkets/semillas.png",
-				"name": "SEMILLAS",
+				"source": "sprites/trinkets/telegrafo.png",
+				"name": "TELEGRAFO",
 				"assigned_bird": "ABUBILLA",
-				"description":"LANGOSTA_D"
+				"description":"TELEGRAFO_D"
 			},
+			
 			{
-				"source": "sprites/trinkets/semillas.png",
-				"name": "SEMILLAS",
+				"source": "sprites/trinkets/mosquito.png",
+				"name": "MOSQUITO",
 				"assigned_bird": "LAVANDERA",
-				"description":"LANGOSTA_D"
-			},
-			{
-				"source": "sprites/trinkets/semillas.png",
-				"name": "SEMILLAS",
-				"assigned_bird": "LAVANDERA",
-				"description":"LANGOSTA_D"
-			},
+				"description":"MOSQUITO_D"
+			}
 		]
 }

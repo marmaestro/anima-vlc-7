@@ -1,29 +1,23 @@
 extends Area2D
 
-#var _trinket : Trinket
-
 @onready var cards: Node2D = %Cards
 @onready var letter_animator: AnimationPlayer = $letterAnimator
 @onready var next: Button = $Letter/Next
 @onready var card: Area2D = $"../Cards/Card"
 @onready var card_2: Area2D = $"../Cards/Card2"
 @onready var card_3: Area2D = $"../Cards/Card3"
-@onready var description: RichTextLabel = $Letter/Container/Description
+
 var _trinket
 @onready var _name: RichTextLabel = $Letter/Container2/Name
-
-var _assignedBird
+@onready var _description: RichTextLabel = $Letter/Container/Description
 
 var success : int = 0
 @onready var points: RichTextLabel = $Points
 
-var objects : Array = ["palo", "tomate", "lechuga", "moneda"]
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	points.text=str(success)
+	points.text = str(success)
 	generateLetter()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
@@ -41,12 +35,8 @@ func generateLetter() -> void:
 	var i : int = randi_range(0,9)
 	if (!cards.isTrinketInList(i)):
 		_trinket = Trinket.new(i)
-		_name.text = _trinket.name
-		_assignedBird = _trinket.assignedBird
-		description.text =  _trinket.description
+		_setText()
 	else: generateLetter()
-	
-	#_setText()
 	
 	letter_animator.play("big")
 	cardsInvisible()
@@ -61,30 +51,28 @@ func cardsInvisible() -> void:
 
 
 func _on_select_button1_pressed() -> void:
-	if(card.name == _assignedBird): addSuccess()
+	if(card.name == _trinket.assignedBird): addSuccess()
 	cards.clearBirdList()
 	generateLetter()
 
 func _on_select_button2_pressed() -> void:
-	if(card_2.name == _assignedBird): addSuccess()
+	if(card_2.name == _trinket.assignedBird): addSuccess()
 	cards.clearBirdList()
 	generateLetter()
 
 func _on_select_button3_pressed() -> void:
-	if(card_3.name == _assignedBird): addSuccess()
+	if(card_3.name == _trinket.assignedBird): addSuccess()
 	cards.clearBirdList()
 	generateLetter()
 
 func addSuccess()->void:
-	success+=1
-	points.text=str(success)
+	success += 1
+	points.text = str(success)
 
-#func _setText() -> void:
-	#_description.clear()
-	#_description.push_bold()
-	#_description.pop()
-	#_description.add_text(_trinket.name)
-	#
-	#_description.clear()
-	#_description.add_text(_trinket.description)
-
+func _setText() -> void:	
+	_name.clear()
+	_name.push_bold()
+	_name.add_text(_trinket.name)
+	
+	_description.clear()
+	_description.add_text(_trinket.description)

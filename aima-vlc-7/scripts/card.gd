@@ -14,14 +14,10 @@ var isBig : bool = false
 @onready var select_button : Button = $SelectButton
 @onready var cards : Node2D = %Cards
 	
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	size_animator.play("small")
 	exit_button.visible = false
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
@@ -55,15 +51,12 @@ func animationSmall() -> void:
 	size_animator.play("getSmaller")
 	
 func _setNames() -> void:
-	
 	_name.clear()
 	_name.push_bold()
-	_name.pop()
 	_name.add_text(_bird.common_name)
 	
 	_scientific.clear()
 	_scientific.push_bold_italics()
-	_scientific.pop()
 	_scientific.add_text(_bird.scientific_name)
 	
 	_description.clear()

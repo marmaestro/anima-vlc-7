@@ -6,13 +6,11 @@ var birdList : Array[int]
 var _trinkets : Array[Trinket]
 var trinketList : Array[int]
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for i in TOTAL_BIRDS:
 		_birds.append(Bird.new(i))
 		_trinkets.append(Trinket.new(i))
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 

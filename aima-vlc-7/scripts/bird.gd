@@ -8,7 +8,7 @@ var traits
 
 func _init(index : int):
 	_identifier = index
-	var json = load("res://data/birds.json")
+	var json = load("res://databases/birds.json")
 	var data = json.data.birds[index]
 	
 	picture = load("res://" + data.source)

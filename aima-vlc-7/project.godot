@@ -21,13 +21,6 @@ window/size/viewport_width=864
 window/size/viewport_height=486
 window/stretch/mode="canvas_items"
 
-[importer_defaults]
-
-csv_translation={
-"compress": true,
-"delimiter": 1
-}
-
 [input]
 
 Space={
@@ -39,9 +32,8 @@ Space={
 [internationalization]
 
 locale/translation_remaps={}
-locale/translations=PackedStringArray("res://data/translations/text_5.es.translation", "res://data/translations/text_5.ca.translation")
+locale/translations=PackedStringArray("res://translations/text_8.ca.translation", "res://translations/text_8.es.translation")
 locale/test="ca"
-locale/fallback="ca"
 
 [rendering]
 

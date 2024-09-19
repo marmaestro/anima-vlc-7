@@ -1,0 +1,64 @@
+keys,ca,es
+URRACA,Garsa,Urraca
+GAVIOTA,Gavià,Gaviota
+PATO,Collverd,Ánade Azulón
+GORRION,Teuladí,Gorrión
+COLIRROJO,Cotxa Fumada,Colirrojo Tizón
+VERDECILLO,Gafarró,Verdecillo
+PALOMA,Colom,Paloma
+TORTOLA,Tórtola,Tórtora
+ABUBILLA,Puput,Abubilla
+LAVANDERA,Cuereta Blanca,Lavandera Blanca
+URRACA_1,"Molt intel·ligent, l'agraden els problemes nous.","Muy inteligente, le gustan los problemas nuevos."
+URRACA_2,Treballa en equip. Es junta amb companyes per a menjar i defendre's.,Trabaja en equipo. Se junta con compañeras para comer y defenderse.
+URRACA_3,"Es reconeix a si mateixa i fa usar ferramentes, com els primats.","Se reconoce a sí misma y utiliza herramientas, como los primates."
+GAVIOTA_1,Territorial i molt agressiva. No li agraden els desconeguts.,Teritorial y muy agresiva. No le gustan los desconocidos.
+GAVIOTA_2,Preferix menjar peixos menuts i petits mamífers com ratolíns.,Prefiere comer peces pequeños y mamímeros como ratones.
+GAVIOTA_3,Viu en qualsevol lloc. N'hi ha exemplars fins a la meseta.,Vive en cualquier sitio. Hay ejemplares en la meseta.
+PATO_1,"Descomfiat, no deixa que cap humà s'aprope molt a ell o la seva familia.","Desconfiado, no deja que los humanos se acerquen."
+PATO_2,Molt elegant. La seva dansa nupcial és coneguda per ser esplendorosa.,Muy elegante. Su danza nupcial es esplendorosa y conocida.
+PATO_3,Fan la sesta durant la vesprada i a mengen quan cau la nit.,Echan la siesta por la tarde y comen al caer la noche.
+GORRION_1,"Eixerut i curiòs, s'apropa molt als humans.","Vivaracho y curioso, se acerca mucho a los humanos."
+GORRION_2,"Habita totes les ciutats del país, i menja del que mengem nosaltes.",Habita en todas las ciudades del país y come nuestras sobras.
+GORRION_3,Ajuda a control·lar plagues menjant-se-les.,Ayuda a mitigar las plagas con su dieta.
+COLIRROJO_1,"Molt tranquil, àgil i curiòs.","Muy tranquilo, ágil y curioso."
+COLIRROJO_2,Li agraden els humans i acostuma a seguir-los pels camps.,Le gustan los humanos y suele seguirlos por los campos.
+COLIRROJO_3,Caça insectes tirant-se sobre ells.,Caza insectos abalanzándose sobre ellos.
+VERDECILLO_1,Sempre canta el primer per que s'apropa la primavera.,Siempre es el primero en cantar porque llega la primavera.
+VERDECILLO_2,"El seu vol nupcial és com el de les papallones, afilat i ràpid.","Su vuelo nupcial es como el de las mariposas, afilado y ágil."
+VERDECILLO_3,Menja llavors d'herbes anuals.,Come semillas de hierbas anuales.
+PALOMA_1,Ha sigut el carter de l'humanitat durant segles.,Ha mandado mensajes para la humanidad durante siglos.
+PALOMA_2,El millor orientant-se però preferix quedar-se prop de casa.,"La mejor orientándose, pero prefiere quedarse cerca de casa."
+PALOMA_3, , 
+TORTOLA_1,La cosina estrangera del colom.,La prima estranjera de la paloma.
+TORTOLA_2,Va arribar durant els 70 i ara viu a tot el país.,Llegó duante los 70 y ahora vive en todo el país.
+TORTOLA_3,"Molt solitària, tret de quan fa niu amb la seva parella.","Muy solitaria, menos cuando hace el nido con su pareja."
+ABUBILLA_1,Viu a entorns secs com deheses.,Vive en entornos secos como dehesas.
+ABUBILLA_2,El seu so tan particular és conegut arreu del món.,Se conoce su particular canto en todo el mundo.
+ABUBILLA_3,Menja insectes que escarva del terra.,Come insectos que desentierra.
+LAVANDERA_1,Mou la cua constantment amunt i avall.,Mueve la cola constantemente arriba y abajo.
+LAVANDERA_2,El seu nom en altres països es per aquest curiòs tret.,Su nombre en otros paises viene derivado de este curioso rasgo.
+LAVANDERA_3,Sempre és prop d'aigua i s'alimenta d'insectes que l'habiten.,Siempre está cerca del agua y se alimenta de insectos que la habitan.
+SIGUIENTE,Següent,Siguiente
+SELECCIONAR,Seleccionar,Selecionar
+NOMBRE_JUEGO,Ocells macos,Pollos bonicos
+ESPEJO,Espill llis,Espejo liso
+PESCADO,Peix fresc,Pescado fresco
+PAJARITA,Corbata refinada,Pajarita refinada
+LANGOSTA,Llagosta invasora,Langosta invasora
+PALA,Pala de jardí,Pala de jardín
+SEMILLAS,Llavors temporeres,Semillas de temporada
+CARTA,Carta privada,Carta privada
+GAFAS,Ulleres de sol,Gafas de sol
+TELEGRAFO,Telègraf,Telégrafo
+MOSQUITO,Larves de mosquit,Larvas de mosquito
+ESPEJO_D,Un mirall petit però prou net. Qualsevol diuria que algú l'ha oblidat ací al costat.,Un espejo pequeño pero muy limpio. Cualquiera diría que alguien lo ha olvidado aquí al lado.
+PESCADO_D,Una llissa amb aspecte d'haver sigut capturada fa un tres i no res. Seria una pena que es desperdiciara. Qui podría aprofitarla millor?,Un mújol con aspecto de haber sido capturado hace nada de nada. Sería una pena que se desperdiciara. ¿Quién podría aprovecharlo mejor?
+PAJARITA_D,"Un bon accesori per a una festa refinada però, què va a fer un pardal amb açó? Suposso que un niu més mullit i romàntic...",Un buen accesorio para una fiesta refinada pero ¿qué hace un ave con esto? Supongo que un nido muy mullido y romántico...
+LANGOSTA_D,"Un exemplar de saltamartí a la seva fase gregària. Durant uns mesos a l'any, totes les llagostes s'ajunten i viuen en comunitat. Són el malson de qualsevol llaurador.","Un ejemplar de saltamontes en su fase gregaria. Durante unos meses al año, todas las langostas se juntan y viven en comunidad. Son la pesadilla de cualquier agricultor."
+PALA_D,"Una petita pala de jardí, perfecta per a traure petites coses del terra. Diria jo que es, i tot, massa petita. Ha de ser d'alguna criatura que està aprenent al jardí.","Una pequeña pala de jardín, perfecta para sacar pequeñas cosas de tierra. Diría yo que es, de hecho, demasiado pequeña. Debe de ser de alguna criatura que está aprendiendo en el jardín."
+SEMILLAS_D,"Un grapat de llavors petites. Fan un olor molt bó. Crec que ha de ser romaní, és una herba molt comuna en València i és coneguda pel seu aroma.","Un puñado de semillas pequeñas. Huelen muy bien. Creo que debe de ser romero, es una hierba muy común en Valencia y és conocida por su aroma."
+CARTA_D,Una peça de paper enrotllat sobre si mateix i atat amb un cordell. Pareix que n'hi ha alguna cosa escrita...,Un trozo de papel enrollado sobre sí mismo y atado con un cordel. Parece que hay algo escrito...
+GAFAS_D,"Unes ulleres prou maques i amb aspecte retro. Parèixen de fa cinquanta anys. Quina època, oi que sí?","Unas gafas bien monas y con aspecto retro. Parecen de hace cincuenta años. Qué epoca, ¿verdad?"
+TELEGRAFO_D,"Un aparat mecànic inventat al segle XIX per a comunicar-se ràpidament. Es manen senyals elèctriques amb una petita palanca, codificades en el famós Codi Morse.\n.--. ..- .--. ..- - ","Un aparato mecánico inventado en el siglo XIX para comunicarse rápidamente. Se mandan señales eléctricas con una pequeña palanca, codificadas en el famoso Código Morse.\n.- -... ..- -... .. .-.. .-.. .-"
+MOSQUITO_D,"Unes criatures diminutes en un glop d'aigua. Aquests animalets estan a la segona fase de la metamorfòsi del mosquit, i viuen en aigües estancades.","Unas criaturas diminutas en un charquito de agua. Estos animalillos están en la segunda fase de la metamorfosis del mosquito, y viven en aguas estancadas."

@@ -1,0 +1,44 @@
+keys,ca,es
+URRACA,Garsa,Urraca
+GAVIOTA,Gavià,Gaviota
+PATO,Collverd,Ánade Azulón
+GORRION,Teuladí,Gorrión
+COLIRROJO,Cotxa Fumada,Colirrojo Tizón
+VERDECILLO,Gafarró,Verdecillo
+PALOMA,Colom,Paloma
+TORTOLA,Tórtola,Tórtora
+ABUBILLA,Puput,Abubilla
+LAVANDERA,Cuereta Blanca,Lavandera Blanca
+URRACA_1,"Molt intel·ligent, l'agraden els problemes nous.","Muy inteligente, le gustan los problemas nuevos."
+URRACA_2,Treballa en equip. Es junta amb companyes per a menjar i defendre's.,Trabaja en equipo. Se junta con compañeras para comer y defenderse.
+URRACA_3,"Es reconeix a si mateixa i pensa en noves ferramentes, com els primats.","Se reconoce a sí misma y piensa en nuevas herramientas, como los primates."
+GAVIOTA_1,Territorial i molt agressiva. No li agraden els desconeguts.,Teritorial y muy agresiva. No le gustan los desconocidos.
+GAVIOTA_2,Preferix menjar peixos menuts i petits mamífers com ratolíns.,Prefiere comer peces pequeños y mamímeros como ratones.
+GAVIOTA_3,Viu en qualsevol lloc. N'hi ha exemplars fins a la meseta.,Vive en cualquier sitio. Hay ejemplares en la meseta.
+PATO_1,"Descomfiat, no deixa que cap humà s'aprope molt a ell o la seva familia.","Desconfiado, no deja que los humanos se acerquen."
+PATO_2,Molt elegant. La seva dansa nupcial és coneguda per ser esplendorosa.,Muy elegante. Su danza nupcial es esplendorosa y conocida.
+PATO_3,Fan la sesta durant la vesprada i a mengen quan cau la nit.,Echan la siesta por la tarde y comen al caer la noche.
+GORRION_1,"Eixerut i curiòs, s'apropa molt als humans.","Vivaracho y curioso, se acerca mucho a los humanos."
+GORRION_2,"Habita totes les ciutats del país, i menja del que mengem nosaltes.",Habita en todas las ciudades del país y come nuestras sobras.
+GORRION_3,Ajuda a control·lar plagues menjant-se-les.,Ayuda a mitigar las plagas con su dieta.
+COLIRROJO_1,"Molt tranquil, àgil i curiòs.","Muy tranquilo, ágil y curioso."
+COLIRROJO_2,Li agraden els humans i acostuma a seguir-los pels camps.,Le gustan los humanos y suele seguirlos por los campos.
+COLIRROJO_3,Caça insectes tirant-se sobre ells.,Caza insectos abalanzándose sobre ellos.
+VERDECILLO_1,Sempre canta el primer per que s'apropa la primavera.,Siempre es el primero en cantar porque llega la primavera.
+VERDECILLO_2,"El seu vol nupcial és com el de les papallones, afilat i ràpid.","Su vuelo nupcial es como el de las mariposas, afilado y ágil."
+VERDECILLO_3,Menja semilles d'herbes de temporada.,Come semillas de hierbas de temporada.
+PALOMA_1,P1,P1
+PALOMA_2,P2,P2
+PALOMA_3,P3,P3
+TORTOLA_1,T1,T1
+TORTOLA_2,T2,T2
+TORTOLA_3,T3,T3
+ABUBILLA_1,A1,A1
+ABUBILLA_2,A2,A2
+ABUBILLA_3,A3,A3
+LAVANDERA_1,L1,L1
+LAVANDERA_2,L2,L2
+LAVANDERA_3,L3,L3
+SIGUIENTE,Següent,Siguiente
+SELECCIONAR,Seleccionar,Selecionar
+NOMBRE_JUEGO,Ocells macos,Pollos bonicos

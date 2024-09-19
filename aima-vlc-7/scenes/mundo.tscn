@@ -284,7 +284,8 @@ theme = ExtResource("2_kn5up")
 theme_type_variation = &"main"
 theme_override_fonts/normal_font = SubResource("SystemFont_1pq6p")
 theme_override_font_sizes/normal_font_size = 10
-text = "Texto to guapo"
+text = "Texto to guapo
+"
 scroll_active = false
 autowrap_mode = 0
 deselect_on_focus_loss_enabled = false

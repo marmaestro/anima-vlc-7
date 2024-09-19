@@ -10,10 +10,8 @@ config_version=5
 
 [application]
 
-config/name="aima-vlc-7"
-config/name_localized={
-"ca": "Piulada"
-}
+config/name="NOMBRE_JUEGO"
+config/version="0.1"
 run/main_scene="res://scenes/mundo.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 
@@ -40,10 +38,10 @@ Space={
 
 [internationalization]
 
-locale/translation_remaps={
-"res://data/translations/translation_1.csv": PackedStringArray()
-}
-locale/translations=PackedStringArray("res://data/translations/translation_0.csv", "res://data/translations/translation_1.csv")
+locale/translation_remaps={}
+locale/translations=PackedStringArray("res://data/translations/text_5.es.translation", "res://data/translations/text_5.ca.translation")
+locale/test="ca"
+locale/fallback="ca"
 
 [rendering]
 

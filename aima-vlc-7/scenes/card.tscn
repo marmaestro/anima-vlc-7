@@ -290,7 +290,7 @@ offset_bottom = 176.0
 theme = ExtResource("5_mixft")
 theme_override_fonts/font = ExtResource("5_2to82")
 theme_override_styles/normal = SubResource("StyleBoxFlat_qqigk")
-text = "SELECIONAR"
+text = "SELECCIONAR"
 
 [node name="ExitButton" type="Button" parent="."]
 offset_left = 90.0

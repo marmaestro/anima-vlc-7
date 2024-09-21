@@ -10,7 +10,8 @@ extends Area2D
 var _trinket
 @onready var _name: RichTextLabel = $Letter/Container2/Name
 @onready var _description: RichTextLabel = $Letter/Container/Description
-@onready var _sprite: Sprite2D = $"../Cards/Card/CardImage/Sprite"
+@onready var _sprite: Sprite2D = $Letter/Object
+
 
 var success : int = 0
 @onready var points: RichTextLabel = $Points

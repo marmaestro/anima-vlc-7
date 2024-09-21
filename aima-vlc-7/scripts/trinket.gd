@@ -2,6 +2,7 @@ class_name Trinket extends Object
 
 var _identifier
 var picture
+var scale
 var name
 var description
 var assignedBird
@@ -13,6 +14,7 @@ func _init(index : int):
 	
 	
 	picture = load("res://" + data.source)
+	scale = Vector2(data.scale, data.scale)
 	name = tr(data.name)
 	description = tr(data.description)
 	assignedBird = data.assigned_bird

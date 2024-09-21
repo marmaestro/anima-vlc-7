@@ -5,70 +5,80 @@
 				"source": "sprites/trinkets/espejo.png",
 				"name": "ESPEJO",
 				"assigned_bird": "URRACA",
-				"description":"ESPEJO_D"
+				"description":"ESPEJO_D",
+				"scale": 0.577
 			},
 			
 			{
 				"source": "sprites/trinkets/pescado.png",
 				"name": "PESCADO",
 				"assigned_bird": "GAVIOTA",
-				"description":"PESCADO_D"
+				"description":"PESCADO_D",
+				"scale": 0.432
 			},
 			
 			{
 				"source": "sprites/trinkets/pajarita.png",
 				"name": "PAJARITA",
 				"assigned_bird": "PATO",
-				"description":"PAJARITA_D"
+				"description":"PAJARITA_D",
+				"scale": 0.497
 			},
 			
 			{
 				"source": "sprites/trinkets/espejo.png",
 				"name": "LANGOSTA",
 				"assigned_bird": "GORRION",
-				"description":"LANGOSTA_D"
+				"description":"LANGOSTA_D",
+				"scale": 1
 			},
 			
 			{
 				"source": "sprites/trinkets/pala.png",
 				"name": "PALA",
 				"assigned_bird": "COLIRROJO",
-				"description":"PALA_D"
+				"description":"PALA_D",
+				"scale": 0.442
 			},
 			
 			{
 				"source": "sprites/trinkets/semillas.png",
 				"name": "SEMILLAS",
 				"assigned_bird": "VERDECILLO",
-				"description":"SEMILLAS_D"
+				"description":"SEMILLAS_D",
+				"scale": 0.747
 			},
 			
 			{
 				"source": "sprites/trinkets/carta.png",
 				"name": "CARTA",
 				"assigned_bird": "PALOMA",
-				"description":"CARTA_D"
+				"description":"CARTA_D",
+				"scale": 0.757
 			},
 			
 			{
 				"source": "sprites/trinkets/gafas.png",
 				"name": "GAFAS",
 				"assigned_bird": "TORTOLA",
-				"description":"GAFAS_D"
+				"description":"GAFAS_D",
+				"scale": 0.397
 			},
 			
 			{
 				"source": "sprites/trinkets/espejo.png",
 				"name": "TELEGRAFO",
 				"assigned_bird": "ABUBILLA",
-				"description":"TELEGRAFO_D"
+				"description":"TELEGRAFO_D",
+				"scale": 1
 			},
 			
 			{
 				"source": "sprites/trinkets/espejo.png",
 				"name": "MOSQUITO",
 				"assigned_bird": "LAVANDERA",
-				"description":"MOSQUITO_D"
+				"description":"MOSQUITO_D",
+				"scale": 1
 			}
 		]
 }

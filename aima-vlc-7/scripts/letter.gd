@@ -37,8 +37,7 @@ func generateLetter() -> void:
 	var i : int = randi_range(0,9)
 	if (!cards.isTrinketInList(i)):
 		_trinket = Trinket.new(i)
-		_setText()
-		_sprite.texture = _trinket.picture
+		_setLetter()
 	else: generateLetter()
 	
 	letter_animator.play("big")
@@ -72,10 +71,13 @@ func addSuccess()->void:
 	success += 1
 	points.text = str(success)
 
-func _setText() -> void:	
+func _setLetter() -> void:	
 	_name.clear()
 	_name.push_bold()
 	_name.add_text(_trinket.name)
 	
 	_description.clear()
 	_description.add_text(_trinket.description)
+	
+	_sprite.texture = _trinket.picture
+	_sprite.scale = _trinket.scale

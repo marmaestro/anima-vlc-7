@@ -11,7 +11,9 @@ func _init(index : int):
 	var json = load("res://databases/trinkets.json")
 	var data = json.data.trinkets[index]
 	
+	
 	picture = load("res://" + data.source)
 	name = tr(data.name)
 	description = tr(data.description)
 	assignedBird = data.assigned_bird
+	

@@ -10,6 +10,7 @@ extends Area2D
 var _trinket
 @onready var _name: RichTextLabel = $Letter/Container2/Name
 @onready var _description: RichTextLabel = $Letter/Container/Description
+@onready var _sprite: Sprite2D = $"../Cards/Card/CardImage/Sprite"
 
 var success : int = 0
 @onready var points: RichTextLabel = $Points
@@ -36,6 +37,7 @@ func generateLetter() -> void:
 	if (!cards.isTrinketInList(i)):
 		_trinket = Trinket.new(i)
 		_setText()
+		_sprite.texture = _trinket.picture
 	else: generateLetter()
 	
 	letter_animator.play("big")

@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://bmfaip8ulc0n" path="res://sprites/birds/pfp/pfp_urraca.png" id="14_j21fi"]
 [ext_resource type="Texture2D" uid="uid://b6f4dajxv8qfm" path="res://sprites/bg/bg.png" id="14_muqyq"]
 [ext_resource type="Theme" uid="uid://yhek5gfshxwo" path="res://themes/buttons.tres" id="14_o87vs"]
-[ext_resource type="PackedScene" path="res://scenes/titol.tscn" id="15_2m7bk"]
+[ext_resource type="PackedScene" uid="uid://cio4akd3iimy4" path="res://scenes/titol.tscn" id="15_2m7bk"]
 [ext_resource type="Texture2D" uid="uid://big5m7cp1rcyl" path="res://sprites/birds/pfp/pfp_gaviota.png" id="15_gvgjg"]
 [ext_resource type="Texture2D" uid="uid://buc6fgmkr318g" path="res://sprites/birds/pfp/pfp_pato.png" id="16_p8wmv"]
 [ext_resource type="Texture2D" uid="uid://cd4i0ls3wky10" path="res://sprites/birds/pfp/pfp_gorrion.png" id="17_lce8v"]
@@ -25,7 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://csblojoq2g2xk" path="res://sprites/birds/pfp/pfp_paloma.png" id="21_raods"]
 [ext_resource type="Texture2D" uid="uid://bv2tlt7n1vpfg" path="res://sprites/birds/pfp/pfp_abubilla.png" id="22_tutr5"]
 [ext_resource type="Texture2D" uid="uid://nbgj0r51n2g" path="res://sprites/birds/pfp/pfp_lavandera.png" id="23_irfci"]
-[ext_resource type="PackedScene" path="res://scenes/traducciones.tscn" id="25_mhcfv"]
+[ext_resource type="PackedScene" uid="uid://bj4odearpjxm1" path="res://scenes/traducciones.tscn" id="25_mhcfv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rlslu"]
 size = Vector2(333, 250)

@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://bj4odearpjxm1"]
+
+[ext_resource type="Texture2D" uid="uid://d4mnhqv6t217f" path="res://sprites/bg/negro.png" id="1_f4kb1"]
+[ext_resource type="Script" path="res://scripts/traducciones.gd" id="1_ois2c"]
+[ext_resource type="Theme" uid="uid://yhek5gfshxwo" path="res://themes/buttons.tres" id="2_r36lf"]
+[ext_resource type="FontFile" uid="uid://b3dxbwaivdqwl" path="res://fonts/Spectral-Bold.ttf" id="3_vvl4m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ififr"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0gpsw"]
+bg_color = Color(0, 0, 0, 0)
+
+[node name="traducciones" type="Node2D"]
+script = ExtResource("1_ois2c")
+
+[node name="bg" type="Sprite2D" parent="."]
+texture = ExtResource("1_f4kb1")
+
+[node name="VALENCIA" type="Button" parent="."]
+offset_left = -432.0
+offset_top = -86.0
+offset_right = 432.0
+offset_bottom = -24.0
+theme = ExtResource("2_r36lf")
+theme_override_fonts/font = ExtResource("3_vvl4m")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ififr")
+text = "VALENCIÀ"
+
+[node name="CASTELLANO" type="Button" parent="."]
+offset_left = -432.0
+offset_top = 28.0
+offset_right = 432.0
+offset_bottom = 90.0
+theme = ExtResource("2_r36lf")
+theme_override_fonts/font = ExtResource("3_vvl4m")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_0gpsw")
+text = "CASTELLANO"
+
+[connection signal="pressed" from="VALENCIA" to="." method="_on_valencia_pressed"]
+[connection signal="pressed" from="CASTELLANO" to="." method="_on_castellano_pressed"]

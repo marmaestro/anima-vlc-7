@@ -1073,7 +1073,6 @@ texture = ExtResource("23_irfci")
 
 [node name="Titol" type="Node2D" parent="."]
 unique_name_in_owner = true
-visible = false
 position = Vector2(432, 243)
 script = ExtResource("25_emycy")
 
@@ -1106,7 +1105,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_3rssd")
 text = "JUGAR"
 
 [node name="Traducciones" type="Node2D" parent="."]
-visible = false
 position = Vector2(432, 243)
 script = ExtResource("29_dkbav")
 

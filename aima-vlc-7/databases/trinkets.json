@@ -31,7 +31,7 @@
 			{
 				"id": 3,
 				"bird_ids": [6,3,7],
-				"source": "sprites/card.png",
+				"source": "sprites/carta.png",
 				"scale": 1,
 				"name": "LANGOSTA",
 				"description":"LANGOSTA_D"
@@ -76,7 +76,7 @@
 			{
 				"id": 8,
 				"bird_ids": [6,0,8],
-				"source": "sprites/card.png",
+				"source": "sprites/carta.png",
 				"scale": 1,
 				"name": "TELEGRAFO",
 				"description":"TELEGRAFO_D"
@@ -85,7 +85,7 @@
 			{
 				"id": 9,
 				"bird_ids": [2,5,9],
-				"source": "sprites/card.png",
+				"source": "sprites/carta.png",
 				"scale": 1,
 				"name": "MOSQUITO",
 				"description":"MOSQUITO_D"

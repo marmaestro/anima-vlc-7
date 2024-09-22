@@ -557,6 +557,8 @@ theme_override_fonts/font = ExtResource("10_55s7r")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ab3v4")
 text = "X"
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Game/Cards/Card"]
+
 [node name="Card2" type="Area2D" parent="Game/Cards"]
 position = Vector2(432, 263)
 scale = Vector2(0.5, 0.5)
@@ -715,6 +717,8 @@ theme = ExtResource("14_o87vs")
 theme_override_fonts/font = ExtResource("10_55s7r")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ab3v4")
 text = "X"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Game/Cards/Card2"]
 
 [node name="Card3" type="Area2D" parent="Game/Cards"]
 position = Vector2(664, 263)
@@ -876,6 +880,8 @@ theme_override_fonts/font = ExtResource("10_55s7r")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ab3v4")
 text = "X"
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Game/Cards/Card3"]
+
 [node name="Graph" type="Node2D" parent="Game"]
 script = ExtResource("14_c5222")
 
@@ -1022,6 +1028,11 @@ position = Vector2(432, 243)
 
 [node name="Traducciones" parent="." instance=ExtResource("25_mhcfv")]
 position = Vector2(432, 243)
+
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+
+[node name="ButtonSounds" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
 
 [connection signal="pressed" from="Game/Letter/Letter/Next" to="Game/Letter" method="_on_next_pressed"]
 [connection signal="mouse_shape_entered" from="Game/Cards/Card" to="Game/Cards/Card" method="_on_mouse_shape_entered"]

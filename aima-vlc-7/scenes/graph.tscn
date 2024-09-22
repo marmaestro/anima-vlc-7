@@ -1,134 +1,134 @@
 [gd_scene load_steps=11 format=3 uid="uid://d0pcrmptf0yow"]
 
-[ext_resource type="Texture2D" uid="uid://b62bnfdyg0fy1" path="res://sprites/birds/colirrojo.png" id="2_anuug"]
-[ext_resource type="Texture2D" uid="uid://c1jvna8y80ihc" path="res://sprites/birds/urraca.png" id="2_uus52"]
-[ext_resource type="Texture2D" uid="uid://cuqdgi71u3oo6" path="res://sprites/birds/gaviota.png" id="3_3ok38"]
-[ext_resource type="Texture2D" uid="uid://c57du0b3ap7kc" path="res://sprites/birds/pato.png" id="4_h53iw"]
-[ext_resource type="Texture2D" uid="uid://boi2812xarodr" path="res://sprites/birds/gorrion.png" id="5_qfk0o"]
-[ext_resource type="Texture2D" uid="uid://bt8d405r2xxhj" path="res://sprites/birds/verdecillo.png" id="7_p6hua"]
-[ext_resource type="Texture2D" uid="uid://bht18dn53dl51" path="res://sprites/birds/tortola.png" id="8_4b5a6"]
-[ext_resource type="Texture2D" uid="uid://bya7m6u5ubbjy" path="res://sprites/birds/paloma.png" id="9_i74sc"]
-[ext_resource type="Texture2D" uid="uid://gxgy7nglcbio" path="res://sprites/birds/abubilla.png" id="10_lgxgo"]
-[ext_resource type="Texture2D" uid="uid://x7nnwjhi3tuu" path="res://sprites/birds/lavandera.png" id="11_ve0db"]
+[ext_resource type="Texture2D" uid="uid://bmfaip8ulc0n" path="res://sprites/birds/pfp/pfp_urraca.png" id="1_8sfyv"]
+[ext_resource type="Texture2D" uid="uid://big5m7cp1rcyl" path="res://sprites/birds/pfp/pfp_gaviota.png" id="2_f1t34"]
+[ext_resource type="Texture2D" uid="uid://buc6fgmkr318g" path="res://sprites/birds/pfp/pfp_pato.png" id="3_udjbb"]
+[ext_resource type="Texture2D" uid="uid://cd4i0ls3wky10" path="res://sprites/birds/pfp/pfp_gorrion.png" id="4_c1f8t"]
+[ext_resource type="Texture2D" uid="uid://benqjuq45s8o7" path="res://sprites/birds/pfp/pfp_collirojo.png" id="5_yrjop"]
+[ext_resource type="Texture2D" uid="uid://cqg4x8v3x8e4a" path="res://sprites/birds/pfp/pfp_verdecillo.png" id="6_tvvdy"]
+[ext_resource type="Texture2D" uid="uid://35u2l7pvso3i" path="res://sprites/birds/pfp/pfp_tortola.png" id="7_wnsfc"]
+[ext_resource type="Texture2D" uid="uid://csblojoq2g2xk" path="res://sprites/birds/pfp/pfp_paloma.png" id="8_os44x"]
+[ext_resource type="Texture2D" uid="uid://bv2tlt7n1vpfg" path="res://sprites/birds/pfp/pfp_abubilla.png" id="9_05rk5"]
+[ext_resource type="Texture2D" uid="uid://nbgj0r51n2g" path="res://sprites/birds/pfp/pfp_lavandera.png" id="10_nr8iu"]
 
 [node name="Graph" type="Node2D"]
 
 [node name="Urraca" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 206.0
-offset_top = 180.0
-offset_right = 206.0
-offset_bottom = 180.0
-scale = Vector2(0.25935, 0.25935)
+offset_left = 187.0
+offset_top = 172.0
+offset_right = 187.0
+offset_bottom = 172.0
+scale = Vector2(0.304817, 0.304817)
 
 [node name="Sprite2D" type="Sprite2D" parent="Urraca"]
-texture = ExtResource("2_uus52")
+texture = ExtResource("1_8sfyv")
 
 [node name="Gaviota" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 726.0
-offset_top = 202.0
-offset_right = 726.0
-offset_bottom = 202.0
-scale = Vector2(0.311745, 0.311745)
+offset_left = 747.0
+offset_top = 233.0
+offset_right = 747.0
+offset_bottom = 233.0
+scale = Vector2(0.394737, 0.394737)
 
 [node name="Sprite2D" type="Sprite2D" parent="Gaviota"]
-texture = ExtResource("3_3ok38")
+texture = ExtResource("2_f1t34")
 
 [node name="Pato" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 159.0
-offset_top = 340.0
-offset_right = 159.0
-offset_bottom = 340.0
-scale = Vector2(0.27474, 0.27474)
+offset_left = 173.0
+offset_top = 356.0
+offset_right = 173.0
+offset_bottom = 356.0
+scale = Vector2(0.333143, 0.333143)
 
 [node name="Sprite2D" type="Sprite2D" parent="Pato"]
-texture = ExtResource("4_h53iw")
+texture = ExtResource("3_udjbb")
 
 [node name="Gorrion" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 531.0
-offset_top = 243.0
-offset_right = 531.0
-offset_bottom = 243.0
-scale = Vector2(0.114432, 0.114432)
+offset_left = 530.0
+offset_top = 303.0
+offset_right = 530.0
+offset_bottom = 303.0
+scale = Vector2(0.17032, 0.17032)
 
 [node name="Sprite2D" type="Sprite2D" parent="Gorrion"]
-texture = ExtResource("5_qfk0o")
+texture = ExtResource("4_c1f8t")
 
 [node name="Colirrojo" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 530.0
-offset_top = 102.0
-offset_right = 530.0
-offset_bottom = 102.0
-scale = Vector2(0.131435, 0.131435)
+offset_left = 581.0
+offset_top = 135.0
+offset_right = 581.0
+offset_bottom = 135.0
+scale = Vector2(0.19615, 0.19615)
 
 [node name="Sprite2D" type="Sprite2D" parent="Colirrojo"]
-texture = ExtResource("2_anuug")
+texture = ExtResource("5_yrjop")
 
 [node name="Verdecillo" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 674.0
-offset_top = 53.0
-offset_right = 674.0
-offset_bottom = 53.0
-scale = Vector2(0.103781, 0.103781)
+offset_left = 679.0
+offset_top = 85.0
+offset_right = 679.0
+offset_bottom = 85.0
+scale = Vector2(0.168587, 0.168587)
 
 [node name="Sprite2D" type="Sprite2D" parent="Verdecillo"]
-texture = ExtResource("7_p6hua")
+texture = ExtResource("6_tvvdy")
 
 [node name="Tortola" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 584.0
-offset_top = 373.0
-offset_right = 584.0
-offset_bottom = 373.0
-scale = Vector2(0.248371, 0.248371)
+offset_left = 612.0
+offset_top = 397.0
+offset_right = 612.0
+offset_bottom = 397.0
+scale = Vector2(0.28705, 0.28705)
 
 [node name="Sprite2D" type="Sprite2D" parent="Tortola"]
-texture = ExtResource("8_4b5a6")
+texture = ExtResource("7_wnsfc")
 
 [node name="Paloma" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 353.0
-offset_top = 407.0
-offset_right = 353.0
-offset_bottom = 407.0
-scale = Vector2(0.230188, 0.230188)
+offset_left = 390.0
+offset_top = 366.0
+offset_right = 390.0
+offset_bottom = 366.0
+scale = Vector2(0.301161, 0.301161)
 
 [node name="Sprite2D" type="Sprite2D" parent="Paloma"]
-texture = ExtResource("9_i74sc")
+texture = ExtResource("8_os44x")
 
 [node name="Abubilla" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 386.0
-offset_top = 207.0
-offset_right = 386.0
-offset_bottom = 207.0
-scale = Vector2(0.283072, 0.283072)
+offset_left = 412.0
+offset_top = 179.0
+offset_right = 412.0
+offset_bottom = 179.0
+scale = Vector2(0.326362, 0.326362)
 
 [node name="Sprite2D" type="Sprite2D" parent="Abubilla"]
-texture = ExtResource("10_lgxgo")
+texture = ExtResource("9_05rk5")
 
 [node name="Lavandera" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 286.0
-offset_top = 55.0
-offset_right = 286.0
-offset_bottom = 55.0
-scale = Vector2(0.162206, 0.162206)
+offset_left = 299.0
+offset_top = 67.0
+offset_right = 299.0
+offset_bottom = 67.0
+scale = Vector2(0.200956, 0.200956)
 
 [node name="Sprite2D" type="Sprite2D" parent="Lavandera"]
-texture = ExtResource("11_ve0db")
+texture = ExtResource("10_nr8iu")

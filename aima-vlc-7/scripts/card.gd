@@ -19,17 +19,6 @@ func _ready():
 
 func _process(delta: float):
 	pass
-
-#func _physics_process(delta: float) -> void:
-	#var space = Input.is_action_pressed("Space")
-	#if(space): generateNewBird()
-		
-#func generateNewBird() -> void:
-	#var i : int = randi_range(0,GLOBALS.TOTAL_BIRDS)
-	#if (!cards.isBirdInList(i)):
-		#bird = Bird.new(i)
-		#_setBird()
-	#else: generateNewBird()
 	
 func generateBird(id : int):
 	bird = Bird.new(id)

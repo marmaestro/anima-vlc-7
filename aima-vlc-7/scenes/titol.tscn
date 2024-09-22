@@ -1,0 +1,87 @@
+[gd_scene load_steps=11 format=3 uid="uid://cio4akd3iimy4"]
+
+[ext_resource type="Script" path="res://scripts/titol.gd" id="1_j7nb4"]
+[ext_resource type="Texture2D" uid="uid://b6f4dajxv8qfm" path="res://sprites/bg/bg.png" id="1_slv2l"]
+[ext_resource type="Texture2D" uid="uid://dc28xc8a47gax" path="res://sprites/bg/nubes1.png" id="2_ucv3q"]
+[ext_resource type="Texture2D" uid="uid://b02ow0x81vtd3" path="res://sprites/bg/titol.png" id="3_73jx1"]
+[ext_resource type="FontFile" uid="uid://b3dxbwaivdqwl" path="res://fonts/Spectral-Bold.ttf" id="4_4bp7c"]
+
+[sub_resource type="Animation" id="Animation_ygd13"]
+resource_name = "move"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("nubes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -10), Vector2(0, 0), Vector2(0, 10), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_05hol"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("nubes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -20)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4pi66"]
+_data = {
+"RESET": SubResource("Animation_05hol"),
+"move": SubResource("Animation_ygd13")
+}
+
+[sub_resource type="Theme" id="Theme_swucb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3rssd"]
+bg_color = Color(0.231373, 0.513726, 0.596078, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Titol" type="Node2D"]
+script = ExtResource("1_j7nb4")
+
+[node name="bg" type="Sprite2D" parent="."]
+texture = ExtResource("1_slv2l")
+
+[node name="nubes" type="Sprite2D" parent="."]
+position = Vector2(0, -20)
+texture = ExtResource("2_ucv3q")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="nubes"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_4pi66")
+}
+autoplay = "move"
+
+[node name="titol" type="Sprite2D" parent="."]
+texture = ExtResource("3_73jx1")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 252.0
+offset_top = 155.0
+offset_right = 403.0
+offset_bottom = 215.0
+theme = SubResource("Theme_swucb")
+theme_override_fonts/font = ExtResource("4_4bp7c")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_3rssd")
+text = "JUGAR"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

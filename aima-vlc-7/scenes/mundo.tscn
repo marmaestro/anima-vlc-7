@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://desl3ix1lirpt"]
+[gd_scene load_steps=30 format=3 uid="uid://desl3ix1lirpt"]
 
 [ext_resource type="Script" path="res://scripts/letter.gd" id="1_7ddfu"]
 [ext_resource type="Texture2D" uid="uid://c50hygp4axwhs" path="res://sprites/Letter.png" id="2_0l2ob"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://d0pcrmptf0yow" path="res://scenes/graph.tscn" id="14_51cwe"]
 [ext_resource type="Script" path="res://scripts/graph.gd" id="14_c5222"]
 [ext_resource type="Theme" uid="uid://yhek5gfshxwo" path="res://themes/buttons.tres" id="14_o87vs"]
+[ext_resource type="PackedScene" uid="uid://cio4akd3iimy4" path="res://scenes/titol.tscn" id="15_2m7bk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rlslu"]
 size = Vector2(333, 250)
@@ -863,6 +864,9 @@ text = "X"
 [node name="Graph" parent="." instance=ExtResource("14_51cwe")]
 visible = false
 script = ExtResource("14_c5222")
+
+[node name="Titol" parent="." instance=ExtResource("15_2m7bk")]
+position = Vector2(432, 243)
 
 [connection signal="pressed" from="Letter/Letter/Next" to="Letter" method="_on_next_pressed"]
 [connection signal="mouse_shape_entered" from="Cards/Card" to="Cards/Card" method="_on_mouse_shape_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://desl3ix1lirpt"]
+[gd_scene load_steps=52 format=3 uid="uid://desl3ix1lirpt"]
 
 [ext_resource type="Script" path="res://scripts/letter.gd" id="1_7ddfu"]
 [ext_resource type="Texture2D" uid="uid://c50hygp4axwhs" path="res://sprites/Letter.png" id="2_0l2ob"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://3bihi1y6l56v" path="res://sprites/trinkets/carta.png" id="3_g2b1t"]
 [ext_resource type="Script" path="res://scripts/card.gd" id="4_aeab4"]
 [ext_resource type="Texture2D" uid="uid://boi2812xarodr" path="res://sprites/birds/gorrion.png" id="5_g07ae"]
+[ext_resource type="AudioStream" uid="uid://djy2nqqi6b5t2" path="res://sounds/buttons.mp3" id="8_a5oj8"]
 [ext_resource type="Texture2D" uid="uid://byqo7unvp5dig" path="res://sprites/Carta.png" id="9_fmxa3"]
 [ext_resource type="FontFile" uid="uid://bsikcrvoehepe" path="res://fonts/Spectral-Regular.ttf" id="10_55s7r"]
 [ext_resource type="FontFile" uid="uid://cww05vwhr0yqf" path="res://fonts/Spectral-Italic.ttf" id="11_58ess"]
@@ -14,7 +15,6 @@
 [ext_resource type="Script" path="res://scripts/graph.gd" id="14_c5222"]
 [ext_resource type="Theme" uid="uid://yhek5gfshxwo" path="res://themes/buttons.tres" id="14_o87vs"]
 [ext_resource type="Texture2D" uid="uid://bmfaip8ulc0n" path="res://sprites/birds/pfp/pfp_urraca.png" id="14_wvrb7"]
-[ext_resource type="PackedScene" uid="uid://cio4akd3iimy4" path="res://scenes/titol.tscn" id="15_2m7bk"]
 [ext_resource type="Texture2D" uid="uid://big5m7cp1rcyl" path="res://sprites/birds/pfp/pfp_gaviota.png" id="15_mbpka"]
 [ext_resource type="Texture2D" uid="uid://buc6fgmkr318g" path="res://sprites/birds/pfp/pfp_pato.png" id="16_2yqsf"]
 [ext_resource type="Texture2D" uid="uid://cd4i0ls3wky10" path="res://sprites/birds/pfp/pfp_gorrion.png" id="17_1gkja"]
@@ -24,7 +24,12 @@
 [ext_resource type="Texture2D" uid="uid://csblojoq2g2xk" path="res://sprites/birds/pfp/pfp_paloma.png" id="21_igndj"]
 [ext_resource type="Texture2D" uid="uid://bv2tlt7n1vpfg" path="res://sprites/birds/pfp/pfp_abubilla.png" id="22_usjn0"]
 [ext_resource type="Texture2D" uid="uid://nbgj0r51n2g" path="res://sprites/birds/pfp/pfp_lavandera.png" id="23_mvsiq"]
-[ext_resource type="PackedScene" uid="uid://bj4odearpjxm1" path="res://scenes/traducciones.tscn" id="25_mhcfv"]
+[ext_resource type="Script" path="res://scripts/titol.gd" id="25_emycy"]
+[ext_resource type="Texture2D" uid="uid://b6f4dajxv8qfm" path="res://sprites/bg/bg.png" id="26_0es07"]
+[ext_resource type="Texture2D" uid="uid://dc28xc8a47gax" path="res://sprites/bg/nubes1.png" id="27_3suha"]
+[ext_resource type="Texture2D" uid="uid://b02ow0x81vtd3" path="res://sprites/bg/titol.png" id="28_4ai0b"]
+[ext_resource type="Script" path="res://scripts/traducciones.gd" id="29_dkbav"]
+[ext_resource type="Texture2D" uid="uid://d4mnhqv6t217f" path="res://sprites/bg/negro.png" id="30_7ffmr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rlslu"]
 size = Vector2(333, 250)
@@ -267,6 +272,59 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="Animation" id="Animation_05hol"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("nubes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -20)]
+}
+
+[sub_resource type="Animation" id="Animation_ygd13"]
+resource_name = "move"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("nubes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -10), Vector2(0, 0), Vector2(0, 10), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4pi66"]
+_data = {
+"RESET": SubResource("Animation_05hol"),
+"move": SubResource("Animation_ygd13")
+}
+
+[sub_resource type="Theme" id="Theme_swucb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3rssd"]
+bg_color = Color(0.231373, 0.513726, 0.596078, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ififr"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0gpsw"]
+bg_color = Color(0, 0, 0, 0)
+
 [node name="Scene" type="Node2D"]
 
 [node name="Game" type="Node2D" parent="."]
@@ -324,8 +382,6 @@ theme = ExtResource("2_kn5up")
 theme_type_variation = &"main"
 theme_override_fonts/normal_font = ExtResource("10_55s7r")
 theme_override_font_sizes/normal_font_size = 22
-text = "Texto to guapo
-"
 fit_content = true
 scroll_active = false
 autowrap_mode = 2
@@ -363,8 +419,6 @@ theme_override_fonts/normal_font = ExtResource("10_55s7r")
 theme_override_fonts/bold_font = ExtResource("13_m1pwu")
 theme_override_font_sizes/normal_font_size = 25
 theme_override_font_sizes/bold_font_size = 25
-text = "Texto to guapo
-"
 scroll_active = false
 autowrap_mode = 0
 deselect_on_focus_loss_enabled = false
@@ -386,11 +440,9 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ak8l7")
 text = "SIGUIENTE"
 metadata/_edit_use_anchors_ = true
 
-[node name="Points" type="RichTextLabel" parent="Game/Letter"]
-offset_left = -410.0
-offset_top = -122.0
-offset_right = -370.0
-offset_bottom = -82.0
+[node name="SoundButtons" type="AudioStreamPlayer2D" parent="Game/Letter"]
+unique_name_in_owner = true
+stream = ExtResource("8_a5oj8")
 
 [node name="Cards" type="Node2D" parent="Game"]
 unique_name_in_owner = true
@@ -556,6 +608,8 @@ theme_override_fonts/font = ExtResource("10_55s7r")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ab3v4")
 text = "X"
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Game/Cards/Card"]
+
 [node name="Card2" type="Area2D" parent="Game/Cards"]
 position = Vector2(432, 263)
 scale = Vector2(0.5, 0.5)
@@ -714,6 +768,8 @@ theme = ExtResource("14_o87vs")
 theme_override_fonts/font = ExtResource("10_55s7r")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ab3v4")
 text = "X"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Game/Cards/Card2"]
 
 [node name="Card3" type="Area2D" parent="Game/Cards"]
 position = Vector2(664, 263)
@@ -875,6 +931,8 @@ theme_override_fonts/font = ExtResource("10_55s7r")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ab3v4")
 text = "X"
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Game/Cards/Card3"]
+
 [node name="Graph" type="Node2D" parent="Game"]
 visible = false
 script = ExtResource("14_c5222")
@@ -1009,13 +1067,70 @@ scale = Vector2(0.200956, 0.200956)
 [node name="Sprite2D" type="Sprite2D" parent="Game/Graph/Lavandera"]
 texture = ExtResource("23_mvsiq")
 
-[node name="Titol" parent="." instance=ExtResource("15_2m7bk")]
+[node name="Titol" type="Node2D" parent="."]
 unique_name_in_owner = true
 visible = false
 position = Vector2(432, 243)
+script = ExtResource("25_emycy")
 
-[node name="Traducciones" parent="." instance=ExtResource("25_mhcfv")]
+[node name="bg" type="Sprite2D" parent="Titol"]
+texture = ExtResource("26_0es07")
+
+[node name="nubes" type="Sprite2D" parent="Titol"]
+position = Vector2(0, -20)
+texture = ExtResource("27_3suha")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Titol/nubes"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_4pi66")
+}
+autoplay = "move"
+
+[node name="titol" type="Sprite2D" parent="Titol"]
+texture = ExtResource("28_4ai0b")
+
+[node name="Button" type="Button" parent="Titol"]
+offset_left = 252.0
+offset_top = 155.0
+offset_right = 403.0
+offset_bottom = 215.0
+theme = SubResource("Theme_swucb")
+theme_override_fonts/font = ExtResource("13_m1pwu")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_3rssd")
+text = "JUGAR"
+
+[node name="Traducciones" type="Node2D" parent="."]
 position = Vector2(432, 243)
+script = ExtResource("29_dkbav")
+
+[node name="bg" type="Sprite2D" parent="Traducciones"]
+texture = ExtResource("30_7ffmr")
+
+[node name="VALENCIA" type="Button" parent="Traducciones"]
+offset_left = -432.0
+offset_top = -86.0
+offset_right = 432.0
+offset_bottom = -24.0
+theme = ExtResource("14_o87vs")
+theme_override_fonts/font = ExtResource("13_m1pwu")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ififr")
+text = "VALENCIÀ"
+
+[node name="CASTELLANO" type="Button" parent="Traducciones"]
+offset_left = -432.0
+offset_top = 28.0
+offset_right = 432.0
+offset_bottom = 90.0
+theme = ExtResource("14_o87vs")
+theme_override_fonts/font = ExtResource("13_m1pwu")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_0gpsw")
+text = "CASTELLANO"
+
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
 
 [connection signal="pressed" from="Game/Letter/Letter/Next" to="Game/Letter" method="_on_next_pressed"]
 [connection signal="mouse_shape_entered" from="Game/Cards/Card" to="Game/Cards/Card" method="_on_mouse_shape_entered"]
@@ -1027,3 +1142,6 @@ position = Vector2(432, 243)
 [connection signal="mouse_shape_entered" from="Game/Cards/Card3" to="Game/Cards/Card3" method="_on_mouse_shape_entered"]
 [connection signal="pressed" from="Game/Cards/Card3/SelectButton" to="Game/Letter" method="_on_select_button3_pressed"]
 [connection signal="pressed" from="Game/Cards/Card3/ExitButton" to="Game/Cards/Card3" method="_on_exit_button_pressed"]
+[connection signal="pressed" from="Titol/Button" to="Titol" method="_on_button_pressed"]
+[connection signal="pressed" from="Traducciones/VALENCIA" to="Traducciones" method="_on_valencia_pressed"]
+[connection signal="pressed" from="Traducciones/CASTELLANO" to="Traducciones" method="_on_castellano_pressed"]

@@ -18,6 +18,9 @@ var _trinket : Trinket
 var success : int = 0
 @onready var points: RichTextLabel = $Points
 
+
+@onready var sound_buttons: AudioStreamPlayer2D = $SoundButtons
+
 func _ready() -> void:
 	generateLetter()
 
@@ -25,6 +28,7 @@ func _process(delta: float) :
 	pass
 
 func _on_next_pressed() :
+	sound_buttons.play()
 	letter_animator.play("getSmaller")
 	card.generateBird(_trinket.birdIds[0])
 	card_2.generateBird(_trinket.birdIds[1])
@@ -58,16 +62,19 @@ func cardsInvisible() -> void:
 	next.visible = true	
 
 func _on_select_button1_pressed() :
+	sound_buttons.play()
 	if(card.bird.id == _trinket.id): addSuccess()
 	_graph.updateGraph(_trinket.id, card.bird)
 	generateLetter()
 
 func _on_select_button2_pressed() :
+	sound_buttons.play()
 	if(card_2.bird.id == _trinket.id): addSuccess()
 	_graph.updateGraph(_trinket.id, card_2.bird)
 	generateLetter()
 
 func _on_select_button3_pressed() :
+	sound_buttons.play()
 	if(card_3.bird.id == _trinket.id): addSuccess()
 	_graph.updateGraph(_trinket.id, card_3.bird)
 	generateLetter()

@@ -1,13 +1,13 @@
 class_name Bird extends Object
 
-var _identifier
-var picture
-var common_name
-var scientific_name
-var traits
+var id : int
+var picture : Texture2D
+var common_name : String
+var scientific_name : String
+var traits : String
 
 func _init(index : int):
-	_identifier = index
+	id = index
 	var json = load("res://databases/birds.json")
 	var data = json.data.birds[index]
 	

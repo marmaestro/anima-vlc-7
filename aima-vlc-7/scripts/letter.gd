@@ -53,17 +53,17 @@ func cardsInvisible() -> void:
 
 
 func _on_select_button1_pressed() -> void:
-	if(card.name == _trinket.assignedBird): addSuccess()
+	if(card_2.bird.id == _trinket.id): addSuccess()
 	cards.clearBirdList()
 	generateLetter()
 
 func _on_select_button2_pressed() -> void:
-	if(card_2.name == _trinket.assignedBird): addSuccess()
+	if(card_2.bird.id == _trinket.id): addSuccess()
 	cards.clearBirdList()
 	generateLetter()
 
 func _on_select_button3_pressed() -> void:
-	if(card_3.name == _trinket.assignedBird): addSuccess()
+	if(card_2.bird.id == _trinket.id): addSuccess()
 	cards.clearBirdList()
 	generateLetter()
 

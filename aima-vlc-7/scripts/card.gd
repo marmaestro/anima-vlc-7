@@ -1,6 +1,6 @@
 extends Area2D
 
-var _bird
+var bird
 @onready var _name : RichTextLabel = $CardImage/Container3/Name
 @onready var _scientific : RichTextLabel = $CardImage/Container2/Scientific
 
@@ -28,9 +28,9 @@ func _physics_process(delta: float) -> void:
 func generateNewBird() -> void:
 	var i : int = randi_range(0,9)
 	if (!cards.isBirdInList(i)):
-		_bird = Bird.new(i)
+		bird = Bird.new(i)
 		_setNames()
-		sprite.texture = _bird.picture
+		sprite.texture = bird.picture
 	else: generateNewBird()
 
 
@@ -53,11 +53,11 @@ func animationSmall() -> void:
 func _setNames() -> void:
 	_name.clear()
 	_name.push_bold()
-	_name.add_text(_bird.common_name)
+	_name.add_text(bird.common_name)
 	
 	_scientific.clear()
 	_scientific.push_bold_italics()
-	_scientific.add_text(_bird.scientific_name)
+	_scientific.add_text(bird.scientific_name)
 	
 	_description.clear()
-	_description.add_text(_bird.traits)
+	_description.add_text(bird.traits)

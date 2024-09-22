@@ -1,6 +1,7 @@
 { "birds":
 		[
 		  {
+			"id": 0,
 			"source": "sprites/birds/urraca.png",
 			"common_name": "URRACA",
 			"scientific_name": "Pica Pica",
@@ -9,6 +10,7 @@
 		  },
 
 		  {
+			"id": 1,
 			"source": "sprites/birds/gaviota.png",
 			"common_name": "GAVIOTA",
 			"scientific_name": "Larus Michahellis",
@@ -17,6 +19,7 @@
 		  },
 
 		  {
+			"id": 2,
 			"source": "sprites/birds/pato.png",
 			"common_name": "PATO",
 			"scientific_name": "Anas Platyrhynchos",
@@ -25,6 +28,7 @@
 		  },
 
 		  {
+			"id": 3,
 			"source": "sprites/birds/gorrion.png",
 			"common_name": "GORRION",
 			"scientific_name": "Passer Domesticus",
@@ -33,6 +37,7 @@
 		  },
 
 		  {
+			"id": 4,
 			"source": "sprites/birds/colirrojo.png",
 			"common_name": "COLIRROJO",
 			"scientific_name": "Phoenicurus Ochruros",
@@ -41,6 +46,7 @@
 		  },
 
 		  {
+			"id": 5,
 			"source": "sprites/birds/verdecillo.png",
 			"common_name": "VERDECILLO",
 			"scientific_name": "Serinus Serinus",
@@ -49,6 +55,7 @@
 		  },
 
 		  {
+			"id": 6,
 			"source": "sprites/birds/paloma.png",
 			"common_name": "PALOMA",
 			"scientific_name": "Columba Livia",
@@ -57,6 +64,7 @@
 		  },
 
 		  {
+			"id": 7,
 			"source": "sprites/birds/tortola.png",
 			"common_name": "TORTOLA",
 			"scientific_name": "Streptopelia Decaocto",
@@ -65,6 +73,7 @@
 		  },
 
 		  {
+			"id": 8,
 			"source": "sprites/birds/abubilla.png",
 			"common_name": "ABUBILLA",
 			"scientific_name": "Upupa Epops",
@@ -73,6 +82,7 @@
 		  },
 
 		  {
+			"id": 9,
 			"source": "sprites/birds/lavandera.png",
 			"common_name": "LAVANDERA",
 			"scientific_name": "Motacilla Alba",

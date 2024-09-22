@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://desl3ix1lirpt"]
+[gd_scene load_steps=41 format=3 uid="uid://desl3ix1lirpt"]
 
 [ext_resource type="Script" path="res://scripts/letter.gd" id="1_7ddfu"]
 [ext_resource type="Texture2D" uid="uid://c50hygp4axwhs" path="res://sprites/Letter.png" id="2_0l2ob"]
@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://bmfaip8ulc0n" path="res://sprites/birds/pfp/pfp_urraca.png" id="14_j21fi"]
 [ext_resource type="Texture2D" uid="uid://b6f4dajxv8qfm" path="res://sprites/bg/bg.png" id="14_muqyq"]
 [ext_resource type="Theme" uid="uid://yhek5gfshxwo" path="res://themes/buttons.tres" id="14_o87vs"]
-[ext_resource type="Texture2D" uid="uid://bmfaip8ulc0n" path="res://sprites/birds/pfp/pfp_urraca.png" id="14_wvrb7"]
 [ext_resource type="PackedScene" path="res://scenes/titol.tscn" id="15_2m7bk"]
 [ext_resource type="Texture2D" uid="uid://big5m7cp1rcyl" path="res://sprites/birds/pfp/pfp_gaviota.png" id="15_gvgjg"]
 [ext_resource type="Texture2D" uid="uid://buc6fgmkr318g" path="res://sprites/birds/pfp/pfp_pato.png" id="16_p8wmv"]
@@ -26,16 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://csblojoq2g2xk" path="res://sprites/birds/pfp/pfp_paloma.png" id="21_raods"]
 [ext_resource type="Texture2D" uid="uid://bv2tlt7n1vpfg" path="res://sprites/birds/pfp/pfp_abubilla.png" id="22_tutr5"]
 [ext_resource type="Texture2D" uid="uid://nbgj0r51n2g" path="res://sprites/birds/pfp/pfp_lavandera.png" id="23_irfci"]
-[ext_resource type="Texture2D" uid="uid://big5m7cp1rcyl" path="res://sprites/birds/pfp/pfp_gaviota.png" id="15_mbpka"]
-[ext_resource type="Texture2D" uid="uid://buc6fgmkr318g" path="res://sprites/birds/pfp/pfp_pato.png" id="16_2yqsf"]
-[ext_resource type="Texture2D" uid="uid://cd4i0ls3wky10" path="res://sprites/birds/pfp/pfp_gorrion.png" id="17_1gkja"]
-[ext_resource type="Texture2D" uid="uid://benqjuq45s8o7" path="res://sprites/birds/pfp/pfp_collirojo.png" id="18_w3f1b"]
-[ext_resource type="Texture2D" uid="uid://cqg4x8v3x8e4a" path="res://sprites/birds/pfp/pfp_verdecillo.png" id="19_kql0f"]
-[ext_resource type="Texture2D" uid="uid://35u2l7pvso3i" path="res://sprites/birds/pfp/pfp_tortola.png" id="20_e6w5g"]
-[ext_resource type="Texture2D" uid="uid://csblojoq2g2xk" path="res://sprites/birds/pfp/pfp_paloma.png" id="21_igndj"]
-[ext_resource type="Texture2D" uid="uid://bv2tlt7n1vpfg" path="res://sprites/birds/pfp/pfp_abubilla.png" id="22_usjn0"]
-[ext_resource type="Texture2D" uid="uid://nbgj0r51n2g" path="res://sprites/birds/pfp/pfp_lavandera.png" id="23_mvsiq"]
-[ext_resource type="PackedScene" uid="uid://bj4odearpjxm1" path="res://scenes/traducciones.tscn" id="25_mhcfv"]
+[ext_resource type="PackedScene" path="res://scenes/traducciones.tscn" id="25_mhcfv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rlslu"]
 size = Vector2(333, 250)
@@ -1031,7 +1021,6 @@ visible = false
 position = Vector2(432, 243)
 
 [node name="Traducciones" parent="." instance=ExtResource("25_mhcfv")]
-visible = false
 position = Vector2(432, 243)
 
 [connection signal="pressed" from="Game/Letter/Letter/Next" to="Game/Letter" method="_on_next_pressed"]

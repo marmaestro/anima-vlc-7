@@ -1,10 +1,13 @@
-class_name Graph extends Node
+class_name Graph extends Node2D
 
 var graph : Array[Pick]
 var trinketList : Array[bool]
 var size : int
+var vectors : Array[Vector2]
 
+@onready var background = $Background
 @onready var birds = [$Urraca,$Gaviota,$Pato,$Gorrion,$Colirrojo,$Verdecillo,$Tortola,$Paloma,$Abubilla,$Lavandera]
+@onready var game = $".."
 
 func _init() :
 	graph = []
@@ -28,13 +31,20 @@ func updateGraph(trinket: int, bird: Bird) :
 				break
 
 func showGraph() :
-	var vectors : Array[Vector2]
 	for pick in graph:
 		for bird in pick.birds:
+			vectors.append(birds[bird].position)
 			if !birds[bird].visible:
 				birds[bird].show()
-				vectors.append(birds[bird].transform.position)
-	_draw(vectors)
+				
+	queue_redraw()
+	background.show()
 	
-func _draw(vectors):
-	pass
+func _draw():
+	
+	var i = 0
+	var j = 1
+	while (i < vectors.size() && j < vectors.size()):
+		draw_line(vectors[i], vectors[j], Color.BLACK, 5.0)
+		i = j
+		j += 1

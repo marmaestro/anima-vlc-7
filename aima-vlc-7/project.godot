@@ -36,10 +36,11 @@ Space={
 [internationalization]
 
 locale/translation_remaps={}
-locale/translations=PackedStringArray("res://translations/text_8.ca.translation", "res://translations/text_8.es.translation")
-locale/test="es"
+locale/translations=PackedStringArray("res://translations/text_9.ca.translation", "res://translations/text_9.es.translation")
+locale/test="ca"
 locale/fallback="ca"
 
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+anti_aliasing/screen_space_roughness_limiter/enabled=false

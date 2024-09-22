@@ -1,9 +1,9 @@
-[gd_scene load_steps=29 format=3 uid="uid://desl3ix1lirpt"]
+[gd_scene load_steps=40 format=3 uid="uid://desl3ix1lirpt"]
 
 [ext_resource type="Script" path="res://scripts/letter.gd" id="1_7ddfu"]
 [ext_resource type="Texture2D" uid="uid://c50hygp4axwhs" path="res://sprites/Letter.png" id="2_0l2ob"]
 [ext_resource type="Theme" uid="uid://ci77qser1elpq" path="res://themes/letter-theme.tres" id="2_kn5up"]
-[ext_resource type="Texture2D" uid="uid://3bihi1y6l56v" path="res://sprites/trinkets/carta.png" id="3_g2b1t"]
+[ext_resource type="Texture2D" uid="uid://ddicyqgh7mk4e" path="res://sprites/trinkets/telegrafo.png" id="3_78llj"]
 [ext_resource type="Script" path="res://scripts/card.gd" id="4_aeab4"]
 [ext_resource type="Texture2D" uid="uid://boi2812xarodr" path="res://sprites/birds/gorrion.png" id="5_g07ae"]
 [ext_resource type="Texture2D" uid="uid://byqo7unvp5dig" path="res://sprites/Carta.png" id="9_fmxa3"]
@@ -11,9 +11,20 @@
 [ext_resource type="FontFile" uid="uid://cww05vwhr0yqf" path="res://fonts/Spectral-Italic.ttf" id="11_58ess"]
 [ext_resource type="FontFile" uid="uid://rke8of3xkujm" path="res://fonts/Spectral-BoldItalic.ttf" id="12_00m0d"]
 [ext_resource type="FontFile" uid="uid://b3dxbwaivdqwl" path="res://fonts/Spectral-Bold.ttf" id="13_m1pwu"]
-[ext_resource type="PackedScene" uid="uid://d0pcrmptf0yow" path="res://scenes/graph.tscn" id="14_51cwe"]
+[ext_resource type="Script" path="res://scripts/graph.gd" id="14_c5222"]
+[ext_resource type="Texture2D" uid="uid://bmfaip8ulc0n" path="res://sprites/birds/pfp/pfp_urraca.png" id="14_j21fi"]
+[ext_resource type="Texture2D" uid="uid://b6f4dajxv8qfm" path="res://sprites/bg/bg.png" id="14_muqyq"]
 [ext_resource type="Theme" uid="uid://yhek5gfshxwo" path="res://themes/buttons.tres" id="14_o87vs"]
-[ext_resource type="PackedScene" uid="uid://cio4akd3iimy4" path="res://scenes/titol.tscn" id="15_2m7bk"]
+[ext_resource type="PackedScene" path="res://scenes/titol.tscn" id="15_2m7bk"]
+[ext_resource type="Texture2D" uid="uid://big5m7cp1rcyl" path="res://sprites/birds/pfp/pfp_gaviota.png" id="15_gvgjg"]
+[ext_resource type="Texture2D" uid="uid://buc6fgmkr318g" path="res://sprites/birds/pfp/pfp_pato.png" id="16_p8wmv"]
+[ext_resource type="Texture2D" uid="uid://cd4i0ls3wky10" path="res://sprites/birds/pfp/pfp_gorrion.png" id="17_lce8v"]
+[ext_resource type="Texture2D" uid="uid://benqjuq45s8o7" path="res://sprites/birds/pfp/pfp_collirojo.png" id="18_l46lv"]
+[ext_resource type="Texture2D" uid="uid://cqg4x8v3x8e4a" path="res://sprites/birds/pfp/pfp_verdecillo.png" id="19_s8tj4"]
+[ext_resource type="Texture2D" uid="uid://35u2l7pvso3i" path="res://sprites/birds/pfp/pfp_tortola.png" id="20_427l8"]
+[ext_resource type="Texture2D" uid="uid://csblojoq2g2xk" path="res://sprites/birds/pfp/pfp_paloma.png" id="21_raods"]
+[ext_resource type="Texture2D" uid="uid://bv2tlt7n1vpfg" path="res://sprites/birds/pfp/pfp_abubilla.png" id="22_tutr5"]
+[ext_resource type="Texture2D" uid="uid://nbgj0r51n2g" path="res://sprites/birds/pfp/pfp_lavandera.png" id="23_irfci"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rlslu"]
 size = Vector2(333, 250)
@@ -281,8 +292,8 @@ texture = ExtResource("2_0l2ob")
 
 [node name="Object" type="Sprite2D" parent="Game/Letter/Letter"]
 position = Vector2(169.535, -43.3256)
-scale = Vector2(0.757, 0.757)
-texture = ExtResource("3_g2b1t")
+scale = Vector2(0.477, 0.477)
+texture = ExtResource("3_78llj")
 
 [node name="Container" type="Control" parent="Game/Letter/Letter"]
 layout_mode = 3
@@ -862,10 +873,147 @@ theme_override_fonts/font = ExtResource("10_55s7r")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ab3v4")
 text = "X"
 
-[node name="Graph" parent="Game" instance=ExtResource("14_51cwe")]
+[node name="Graph" type="Node2D" parent="Game"]
+script = ExtResource("14_c5222")
+
+[node name="Background" type="Sprite2D" parent="Game/Graph"]
 visible = false
+z_index = -1
+texture = ExtResource("14_muqyq")
+offset = Vector2(432, 243)
+
+[node name="Urraca" type="Control" parent="Game/Graph"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 187.0
+offset_top = 172.0
+offset_right = 187.0
+offset_bottom = 172.0
+scale = Vector2(0.304817, 0.304817)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/Graph/Urraca"]
+texture = ExtResource("14_j21fi")
+
+[node name="Gaviota" type="Control" parent="Game/Graph"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 747.0
+offset_top = 233.0
+offset_right = 747.0
+offset_bottom = 233.0
+scale = Vector2(0.394737, 0.394737)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/Graph/Gaviota"]
+texture = ExtResource("15_gvgjg")
+
+[node name="Pato" type="Control" parent="Game/Graph"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 173.0
+offset_top = 356.0
+offset_right = 173.0
+offset_bottom = 356.0
+scale = Vector2(0.333143, 0.333143)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/Graph/Pato"]
+texture = ExtResource("16_p8wmv")
+
+[node name="Gorrion" type="Control" parent="Game/Graph"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 530.0
+offset_top = 303.0
+offset_right = 530.0
+offset_bottom = 303.0
+scale = Vector2(0.17032, 0.17032)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/Graph/Gorrion"]
+texture = ExtResource("17_lce8v")
+
+[node name="Colirrojo" type="Control" parent="Game/Graph"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 581.0
+offset_top = 135.0
+offset_right = 581.0
+offset_bottom = 135.0
+scale = Vector2(0.19615, 0.19615)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/Graph/Colirrojo"]
+texture = ExtResource("18_l46lv")
+
+[node name="Verdecillo" type="Control" parent="Game/Graph"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 679.0
+offset_top = 85.0
+offset_right = 679.0
+offset_bottom = 85.0
+scale = Vector2(0.168587, 0.168587)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/Graph/Verdecillo"]
+texture = ExtResource("19_s8tj4")
+
+[node name="Tortola" type="Control" parent="Game/Graph"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 612.0
+offset_top = 397.0
+offset_right = 612.0
+offset_bottom = 397.0
+scale = Vector2(0.28705, 0.28705)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/Graph/Tortola"]
+texture = ExtResource("20_427l8")
+
+[node name="Paloma" type="Control" parent="Game/Graph"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 390.0
+offset_top = 366.0
+offset_right = 390.0
+offset_bottom = 366.0
+scale = Vector2(0.301161, 0.301161)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/Graph/Paloma"]
+texture = ExtResource("21_raods")
+
+[node name="Abubilla" type="Control" parent="Game/Graph"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 412.0
+offset_top = 179.0
+offset_right = 412.0
+offset_bottom = 179.0
+scale = Vector2(0.326362, 0.326362)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/Graph/Abubilla"]
+texture = ExtResource("22_tutr5")
+
+[node name="Lavandera" type="Control" parent="Game/Graph"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 299.0
+offset_top = 67.0
+offset_right = 299.0
+offset_bottom = 67.0
+scale = Vector2(0.200956, 0.200956)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/Graph/Lavandera"]
+texture = ExtResource("23_irfci")
 
 [node name="Titol" parent="." instance=ExtResource("15_2m7bk")]
+visible = false
 position = Vector2(432, 243)
 
 [connection signal="pressed" from="Game/Letter/Letter/Next" to="Game/Letter" method="_on_next_pressed"]

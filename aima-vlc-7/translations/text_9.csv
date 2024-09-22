@@ -41,7 +41,7 @@ LAVANDERA_2,El seu nom en altres països es per aquest curiòs tret.,Su nombre e
 LAVANDERA_3,Sempre és prop d'aigua i s'alimenta d'insectes que l'habiten.,Siempre está cerca del agua y se alimenta de insectos que la habitan.
 SIGUIENTE,Següent,Siguiente
 SELECCIONAR,Seleccionar,Selecionar
-NOMBRE_JUEGO,Ocells macos,Pollos bonicos
+NOMBRE_JUEGO,PLOMES Y PIULADES,PLUMAS Y PIADAS
 ESPEJO,Espill llis,Espejo liso
 PESCADO,Peix fresc,Pescado fresco
 PAJARITA,Corbata refinada,Pajarita refinada
@@ -51,7 +51,7 @@ SEMILLAS,Llavors temporeres,Semillas de temporada
 CARTA,Carta privada,Carta privada
 GAFAS,Ulleres de sol,Gafas de sol
 TELEGRAFO,Telègraf,Telégrafo
-MOSQUITO,Larves de mosquit,Larvas de mosquito
+MOSQUITO,Larva de mosquit,Larva de mosquito
 ESPEJO_D,Un mirall petit però prou net. Qualsevol diuria que algú l'ha oblidat ací al costat.,Un espejo pequeño pero muy limpio. Cualquiera diría que alguien lo ha olvidado aquí al lado.
 PESCADO_D,Una llissa amb aspecte d'haver sigut capturada fa un tres i no res. Seria una pena que es desperdiciara. Qui podría aprofitarla millor?,Un mújol con aspecto de haber sido capturado hace nada de nada. Sería una pena que se desperdiciara. ¿Quién podría aprovecharlo mejor?
 PAJARITA_D,"Un bon accesori per a una festa refinada però, què va a fer un pardal amb açó? Suposso que un niu més mullit i romàntic...",Un buen accesorio para una fiesta refinada pero ¿qué hace un ave con esto? Supongo que un nido muy mullido y romántico...
@@ -61,4 +61,4 @@ SEMILLAS_D,"Un grapat de llavors petites. Fan un olor molt bó. Crec que ha de s
 CARTA_D,Una peça de paper enrotllat sobre si mateix i atat amb un cordell. Pareix que n'hi ha alguna cosa escrita...,Un trozo de papel enrollado sobre sí mismo y atado con un cordel. Parece que hay algo escrito...
 GAFAS_D,"Unes ulleres prou maques i amb aspecte retro. Parèixen de fa cinquanta anys. Quina època, oi que sí?","Unas gafas bien monas y con aspecto retro. Parecen de hace cincuenta años. Qué epoca, ¿verdad?"
 TELEGRAFO_D,"Un aparat mecànic inventat al segle XIX per a comunicar-se ràpidament. Es manen senyals elèctriques amb una petita palanca, codificades en el famós Codi Morse.\n.--. ..- .--. ..- - ","Un aparato mecánico inventado en el siglo XIX para comunicarse rápidamente. Se mandan señales eléctricas con una pequeña palanca, codificadas en el famoso Código Morse.\n.- -... ..- -... .. .-.. .-.. .-"
-MOSQUITO_D,"Unes criatures diminutes en un glop d'aigua. Aquests animalets estan a la segona fase de la metamorfòsi del mosquit, i viuen en aigües estancades.","Unas criaturas diminutas en un charquito de agua. Estos animalillos están en la segunda fase de la metamorfosis del mosquito, y viven en aguas estancadas."
+MOSQUITO_D,"Una criatura diminuta en un glop d'aigua. Aquest animalet està a la segona fase de la metamorfòsi del mosquit, i viu en aigües estancades.","Una criatura diminuta en un charquito de agua. Este animalillo está en la segunda fase de la metamorfosis del mosquito, y vive en aguas estancadas."

@@ -1,6 +1,4 @@
-
-[gd_scene load_steps=38 format=3 uid="uid://desl3ix1lirpt"]
-
+[gd_scene load_steps=29 format=3 uid="uid://desl3ix1lirpt"]
 
 [ext_resource type="Script" path="res://scripts/letter.gd" id="1_7ddfu"]
 [ext_resource type="Texture2D" uid="uid://c50hygp4axwhs" path="res://sprites/Letter.png" id="2_0l2ob"]
@@ -13,21 +11,9 @@
 [ext_resource type="FontFile" uid="uid://cww05vwhr0yqf" path="res://fonts/Spectral-Italic.ttf" id="11_58ess"]
 [ext_resource type="FontFile" uid="uid://rke8of3xkujm" path="res://fonts/Spectral-BoldItalic.ttf" id="12_00m0d"]
 [ext_resource type="FontFile" uid="uid://b3dxbwaivdqwl" path="res://fonts/Spectral-Bold.ttf" id="13_m1pwu"]
-[ext_resource type="Script" path="res://scripts/graph.gd" id="14_c5222"]
-[ext_resource type="Texture2D" uid="uid://bmfaip8ulc0n" path="res://sprites/birds/pfp/pfp_urraca.png" id="14_j21fi"]
+[ext_resource type="PackedScene" uid="uid://d0pcrmptf0yow" path="res://scenes/graph.tscn" id="14_51cwe"]
 [ext_resource type="Theme" uid="uid://yhek5gfshxwo" path="res://themes/buttons.tres" id="14_o87vs"]
-
 [ext_resource type="PackedScene" uid="uid://cio4akd3iimy4" path="res://scenes/titol.tscn" id="15_2m7bk"]
-
-[ext_resource type="Texture2D" uid="uid://big5m7cp1rcyl" path="res://sprites/birds/pfp/pfp_gaviota.png" id="15_gvgjg"]
-[ext_resource type="Texture2D" uid="uid://buc6fgmkr318g" path="res://sprites/birds/pfp/pfp_pato.png" id="16_p8wmv"]
-[ext_resource type="Texture2D" uid="uid://cd4i0ls3wky10" path="res://sprites/birds/pfp/pfp_gorrion.png" id="17_lce8v"]
-[ext_resource type="Texture2D" uid="uid://benqjuq45s8o7" path="res://sprites/birds/pfp/pfp_collirojo.png" id="18_l46lv"]
-[ext_resource type="Texture2D" uid="uid://cqg4x8v3x8e4a" path="res://sprites/birds/pfp/pfp_verdecillo.png" id="19_s8tj4"]
-[ext_resource type="Texture2D" uid="uid://35u2l7pvso3i" path="res://sprites/birds/pfp/pfp_tortola.png" id="20_427l8"]
-[ext_resource type="Texture2D" uid="uid://csblojoq2g2xk" path="res://sprites/birds/pfp/pfp_paloma.png" id="21_raods"]
-[ext_resource type="Texture2D" uid="uid://bv2tlt7n1vpfg" path="res://sprites/birds/pfp/pfp_abubilla.png" id="22_tutr5"]
-[ext_resource type="Texture2D" uid="uid://nbgj0r51n2g" path="res://sprites/birds/pfp/pfp_lavandera.png" id="23_irfci"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rlslu"]
 size = Vector2(333, 250)
@@ -272,31 +258,33 @@ corner_radius_bottom_left = 10
 
 [node name="Scene" type="Node2D"]
 
-[node name="Letter" type="Area2D" parent="."]
+[node name="Game" type="Node2D" parent="."]
+
+[node name="Letter" type="Area2D" parent="Game"]
 unique_name_in_owner = true
 position = Vector2(432, 132)
 script = ExtResource("1_7ddfu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Letter"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/Letter"]
 position = Vector2(-2.5, 3)
 shape = SubResource("RectangleShape2D_rlslu")
 
-[node name="letterAnimator" type="AnimationPlayer" parent="Letter"]
+[node name="letterAnimator" type="AnimationPlayer" parent="Game/Letter"]
 libraries = {
 "": SubResource("AnimationLibrary_1gbjb")
 }
 
-[node name="Letter" type="Sprite2D" parent="Letter"]
+[node name="Letter" type="Sprite2D" parent="Game/Letter"]
 position = Vector2(-6, 4)
 scale = Vector2(0.530864, 0.530864)
 texture = ExtResource("2_0l2ob")
 
-[node name="Object" type="Sprite2D" parent="Letter/Letter"]
+[node name="Object" type="Sprite2D" parent="Game/Letter/Letter"]
 position = Vector2(169.535, -43.3256)
 scale = Vector2(0.757, 0.757)
 texture = ExtResource("3_g2b1t")
 
-[node name="Container" type="Control" parent="Letter/Letter"]
+[node name="Container" type="Control" parent="Game/Letter/Letter"]
 layout_mode = 3
 anchor_left = 0.206
 anchor_top = 0.219823
@@ -311,7 +299,7 @@ grow_vertical = 2
 size_flags_horizontal = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="Description" type="RichTextLabel" parent="Letter/Letter/Container"]
+[node name="Description" type="RichTextLabel" parent="Game/Letter/Letter/Container"]
 clip_contents = false
 layout_mode = 1
 anchors_preset = -1
@@ -331,7 +319,7 @@ autowrap_mode = 2
 deselect_on_focus_loss_enabled = false
 text_direction = 1
 
-[node name="Container2" type="Control" parent="Letter/Letter"]
+[node name="Container2" type="Control" parent="Game/Letter/Letter"]
 layout_mode = 3
 anchor_left = 0.206
 anchor_top = 0.219823
@@ -346,7 +334,7 @@ grow_vertical = 2
 size_flags_horizontal = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="Name" type="RichTextLabel" parent="Letter/Letter/Container2"]
+[node name="Name" type="RichTextLabel" parent="Game/Letter/Letter/Container2"]
 clip_contents = false
 layout_mode = 1
 anchors_preset = 15
@@ -368,7 +356,7 @@ scroll_active = false
 autowrap_mode = 0
 deselect_on_focus_loss_enabled = false
 
-[node name="Next" type="Button" parent="Letter/Letter"]
+[node name="Next" type="Button" parent="Game/Letter/Letter"]
 anchors_preset = -1
 anchor_left = -0.0461348
 anchor_top = -0.000143357
@@ -385,37 +373,43 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ak8l7")
 text = "SIGUIENTE"
 metadata/_edit_use_anchors_ = true
 
-[node name="Cards" type="Node2D" parent="."]
+[node name="Points" type="RichTextLabel" parent="Game/Letter"]
+offset_left = -410.0
+offset_top = -122.0
+offset_right = -370.0
+offset_bottom = -82.0
+
+[node name="Cards" type="Node2D" parent="Game"]
 unique_name_in_owner = true
 position = Vector2(0, 84)
 
-[node name="Card" type="Area2D" parent="Cards"]
+[node name="Card" type="Area2D" parent="Game/Cards"]
 position = Vector2(200, 263)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("4_aeab4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/Cards/Card"]
 position = Vector2(0, -2.24548)
 scale = Vector2(9.24, 14.7509)
 shape = SubResource("RectangleShape2D_ghbw6")
 
-[node name="sizeAnimator" type="AnimationPlayer" parent="Cards/Card"]
+[node name="sizeAnimator" type="AnimationPlayer" parent="Game/Cards/Card"]
 root_node = NodePath("../CardImage")
 libraries = {
 "": SubResource("AnimationLibrary_a2xb7")
 }
 
-[node name="CardImage" type="Sprite2D" parent="Cards/Card"]
+[node name="CardImage" type="Sprite2D" parent="Game/Cards/Card"]
 position = Vector2(12, -1.81251)
 scale = Vector2(0.634517, 0.634517)
 texture = ExtResource("9_fmxa3")
 
-[node name="Sprite" type="Sprite2D" parent="Cards/Card/CardImage"]
+[node name="Sprite" type="Sprite2D" parent="Game/Cards/Card/CardImage"]
 position = Vector2(-20.6243, -85.3996)
 scale = Vector2(0.352745, 0.352745)
 texture = ExtResource("5_g07ae")
 
-[node name="Container" type="Control" parent="Cards/Card/CardImage"]
+[node name="Container" type="Control" parent="Game/Cards/Card/CardImage"]
 layout_mode = 3
 anchor_left = 0.332343
 anchor_top = 0.642214
@@ -430,7 +424,7 @@ grow_vertical = 2
 size_flags_horizontal = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="Description" type="RichTextLabel" parent="Cards/Card/CardImage/Container"]
+[node name="Description" type="RichTextLabel" parent="Game/Cards/Card/CardImage/Container"]
 clip_contents = false
 layout_mode = 1
 anchors_preset = -1
@@ -453,7 +447,7 @@ scroll_active = false
 autowrap_mode = 2
 deselect_on_focus_loss_enabled = false
 
-[node name="Container2" type="Control" parent="Cards/Card/CardImage"]
+[node name="Container2" type="Control" parent="Game/Cards/Card/CardImage"]
 layout_mode = 3
 anchor_left = 0.332343
 anchor_top = 0.545476
@@ -468,7 +462,7 @@ grow_vertical = 2
 size_flags_horizontal = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="Scientific" type="RichTextLabel" parent="Cards/Card/CardImage/Container2"]
+[node name="Scientific" type="RichTextLabel" parent="Game/Cards/Card/CardImage/Container2"]
 clip_contents = false
 layout_mode = 1
 anchors_preset = 15
@@ -491,7 +485,7 @@ scroll_active = false
 autowrap_mode = 0
 deselect_on_focus_loss_enabled = false
 
-[node name="Container3" type="Control" parent="Cards/Card/CardImage"]
+[node name="Container3" type="Control" parent="Game/Cards/Card/CardImage"]
 layout_mode = 3
 anchor_left = 0.332343
 anchor_top = 0.545476
@@ -506,7 +500,7 @@ grow_vertical = 2
 size_flags_horizontal = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="Name" type="RichTextLabel" parent="Cards/Card/CardImage/Container3"]
+[node name="Name" type="RichTextLabel" parent="Game/Cards/Card/CardImage/Container3"]
 clip_contents = false
 layout_mode = 1
 anchors_preset = 15
@@ -528,7 +522,7 @@ scroll_active = false
 autowrap_mode = 0
 deselect_on_focus_loss_enabled = false
 
-[node name="SelectButton" type="Button" parent="Cards/Card"]
+[node name="SelectButton" type="Button" parent="Game/Cards/Card"]
 offset_left = -79.0
 offset_top = 153.0
 offset_right = 79.0
@@ -538,7 +532,7 @@ theme_override_fonts/font = ExtResource("10_55s7r")
 theme_override_styles/normal = SubResource("StyleBoxFlat_qqigk")
 text = "SELECCIONAR"
 
-[node name="ExitButton" type="Button" parent="Cards/Card"]
+[node name="ExitButton" type="Button" parent="Game/Cards/Card"]
 offset_left = 90.0
 offset_top = -170.0
 offset_right = 125.0
@@ -549,33 +543,33 @@ theme_override_fonts/font = ExtResource("10_55s7r")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ab3v4")
 text = "X"
 
-[node name="Card2" type="Area2D" parent="Cards"]
+[node name="Card2" type="Area2D" parent="Game/Cards"]
 position = Vector2(432, 263)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("4_aeab4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/Cards/Card2"]
 position = Vector2(0, -2.24548)
 scale = Vector2(9.24, 14.7509)
 shape = SubResource("RectangleShape2D_ghbw6")
 
-[node name="sizeAnimator" type="AnimationPlayer" parent="Cards/Card2"]
+[node name="sizeAnimator" type="AnimationPlayer" parent="Game/Cards/Card2"]
 root_node = NodePath("../CardImage")
 libraries = {
 "": SubResource("AnimationLibrary_a2xb7")
 }
 
-[node name="CardImage" type="Sprite2D" parent="Cards/Card2"]
+[node name="CardImage" type="Sprite2D" parent="Game/Cards/Card2"]
 position = Vector2(12, -1.81251)
 scale = Vector2(0.634517, 0.634517)
 texture = ExtResource("9_fmxa3")
 
-[node name="Sprite" type="Sprite2D" parent="Cards/Card2/CardImage"]
+[node name="Sprite" type="Sprite2D" parent="Game/Cards/Card2/CardImage"]
 position = Vector2(-20.6243, -85.3996)
 scale = Vector2(0.352745, 0.352745)
 texture = ExtResource("5_g07ae")
 
-[node name="Container" type="Control" parent="Cards/Card2/CardImage"]
+[node name="Container" type="Control" parent="Game/Cards/Card2/CardImage"]
 layout_mode = 3
 anchor_left = 0.332343
 anchor_top = 0.642214
@@ -590,7 +584,7 @@ grow_vertical = 2
 size_flags_horizontal = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="Description" type="RichTextLabel" parent="Cards/Card2/CardImage/Container"]
+[node name="Description" type="RichTextLabel" parent="Game/Cards/Card2/CardImage/Container"]
 clip_contents = false
 layout_mode = 1
 anchors_preset = -1
@@ -613,7 +607,7 @@ scroll_active = false
 autowrap_mode = 2
 deselect_on_focus_loss_enabled = false
 
-[node name="Container2" type="Control" parent="Cards/Card2/CardImage"]
+[node name="Container2" type="Control" parent="Game/Cards/Card2/CardImage"]
 layout_mode = 3
 anchor_left = 0.332343
 anchor_top = 0.545476
@@ -628,7 +622,7 @@ grow_vertical = 2
 size_flags_horizontal = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="Scientific" type="RichTextLabel" parent="Cards/Card2/CardImage/Container2"]
+[node name="Scientific" type="RichTextLabel" parent="Game/Cards/Card2/CardImage/Container2"]
 clip_contents = false
 layout_mode = 1
 anchors_preset = 15
@@ -651,7 +645,7 @@ scroll_active = false
 autowrap_mode = 0
 deselect_on_focus_loss_enabled = false
 
-[node name="Container3" type="Control" parent="Cards/Card2/CardImage"]
+[node name="Container3" type="Control" parent="Game/Cards/Card2/CardImage"]
 layout_mode = 3
 anchor_left = 0.332343
 anchor_top = 0.545476
@@ -665,7 +659,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
 
-[node name="Name" type="RichTextLabel" parent="Cards/Card2/CardImage/Container3"]
+[node name="Name" type="RichTextLabel" parent="Game/Cards/Card2/CardImage/Container3"]
 clip_contents = false
 layout_mode = 1
 anchors_preset = 15
@@ -687,7 +681,7 @@ scroll_active = false
 autowrap_mode = 0
 deselect_on_focus_loss_enabled = false
 
-[node name="SelectButton" type="Button" parent="Cards/Card2"]
+[node name="SelectButton" type="Button" parent="Game/Cards/Card2"]
 offset_left = -79.0
 offset_top = 153.0
 offset_right = 79.0
@@ -697,7 +691,7 @@ theme_override_fonts/font = ExtResource("10_55s7r")
 theme_override_styles/normal = SubResource("StyleBoxFlat_qqigk")
 text = "SELECCIONAR"
 
-[node name="ExitButton" type="Button" parent="Cards/Card2"]
+[node name="ExitButton" type="Button" parent="Game/Cards/Card2"]
 offset_left = 90.0
 offset_top = -170.0
 offset_right = 125.0
@@ -708,33 +702,33 @@ theme_override_fonts/font = ExtResource("10_55s7r")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ab3v4")
 text = "X"
 
-[node name="Card3" type="Area2D" parent="Cards"]
+[node name="Card3" type="Area2D" parent="Game/Cards"]
 position = Vector2(664, 263)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("4_aeab4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cards/Card3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/Cards/Card3"]
 position = Vector2(0, -2.24548)
 scale = Vector2(9.24, 14.7509)
 shape = SubResource("RectangleShape2D_ghbw6")
 
-[node name="sizeAnimator" type="AnimationPlayer" parent="Cards/Card3"]
+[node name="sizeAnimator" type="AnimationPlayer" parent="Game/Cards/Card3"]
 root_node = NodePath("../CardImage")
 libraries = {
 "": SubResource("AnimationLibrary_a2xb7")
 }
 
-[node name="CardImage" type="Sprite2D" parent="Cards/Card3"]
+[node name="CardImage" type="Sprite2D" parent="Game/Cards/Card3"]
 position = Vector2(12, -1.81251)
 scale = Vector2(0.634517, 0.634517)
 texture = ExtResource("9_fmxa3")
 
-[node name="Sprite" type="Sprite2D" parent="Cards/Card3/CardImage"]
+[node name="Sprite" type="Sprite2D" parent="Game/Cards/Card3/CardImage"]
 position = Vector2(-20.6243, -85.3996)
 scale = Vector2(0.352745, 0.352745)
 texture = ExtResource("5_g07ae")
 
-[node name="Container" type="Control" parent="Cards/Card3/CardImage"]
+[node name="Container" type="Control" parent="Game/Cards/Card3/CardImage"]
 layout_mode = 3
 anchor_left = 0.332343
 anchor_top = 0.642214
@@ -749,7 +743,7 @@ grow_vertical = 2
 size_flags_horizontal = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="Description" type="RichTextLabel" parent="Cards/Card3/CardImage/Container"]
+[node name="Description" type="RichTextLabel" parent="Game/Cards/Card3/CardImage/Container"]
 clip_contents = false
 layout_mode = 1
 anchors_preset = -1
@@ -772,7 +766,7 @@ scroll_active = false
 autowrap_mode = 2
 deselect_on_focus_loss_enabled = false
 
-[node name="Container2" type="Control" parent="Cards/Card3/CardImage"]
+[node name="Container2" type="Control" parent="Game/Cards/Card3/CardImage"]
 layout_mode = 3
 anchor_left = 0.332343
 anchor_top = 0.545476
@@ -787,7 +781,7 @@ grow_vertical = 2
 size_flags_horizontal = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="Scientific" type="RichTextLabel" parent="Cards/Card3/CardImage/Container2"]
+[node name="Scientific" type="RichTextLabel" parent="Game/Cards/Card3/CardImage/Container2"]
 clip_contents = false
 layout_mode = 1
 anchors_preset = 15
@@ -810,7 +804,7 @@ scroll_active = false
 autowrap_mode = 0
 deselect_on_focus_loss_enabled = false
 
-[node name="Container3" type="Control" parent="Cards/Card3/CardImage"]
+[node name="Container3" type="Control" parent="Game/Cards/Card3/CardImage"]
 layout_mode = 3
 anchor_left = 0.332343
 anchor_top = 0.545476
@@ -825,7 +819,7 @@ grow_vertical = 2
 size_flags_horizontal = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="Name" type="RichTextLabel" parent="Cards/Card3/CardImage/Container3"]
+[node name="Name" type="RichTextLabel" parent="Game/Cards/Card3/CardImage/Container3"]
 clip_contents = false
 layout_mode = 1
 anchors_preset = 15
@@ -847,7 +841,7 @@ scroll_active = false
 autowrap_mode = 0
 deselect_on_focus_loss_enabled = false
 
-[node name="SelectButton" type="Button" parent="Cards/Card3"]
+[node name="SelectButton" type="Button" parent="Game/Cards/Card3"]
 offset_left = -79.0
 offset_top = 153.0
 offset_right = 79.0
@@ -857,7 +851,7 @@ theme_override_fonts/font = ExtResource("10_55s7r")
 theme_override_styles/normal = SubResource("StyleBoxFlat_qqigk")
 text = "SELECCIONAR"
 
-[node name="ExitButton" type="Button" parent="Cards/Card3"]
+[node name="ExitButton" type="Button" parent="Game/Cards/Card3"]
 offset_left = 90.0
 offset_top = -170.0
 offset_right = 125.0
@@ -868,147 +862,19 @@ theme_override_fonts/font = ExtResource("10_55s7r")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ab3v4")
 text = "X"
 
-[node name="Graph" type="Node2D" parent="."]
-script = ExtResource("14_c5222")
-
-
-[node name="Urraca" type="Control" parent="Graph"]
+[node name="Graph" parent="Game" instance=ExtResource("14_51cwe")]
 visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_left = 187.0
-offset_top = 172.0
-offset_right = 187.0
-offset_bottom = 172.0
-scale = Vector2(0.304817, 0.304817)
 
-[node name="Sprite2D" type="Sprite2D" parent="Graph/Urraca"]
-texture = ExtResource("14_j21fi")
+[node name="Titol" parent="." instance=ExtResource("15_2m7bk")]
+position = Vector2(432, 243)
 
-[node name="Gaviota" type="Control" parent="Graph"]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_left = 747.0
-offset_top = 233.0
-offset_right = 747.0
-offset_bottom = 233.0
-scale = Vector2(0.394737, 0.394737)
-
-[node name="Sprite2D" type="Sprite2D" parent="Graph/Gaviota"]
-texture = ExtResource("15_gvgjg")
-
-[node name="Pato" type="Control" parent="Graph"]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_left = 173.0
-offset_top = 356.0
-offset_right = 173.0
-offset_bottom = 356.0
-scale = Vector2(0.333143, 0.333143)
-
-[node name="Sprite2D" type="Sprite2D" parent="Graph/Pato"]
-texture = ExtResource("16_p8wmv")
-
-[node name="Gorrion" type="Control" parent="Graph"]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_left = 530.0
-offset_top = 303.0
-offset_right = 530.0
-offset_bottom = 303.0
-scale = Vector2(0.17032, 0.17032)
-
-[node name="Sprite2D" type="Sprite2D" parent="Graph/Gorrion"]
-texture = ExtResource("17_lce8v")
-
-[node name="Colirrojo" type="Control" parent="Graph"]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_left = 581.0
-offset_top = 135.0
-offset_right = 581.0
-offset_bottom = 135.0
-scale = Vector2(0.19615, 0.19615)
-
-[node name="Sprite2D" type="Sprite2D" parent="Graph/Colirrojo"]
-texture = ExtResource("18_l46lv")
-
-[node name="Verdecillo" type="Control" parent="Graph"]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_left = 679.0
-offset_top = 85.0
-offset_right = 679.0
-offset_bottom = 85.0
-scale = Vector2(0.168587, 0.168587)
-
-[node name="Sprite2D" type="Sprite2D" parent="Graph/Verdecillo"]
-texture = ExtResource("19_s8tj4")
-
-[node name="Tortola" type="Control" parent="Graph"]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_left = 612.0
-offset_top = 397.0
-offset_right = 612.0
-offset_bottom = 397.0
-scale = Vector2(0.28705, 0.28705)
-
-[node name="Sprite2D" type="Sprite2D" parent="Graph/Tortola"]
-texture = ExtResource("20_427l8")
-
-[node name="Paloma" type="Control" parent="Graph"]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_left = 390.0
-offset_top = 366.0
-offset_right = 390.0
-offset_bottom = 366.0
-scale = Vector2(0.301161, 0.301161)
-
-[node name="Sprite2D" type="Sprite2D" parent="Graph/Paloma"]
-texture = ExtResource("21_raods")
-
-[node name="Abubilla" type="Control" parent="Graph"]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_left = 412.0
-offset_top = 179.0
-offset_right = 412.0
-offset_bottom = 179.0
-scale = Vector2(0.326362, 0.326362)
-
-[node name="Sprite2D" type="Sprite2D" parent="Graph/Abubilla"]
-texture = ExtResource("22_tutr5")
-
-[node name="Lavandera" type="Control" parent="Graph"]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_left = 299.0
-offset_top = 67.0
-offset_right = 299.0
-offset_bottom = 67.0
-scale = Vector2(0.200956, 0.200956)
-
-[node name="Sprite2D" type="Sprite2D" parent="Graph/Lavandera"]
-texture = ExtResource("23_irfci")
-
-[connection signal="pressed" from="Letter/Letter/Next" to="Letter" method="_on_next_pressed"]
-[connection signal="mouse_shape_entered" from="Cards/Card" to="Cards/Card" method="_on_mouse_shape_entered"]
-[connection signal="pressed" from="Cards/Card/SelectButton" to="Letter" method="_on_select_button1_pressed"]
-[connection signal="pressed" from="Cards/Card/ExitButton" to="Cards/Card" method="_on_exit_button_pressed"]
-[connection signal="mouse_shape_entered" from="Cards/Card2" to="Cards/Card2" method="_on_mouse_shape_entered"]
-[connection signal="pressed" from="Cards/Card2/SelectButton" to="Letter" method="_on_select_button2_pressed"]
-[connection signal="pressed" from="Cards/Card2/ExitButton" to="Cards/Card2" method="_on_exit_button_pressed"]
-[connection signal="mouse_shape_entered" from="Cards/Card3" to="Cards/Card3" method="_on_mouse_shape_entered"]
-[connection signal="pressed" from="Cards/Card3/SelectButton" to="Letter" method="_on_select_button3_pressed"]
-[connection signal="pressed" from="Cards/Card3/ExitButton" to="Cards/Card3" method="_on_exit_button_pressed"]
+[connection signal="pressed" from="Game/Letter/Letter/Next" to="Game/Letter" method="_on_next_pressed"]
+[connection signal="mouse_shape_entered" from="Game/Cards/Card" to="Game/Cards/Card" method="_on_mouse_shape_entered"]
+[connection signal="pressed" from="Game/Cards/Card/SelectButton" to="Game/Letter" method="_on_select_button1_pressed"]
+[connection signal="pressed" from="Game/Cards/Card/ExitButton" to="Game/Cards/Card" method="_on_exit_button_pressed"]
+[connection signal="mouse_shape_entered" from="Game/Cards/Card2" to="Game/Cards/Card2" method="_on_mouse_shape_entered"]
+[connection signal="pressed" from="Game/Cards/Card2/SelectButton" to="Game/Letter" method="_on_select_button2_pressed"]
+[connection signal="pressed" from="Game/Cards/Card2/ExitButton" to="Game/Cards/Card2" method="_on_exit_button_pressed"]
+[connection signal="mouse_shape_entered" from="Game/Cards/Card3" to="Game/Cards/Card3" method="_on_mouse_shape_entered"]
+[connection signal="pressed" from="Game/Cards/Card3/SelectButton" to="Game/Letter" method="_on_select_button3_pressed"]
+[connection signal="pressed" from="Game/Cards/Card3/ExitButton" to="Game/Cards/Card3" method="_on_exit_button_pressed"]

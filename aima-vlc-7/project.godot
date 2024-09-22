@@ -15,6 +15,10 @@ config/version="0.1"
 run/main_scene="res://scenes/mundo.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 
+[autoload]
+
+globals="*res://scripts/globals.gd"
+
 [display]
 
 window/size/viewport_width=864

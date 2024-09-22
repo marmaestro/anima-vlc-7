@@ -14,7 +14,7 @@ func _init(index : int):
 	picture = load("res://" + data.source)
 	common_name = tr(data.common_name)
 	scientific_name = data.scientific_name
-	traits = tr(data.traits.trait_1) + "\n" + tr(data.traits.trait_2) + "\n" + tr(data.traits.trait_3)
+	traits = tr(data.traits[0]) + "\n" + tr(data.traits[1]) + "\n" + tr(data.traits[2])
 	
 
 	

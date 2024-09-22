@@ -6,7 +6,6 @@ var bird
 
 @onready var sprite : Sprite2D = $CardImage/Sprite
 @onready var _description : RichTextLabel = $CardImage/Container/Description
-var _neededObject
 
 @onready var size_animator : AnimationPlayer = $sizeAnimator
 var isBig : bool = false
@@ -14,43 +13,45 @@ var isBig : bool = false
 @onready var select_button : Button = $SelectButton
 @onready var cards : Node2D = %Cards
 	
-func _ready() -> void:
+func _ready():
 	size_animator.play("small")
 	exit_button.visible = false
 
-func _process(delta: float) -> void:
+func _process(delta: float):
 	pass
 
-func _physics_process(delta: float) -> void:
-	var space = Input.is_action_pressed("Space")
-	if(space): generateNewBird()
+#func _physics_process(delta: float) -> void:
+	#var space = Input.is_action_pressed("Space")
+	#if(space): generateNewBird()
 		
-func generateNewBird() -> void:
-	var i : int = randi_range(0,9)
-	if (!cards.isBirdInList(i)):
-		bird = Bird.new(i)
-		_setNames()
-		sprite.texture = bird.picture
-	else: generateNewBird()
+#func generateNewBird() -> void:
+	#var i : int = randi_range(0,GLOBALS.TOTAL_BIRDS)
+	#if (!cards.isBirdInList(i)):
+		#bird = Bird.new(i)
+		#_setBird()
+	#else: generateNewBird()
+	
+func generateBird(id : int):
+	bird = Bird.new(id)
+	_setBird()
 
-
-func _on_mouse_shape_entered(shape_idx: int) -> void:
+func _on_mouse_shape_entered(shape_idx: int):
 	if(!isBig):
 		isBig = true
 		exit_button.visible = true
 		size_animator.play("getBigger")
 
 
-func _on_exit_button_pressed() -> void:
+func _on_exit_button_pressed():
 	print("exit")
 	animationSmall()
 
-func animationSmall() -> void:
+func animationSmall():
 	isBig = false
 	exit_button.visible = false
 	size_animator.play("getSmaller")
 	
-func _setNames() -> void:
+func _setBird():
 	_name.clear()
 	_name.push_bold()
 	_name.add_text(bird.common_name)
@@ -61,3 +62,5 @@ func _setNames() -> void:
 	
 	_description.clear()
 	_description.add_text(bird.traits)
+
+	sprite.texture = bird.picture

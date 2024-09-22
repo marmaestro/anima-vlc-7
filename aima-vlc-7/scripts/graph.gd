@@ -6,7 +6,7 @@ var size : int
 var vectors : Array[Vector2]
 
 @onready var background = $Background
-@onready var birds = [$Urraca,$Gaviota,$Pato,$Gorrion,$Colirrojo,$Verdecillo,$Tortola,$Paloma,$Abubilla,$Lavandera]
+@onready var birds = [$Urraca,$Gaviota,$Pato,$Gorrion,$Colirrojo,$Verdecillo,$Paloma,$Tortola,$Abubilla,$Lavandera]
 @onready var game = $".."
 
 func _init() :

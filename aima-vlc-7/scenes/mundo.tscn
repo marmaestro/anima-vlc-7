@@ -329,7 +329,10 @@ bg_color = Color(0, 0, 0, 0)
 
 [node name="Game" type="Node2D" parent="."]
 unique_name_in_owner = true
-visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Game"]
+position = Vector2(432, 243)
+texture = ExtResource("14_muqyq")
 
 [node name="Letter" type="Area2D" parent="Game"]
 unique_name_in_owner = true
@@ -1103,6 +1106,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_3rssd")
 text = "JUGAR"
 
 [node name="Traducciones" type="Node2D" parent="."]
+visible = false
 position = Vector2(432, 243)
 script = ExtResource("29_dkbav")
 

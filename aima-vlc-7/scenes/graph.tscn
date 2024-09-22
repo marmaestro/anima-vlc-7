@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://d0pcrmptf0yow"]
+[gd_scene load_steps=12 format=3 uid="uid://d0pcrmptf0yow"]
 
 [ext_resource type="Texture2D" uid="uid://bmfaip8ulc0n" path="res://sprites/birds/pfp/pfp_urraca.png" id="1_8sfyv"]
+[ext_resource type="Script" path="res://scripts/graph.gd" id="1_s1r0k"]
 [ext_resource type="Texture2D" uid="uid://big5m7cp1rcyl" path="res://sprites/birds/pfp/pfp_gaviota.png" id="2_f1t34"]
 [ext_resource type="Texture2D" uid="uid://buc6fgmkr318g" path="res://sprites/birds/pfp/pfp_pato.png" id="3_udjbb"]
 [ext_resource type="Texture2D" uid="uid://cd4i0ls3wky10" path="res://sprites/birds/pfp/pfp_gorrion.png" id="4_c1f8t"]
@@ -12,8 +13,10 @@
 [ext_resource type="Texture2D" uid="uid://nbgj0r51n2g" path="res://sprites/birds/pfp/pfp_lavandera.png" id="10_nr8iu"]
 
 [node name="Graph" type="Node2D"]
+script = ExtResource("1_s1r0k")
 
 [node name="Urraca" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 187.0
@@ -26,6 +29,7 @@ scale = Vector2(0.304817, 0.304817)
 texture = ExtResource("1_8sfyv")
 
 [node name="Gaviota" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 747.0
@@ -38,6 +42,7 @@ scale = Vector2(0.394737, 0.394737)
 texture = ExtResource("2_f1t34")
 
 [node name="Pato" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 173.0
@@ -50,6 +55,7 @@ scale = Vector2(0.333143, 0.333143)
 texture = ExtResource("3_udjbb")
 
 [node name="Gorrion" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 530.0
@@ -62,6 +68,7 @@ scale = Vector2(0.17032, 0.17032)
 texture = ExtResource("4_c1f8t")
 
 [node name="Colirrojo" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 581.0
@@ -74,6 +81,7 @@ scale = Vector2(0.19615, 0.19615)
 texture = ExtResource("5_yrjop")
 
 [node name="Verdecillo" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 679.0
@@ -86,6 +94,7 @@ scale = Vector2(0.168587, 0.168587)
 texture = ExtResource("6_tvvdy")
 
 [node name="Tortola" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 612.0
@@ -98,6 +107,7 @@ scale = Vector2(0.28705, 0.28705)
 texture = ExtResource("7_wnsfc")
 
 [node name="Paloma" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 390.0
@@ -110,6 +120,7 @@ scale = Vector2(0.301161, 0.301161)
 texture = ExtResource("8_os44x")
 
 [node name="Abubilla" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 412.0
@@ -122,6 +133,7 @@ scale = Vector2(0.326362, 0.326362)
 texture = ExtResource("9_05rk5")
 
 [node name="Lavandera" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 299.0

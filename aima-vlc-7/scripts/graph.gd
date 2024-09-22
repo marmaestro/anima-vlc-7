@@ -8,6 +8,7 @@ var vectors : Array[Vector2]
 @onready var background = $Background
 @onready var birds = [$Urraca,$Gaviota,$Pato,$Gorrion,$Colirrojo,$Verdecillo,$Paloma,$Tortola,$Abubilla,$Lavandera]
 @onready var game = $".."
+@onready var exit_button: Button = $ExitButton
 
 func _init() :
 	graph = []
@@ -39,6 +40,7 @@ func showGraph() :
 				
 	queue_redraw()
 	background.show()
+	exit_button.show()
 	
 func _draw():
 	
@@ -48,3 +50,7 @@ func _draw():
 		draw_line(vectors[i], vectors[j], Color.BLACK, 5.0)
 		i = j
 		j += 1
+
+
+func _on_exit_button_pressed() -> void:
+	get_tree().quit()

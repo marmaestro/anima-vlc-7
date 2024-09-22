@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://desl3ix1lirpt"]
+[gd_scene load_steps=58 format=3 uid="uid://desl3ix1lirpt"]
 
 [ext_resource type="Script" path="res://scripts/letter.gd" id="1_7ddfu"]
 [ext_resource type="Texture2D" uid="uid://c50hygp4axwhs" path="res://sprites/Letter.png" id="2_0l2ob"]
@@ -269,6 +269,13 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ab3v4"]
 bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pcn4v"]
+bg_color = Color(0.231373, 0.513726, 0.596078, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -1124,6 +1131,18 @@ scale = Vector2(0.200956, 0.200956)
 [node name="Sprite2D" type="Sprite2D" parent="Game/Graph/Lavandera"]
 texture = ExtResource("23_irfci")
 
+[node name="ExitButton" type="Button" parent="Game/Graph"]
+visible = false
+offset_left = 712.0
+offset_top = 413.0
+offset_right = 841.0
+offset_bottom = 460.0
+theme = ExtResource("14_o87vs")
+theme_override_fonts/font = ExtResource("13_m1pwu")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_pcn4v")
+text = "SALIR"
+
 [node name="Titol" type="Node2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(432, 243)
@@ -1159,7 +1178,6 @@ text = "JUGAR"
 
 [node name="Traducciones" type="Node2D" parent="."]
 unique_name_in_owner = true
-visible = false
 position = Vector2(432, 243)
 script = ExtResource("29_dkbav")
 
@@ -1223,6 +1241,7 @@ stream = ExtResource("8_a5oj8")
 [connection signal="mouse_shape_entered" from="Game/Cards/Card3" to="Game/Cards/Card3" method="_on_mouse_shape_entered"]
 [connection signal="pressed" from="Game/Cards/Card3/SelectButton" to="Game/Letter" method="_on_select_button3_pressed"]
 [connection signal="pressed" from="Game/Cards/Card3/ExitButton" to="Game/Cards/Card3" method="_on_exit_button_pressed"]
+[connection signal="pressed" from="Game/Graph/ExitButton" to="Game/Graph" method="_on_exit_button_pressed"]
 [connection signal="pressed" from="Titol/Button" to="Titol" method="_on_button_pressed"]
 [connection signal="pressed" from="Traducciones/VALENCIA" to="Traducciones" method="_on_valencia_pressed"]
 [connection signal="pressed" from="Traducciones/CASTELLANO" to="Traducciones" method="_on_castellano_pressed"]

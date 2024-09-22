@@ -37,6 +37,7 @@ func _on_mouse_shape_entered(shape_idx: int):
 
 func _on_exit_button_pressed():
 	print("exit")
+	button_sounds.play()
 	animationSmall()
 
 func animationSmall():

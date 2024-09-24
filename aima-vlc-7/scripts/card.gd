@@ -20,14 +20,12 @@ func _ready():
 	size_animator.play("small")
 	exit_button.visible = false
 
-func _process(delta: float):
-	pass
 	
 func generateBird(id : int):
 	bird = Bird.new(id)
 	_setBird()
 
-func _on_mouse_shape_entered(shape_idx: int):
+func _on_mouse_shape_entered(_shape_idx: int):
 	if(!isBig):
 		isBig = true
 		exit_button.visible = true

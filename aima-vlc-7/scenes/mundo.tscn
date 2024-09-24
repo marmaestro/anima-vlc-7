@@ -1165,6 +1165,10 @@ libraries = {
 "": SubResource("AnimationLibrary_4pi66")
 }
 autoplay = "move"
+playback_auto_capture_transition_type = 8
+playback_auto_capture_ease_type = 3
+speed_scale = 0.75
+movie_quit_on_finish = true
 
 [node name="titol" type="Sprite2D" parent="Titol"]
 texture = ExtResource("28_4ai0b")

@@ -4,17 +4,8 @@ extends Node2D
 @onready var game: Node2D = %Game
 @onready var button_sounds: AudioStreamPlayer2D = %ButtonSounds
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
 
 func _on_button_pressed() -> void:
 	button_sounds.play()
-	titol.visible=false
+	titol.visible = false
 	game.visible = true

@@ -16,14 +16,11 @@ var _trinket : Trinket
 @onready var _graph: Graph = $"../Graph"
 
 var success : int = 0
-@onready var points: RichTextLabel = $Points
 @onready var button_sounds: AudioStreamPlayer2D = %ButtonSounds
 
 func _ready() -> void:
 	generateLetter()
 
-func _process(delta: float) :
-	pass
 
 func _on_next_pressed() :
 	button_sounds.play()

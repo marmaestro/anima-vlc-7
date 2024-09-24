@@ -36,7 +36,7 @@ Space={
 [internationalization]
 
 locale/translation_remaps={}
-locale/translations=PackedStringArray("res://translations/text_10.ca.translation", "res://translations/text_10.es.translation")
+locale/translations=PackedStringArray("res://translations/text_11.ca.translation", "res://translations/text_11.es.translation")
 locale/test="ca"
 locale/fallback="ca"
 

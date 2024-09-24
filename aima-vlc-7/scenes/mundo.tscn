@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://desl3ix1lirpt"]
+[gd_scene load_steps=59 format=3 uid="uid://desl3ix1lirpt"]
 
 [ext_resource type="Script" path="res://scripts/letter.gd" id="1_7ddfu"]
 [ext_resource type="Texture2D" uid="uid://c50hygp4axwhs" path="res://sprites/Letter.png" id="2_0l2ob"]
@@ -32,6 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://d4mnhqv6t217f" path="res://sprites/bg/negro.png" id="30_7ffmr"]
 [ext_resource type="Script" path="res://scripts/logo.gd" id="30_rhk2u"]
 [ext_resource type="Texture2D" uid="uid://dtq2cxnrmu6gb" path="res://sprites/logo completo blanco.png" id="31_4u324"]
+[ext_resource type="AudioStream" uid="uid://cv8a6vklx8nco" path="res://sounds/William Frederick Davidson - Pits and Patters.mp3.mp3" id="33_4gu5c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rlslu"]
 size = Vector2(333, 250)
@@ -334,6 +335,21 @@ bg_color = Color(0, 0, 0, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0gpsw"]
 bg_color = Color(0, 0, 0, 0)
 
+[sub_resource type="Animation" id="Animation_2as3k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LogoPunicGoose:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_qwiko"]
 resource_name = "logo"
 length = 5.0
@@ -362,21 +378,6 @@ tracks/1/keys = {
 "args": [],
 "method": &"animacionLogo"
 }]
-}
-
-[sub_resource type="Animation" id="Animation_2as3k"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("LogoPunicGoose:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fyx80"]
@@ -668,6 +669,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ab3v4")
 text = "X"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Game/Cards/Card"]
+bus = &"SFX"
 
 [node name="Card2" type="Area2D" parent="Game/Cards"]
 position = Vector2(432, 263)
@@ -829,6 +831,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ab3v4")
 text = "X"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Game/Cards/Card2"]
+bus = &"SFX"
 
 [node name="Card3" type="Area2D" parent="Game/Cards"]
 position = Vector2(664, 263)
@@ -991,6 +994,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ab3v4")
 text = "X"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Game/Cards/Card3"]
+bus = &"SFX"
 
 [node name="Graph" type="Node2D" parent="Game"]
 script = ExtResource("14_c5222")
@@ -1231,6 +1235,11 @@ autoplay = "logo"
 unique_name_in_owner = true
 stream = ExtResource("8_a5oj8")
 
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("33_4gu5c")
+volume_db = -15.0
+
 [connection signal="pressed" from="Game/Letter/Letter/Next" to="Game/Letter" method="_on_next_pressed"]
 [connection signal="mouse_shape_entered" from="Game/Cards/Card" to="Game/Cards/Card" method="_on_mouse_shape_entered"]
 [connection signal="pressed" from="Game/Cards/Card/SelectButton" to="Game/Letter" method="_on_select_button1_pressed"]
@@ -1245,3 +1254,4 @@ stream = ExtResource("8_a5oj8")
 [connection signal="pressed" from="Titol/Button" to="Titol" method="_on_button_pressed"]
 [connection signal="pressed" from="Traducciones/VALENCIA" to="Traducciones" method="_on_valencia_pressed"]
 [connection signal="pressed" from="Traducciones/CASTELLANO" to="Traducciones" method="_on_castellano_pressed"]
+[connection signal="finished" from="Music" to="Music" method="_on_finished"]

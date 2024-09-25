@@ -10,7 +10,11 @@ config_version=5
 
 [application]
 
-config/name="NOMBRE_JUEGO"
+config/name="PLOMES I PIULADES"
+config/name_localized={
+"ca": "PLOMES I PIULADES",
+"es": "PLUMAS Y PIADAS"
+}
 config/version="0.1"
 run/main_scene="res://scenes/mundo.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
@@ -36,7 +40,7 @@ Space={
 [internationalization]
 
 locale/translation_remaps={}
-locale/translations=PackedStringArray("res://translations/text_11.ca.translation", "res://translations/text_11.es.translation")
+locale/translations=PackedStringArray("res://translations/text_12.ca.translation", "res://translations/text_12.es.translation")
 locale/test="ca"
 locale/fallback="ca"
 

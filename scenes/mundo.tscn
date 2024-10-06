@@ -1,0 +1,1261 @@
+[gd_scene load_steps=59 format=3 uid="uid://desl3ix1lirpt"]
+
+[ext_resource type="Script" path="res://scripts/letter.gd" id="1_7ddfu"]
+[ext_resource type="Texture2D" uid="uid://c50hygp4axwhs" path="res://sprites/Letter.png" id="2_0l2ob"]
+[ext_resource type="Theme" uid="uid://ci77qser1elpq" path="res://themes/letter-theme.tres" id="2_kn5up"]
+[ext_resource type="Texture2D" uid="uid://ddicyqgh7mk4e" path="res://sprites/trinkets/telegrafo.png" id="3_78llj"]
+[ext_resource type="Script" path="res://scripts/card.gd" id="4_aeab4"]
+[ext_resource type="Texture2D" uid="uid://boi2812xarodr" path="res://sprites/birds/gorrion.png" id="5_g07ae"]
+[ext_resource type="AudioStream" uid="uid://b5gqe5duojfkt" path="res://sounds/buttons.mp3" id="8_a5oj8"]
+[ext_resource type="Texture2D" uid="uid://byqo7unvp5dig" path="res://sprites/Carta.png" id="9_fmxa3"]
+[ext_resource type="FontFile" uid="uid://bsikcrvoehepe" path="res://fonts/Spectral-Regular.ttf" id="10_55s7r"]
+[ext_resource type="FontFile" uid="uid://cww05vwhr0yqf" path="res://fonts/Spectral-Italic.ttf" id="11_58ess"]
+[ext_resource type="FontFile" uid="uid://rke8of3xkujm" path="res://fonts/Spectral-BoldItalic.ttf" id="12_00m0d"]
+[ext_resource type="FontFile" uid="uid://b3dxbwaivdqwl" path="res://fonts/Spectral-Bold.ttf" id="13_m1pwu"]
+[ext_resource type="Script" path="res://scripts/graph.gd" id="14_c5222"]
+[ext_resource type="Texture2D" uid="uid://bmfaip8ulc0n" path="res://sprites/birds/pfp/pfp_urraca.png" id="14_j21fi"]
+[ext_resource type="Texture2D" uid="uid://b6f4dajxv8qfm" path="res://sprites/bg/bg.png" id="14_muqyq"]
+[ext_resource type="Theme" uid="uid://yhek5gfshxwo" path="res://themes/buttons.tres" id="14_o87vs"]
+[ext_resource type="Texture2D" uid="uid://big5m7cp1rcyl" path="res://sprites/birds/pfp/pfp_gaviota.png" id="15_gvgjg"]
+[ext_resource type="Texture2D" uid="uid://buc6fgmkr318g" path="res://sprites/birds/pfp/pfp_pato.png" id="16_p8wmv"]
+[ext_resource type="Texture2D" uid="uid://cd4i0ls3wky10" path="res://sprites/birds/pfp/pfp_gorrion.png" id="17_lce8v"]
+[ext_resource type="Texture2D" uid="uid://benqjuq45s8o7" path="res://sprites/birds/pfp/pfp_collirojo.png" id="18_l46lv"]
+[ext_resource type="Texture2D" uid="uid://cqg4x8v3x8e4a" path="res://sprites/birds/pfp/pfp_verdecillo.png" id="19_s8tj4"]
+[ext_resource type="Texture2D" uid="uid://35u2l7pvso3i" path="res://sprites/birds/pfp/pfp_tortola.png" id="20_427l8"]
+[ext_resource type="Texture2D" uid="uid://csblojoq2g2xk" path="res://sprites/birds/pfp/pfp_paloma.png" id="21_raods"]
+[ext_resource type="Texture2D" uid="uid://bv2tlt7n1vpfg" path="res://sprites/birds/pfp/pfp_abubilla.png" id="22_tutr5"]
+[ext_resource type="Texture2D" uid="uid://nbgj0r51n2g" path="res://sprites/birds/pfp/pfp_lavandera.png" id="23_irfci"]
+[ext_resource type="Script" path="res://scripts/titol.gd" id="25_emycy"]
+[ext_resource type="Texture2D" uid="uid://dc28xc8a47gax" path="res://sprites/bg/nubes1.png" id="27_3suha"]
+[ext_resource type="Texture2D" uid="uid://b02ow0x81vtd3" path="res://sprites/bg/titol.png" id="28_4ai0b"]
+[ext_resource type="Script" path="res://scripts/traducciones.gd" id="29_dkbav"]
+[ext_resource type="Texture2D" uid="uid://d4mnhqv6t217f" path="res://sprites/bg/negro.png" id="30_7ffmr"]
+[ext_resource type="Script" path="res://scripts/logo.gd" id="30_rhk2u"]
+[ext_resource type="Texture2D" uid="uid://dtq2cxnrmu6gb" path="res://sprites/logo completo blanco.png" id="31_4u324"]
+[ext_resource type="AudioStream" uid="uid://cv8a6vklx8nco" path="res://sounds/William Frederick Davidson - Pits and Patters.mp3.mp3" id="33_4gu5c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rlslu"]
+size = Vector2(333, 250)
+
+[sub_resource type="Animation" id="Animation_saalr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(432, 132)]
+}
+
+[sub_resource type="Animation" id="Animation_leemx"]
+resource_name = "bif"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.5, 1.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(432, 243)]
+}
+
+[sub_resource type="Animation" id="Animation_p8tdy"]
+resource_name = "getSmaller"
+length = 0.5
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.5, 1.5), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(432, 243), Vector2(432, 132)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"cardsVisible"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1gbjb"]
+_data = {
+"RESET": SubResource("Animation_saalr"),
+"big": SubResource("Animation_leemx"),
+"getSmaller": SubResource("Animation_p8tdy")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ak8l7"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ghbw6"]
+size = Vector2(23.3766, 20.3045)
+
+[sub_resource type="Animation" id="Animation_lyfdh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [263.0]
+}
+
+[sub_resource type="Animation" id="Animation_anaks"]
+resource_name = "getBigger"
+length = 0.5
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [263.0, 200.0]
+}
+
+[sub_resource type="Animation" id="Animation_lhfbs"]
+resource_name = "getSmaller"
+length = 0.5
+step = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.5, 0.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [200.0, 263.0]
+}
+
+[sub_resource type="Animation" id="Animation_rr54h"]
+resource_name = "small"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a2xb7"]
+_data = {
+"RESET": SubResource("Animation_lyfdh"),
+"getBigger": SubResource("Animation_anaks"),
+"getSmaller": SubResource("Animation_lhfbs"),
+"small": SubResource("Animation_rr54h")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qqigk"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ab3v4"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pcn4v"]
+bg_color = Color(0.231373, 0.513726, 0.596078, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Animation" id="Animation_05hol"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("nubes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -20)]
+}
+
+[sub_resource type="Animation" id="Animation_ygd13"]
+resource_name = "move"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("nubes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -10), Vector2(0, 0), Vector2(0, 10), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4pi66"]
+_data = {
+"RESET": SubResource("Animation_05hol"),
+"move": SubResource("Animation_ygd13")
+}
+
+[sub_resource type="Theme" id="Theme_swucb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3rssd"]
+bg_color = Color(0.231373, 0.513726, 0.596078, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ififr"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0gpsw"]
+bg_color = Color(0, 0, 0, 0)
+
+[sub_resource type="Animation" id="Animation_2as3k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LogoPunicGoose:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qwiko"]
+resource_name = "logo"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LogoPunicGoose:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.53333, 3, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(4.93333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"animacionLogo"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fyx80"]
+_data = {
+"RESET": SubResource("Animation_2as3k"),
+"logo": SubResource("Animation_qwiko")
+}
+
+[node name="Scene" type="Node2D"]
+
+[node name="Game" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Game"]
+position = Vector2(432, 243)
+texture = ExtResource("14_muqyq")
+
+[node name="Letter" type="Area2D" parent="Game"]
+unique_name_in_owner = true
+position = Vector2(432, 132)
+script = ExtResource("1_7ddfu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/Letter"]
+position = Vector2(-2.5, 3)
+shape = SubResource("RectangleShape2D_rlslu")
+
+[node name="letterAnimator" type="AnimationPlayer" parent="Game/Letter"]
+libraries = {
+"": SubResource("AnimationLibrary_1gbjb")
+}
+
+[node name="Letter" type="Sprite2D" parent="Game/Letter"]
+position = Vector2(-6, 4)
+scale = Vector2(0.530864, 0.530864)
+texture = ExtResource("2_0l2ob")
+
+[node name="Object" type="Sprite2D" parent="Game/Letter/Letter"]
+position = Vector2(169.535, -43.3256)
+scale = Vector2(0.477, 0.477)
+texture = ExtResource("3_78llj")
+
+[node name="Container" type="Control" parent="Game/Letter/Letter"]
+layout_mode = 3
+anchor_left = 0.206
+anchor_top = 0.219823
+anchor_right = 0.522
+anchor_bottom = 0.825
+offset_left = -431.984
+offset_top = -242.834
+offset_right = -432.008
+offset_bottom = -242.95
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Description" type="RichTextLabel" parent="Game/Letter/Letter/Container"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_kn5up")
+theme_type_variation = &"main"
+theme_override_fonts/normal_font = ExtResource("10_55s7r")
+theme_override_font_sizes/normal_font_size = 22
+fit_content = true
+scroll_active = false
+autowrap_mode = 2
+deselect_on_focus_loss_enabled = false
+text_direction = 1
+
+[node name="Container2" type="Control" parent="Game/Letter/Letter"]
+layout_mode = 3
+anchor_left = 0.206
+anchor_top = 0.219823
+anchor_right = 0.522
+anchor_bottom = 0.825
+offset_left = -431.984
+offset_top = -289.555
+offset_right = -432.008
+offset_bottom = -289.671
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Name" type="RichTextLabel" parent="Game/Letter/Letter/Container2"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -3.05176e-05
+offset_bottom = -256.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_kn5up")
+theme_type_variation = &"main"
+theme_override_fonts/normal_font = ExtResource("10_55s7r")
+theme_override_fonts/bold_font = ExtResource("13_m1pwu")
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 25
+scroll_active = false
+autowrap_mode = 0
+deselect_on_focus_loss_enabled = false
+
+[node name="Next" type="Button" parent="Game/Letter/Letter"]
+anchors_preset = -1
+anchor_left = -0.0461348
+anchor_top = -0.000143357
+anchor_right = 0.0163652
+anchor_bottom = 0.0389513
+offset_left = 145.349
+offset_top = 123.07
+offset_right = 235.349
+offset_bottom = 154.07
+theme = ExtResource("14_o87vs")
+theme_override_fonts/font = ExtResource("10_55s7r")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_ak8l7")
+text = "SIGUIENTE"
+metadata/_edit_use_anchors_ = true
+
+[node name="Cards" type="Node2D" parent="Game"]
+unique_name_in_owner = true
+position = Vector2(0, 84)
+
+[node name="Card" type="Area2D" parent="Game/Cards"]
+position = Vector2(200, 263)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("4_aeab4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/Cards/Card"]
+position = Vector2(0, -2.24548)
+scale = Vector2(9.24, 14.7509)
+shape = SubResource("RectangleShape2D_ghbw6")
+
+[node name="sizeAnimator" type="AnimationPlayer" parent="Game/Cards/Card"]
+root_node = NodePath("../CardImage")
+libraries = {
+"": SubResource("AnimationLibrary_a2xb7")
+}
+
+[node name="CardImage" type="Sprite2D" parent="Game/Cards/Card"]
+position = Vector2(12, -1.81251)
+scale = Vector2(0.634517, 0.634517)
+texture = ExtResource("9_fmxa3")
+
+[node name="Sprite" type="Sprite2D" parent="Game/Cards/Card/CardImage"]
+position = Vector2(-20.6243, -85.3996)
+scale = Vector2(0.352745, 0.352745)
+texture = ExtResource("5_g07ae")
+
+[node name="Container" type="Control" parent="Game/Cards/Card/CardImage"]
+layout_mode = 3
+anchor_left = 0.332343
+anchor_top = 0.642214
+anchor_right = 0.630954
+anchor_bottom = 0.868551
+offset_left = -432.144
+offset_top = -243.116
+offset_right = -432.144
+offset_bottom = -243.116
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Description" type="RichTextLabel" parent="Game/Cards/Card/CardImage/Container"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.082
+anchor_right = 0.956
+anchor_bottom = 1.118
+offset_left = -3.0
+offset_top = 0.0199986
+offset_right = 0.0879974
+offset_bottom = 0.0200119
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_kn5up")
+theme_type_variation = &"main"
+theme_override_constants/line_separation = -2
+theme_override_fonts/normal_font = ExtResource("10_55s7r")
+theme_override_font_sizes/normal_font_size = 14
+fit_content = true
+scroll_active = false
+autowrap_mode = 2
+deselect_on_focus_loss_enabled = false
+
+[node name="Container2" type="Control" parent="Game/Cards/Card/CardImage"]
+layout_mode = 3
+anchor_left = 0.332343
+anchor_top = 0.545476
+anchor_right = 0.624009
+anchor_bottom = 0.591
+offset_left = -432.144
+offset_top = -243.102
+offset_right = -432.144
+offset_bottom = -243.226
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Scientific" type="RichTextLabel" parent="Game/Cards/Card/CardImage/Container2"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.38344
+offset_bottom = -3.38344
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_kn5up")
+theme_type_variation = &"main"
+theme_override_fonts/normal_font = ExtResource("10_55s7r")
+theme_override_fonts/italics_font = ExtResource("11_58ess")
+theme_override_fonts/bold_italics_font = ExtResource("12_00m0d")
+theme_override_fonts/bold_font = ExtResource("13_m1pwu")
+theme_override_font_sizes/bold_italics_font_size = 18
+theme_override_font_sizes/normal_font_size = 18
+theme_override_font_sizes/bold_font_size = 20
+scroll_active = false
+autowrap_mode = 0
+deselect_on_focus_loss_enabled = false
+
+[node name="Container3" type="Control" parent="Game/Cards/Card/CardImage"]
+layout_mode = 3
+anchor_left = 0.332343
+anchor_top = 0.545476
+anchor_right = 0.624009
+anchor_bottom = 0.591
+offset_left = -432.136
+offset_top = -476.581
+offset_right = -432.136
+offset_bottom = -476.706
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Name" type="RichTextLabel" parent="Game/Cards/Card/CardImage/Container3"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.15201
+offset_bottom = -3.15201
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_kn5up")
+theme_type_variation = &"main"
+theme_override_fonts/normal_font = ExtResource("10_55s7r")
+theme_override_fonts/italics_font = ExtResource("11_58ess")
+theme_override_fonts/bold_italics_font = ExtResource("12_00m0d")
+theme_override_fonts/bold_font = ExtResource("13_m1pwu")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 25
+scroll_active = false
+autowrap_mode = 0
+deselect_on_focus_loss_enabled = false
+
+[node name="SelectButton" type="Button" parent="Game/Cards/Card"]
+offset_left = -79.0
+offset_top = 153.0
+offset_right = 79.0
+offset_bottom = 176.0
+theme = ExtResource("14_o87vs")
+theme_override_fonts/font = ExtResource("10_55s7r")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qqigk")
+text = "SELECCIONAR"
+
+[node name="ExitButton" type="Button" parent="Game/Cards/Card"]
+offset_left = 90.0
+offset_top = -170.0
+offset_right = 125.0
+offset_bottom = -139.0
+scale = Vector2(0.539376, 0.539376)
+theme = ExtResource("14_o87vs")
+theme_override_fonts/font = ExtResource("10_55s7r")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ab3v4")
+text = "X"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Game/Cards/Card"]
+bus = &"SFX"
+
+[node name="Card2" type="Area2D" parent="Game/Cards"]
+position = Vector2(432, 263)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("4_aeab4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/Cards/Card2"]
+position = Vector2(0, -2.24548)
+scale = Vector2(9.24, 14.7509)
+shape = SubResource("RectangleShape2D_ghbw6")
+
+[node name="sizeAnimator" type="AnimationPlayer" parent="Game/Cards/Card2"]
+root_node = NodePath("../CardImage")
+libraries = {
+"": SubResource("AnimationLibrary_a2xb7")
+}
+
+[node name="CardImage" type="Sprite2D" parent="Game/Cards/Card2"]
+position = Vector2(12, -1.81251)
+scale = Vector2(0.634517, 0.634517)
+texture = ExtResource("9_fmxa3")
+
+[node name="Sprite" type="Sprite2D" parent="Game/Cards/Card2/CardImage"]
+position = Vector2(-20.6243, -85.3996)
+scale = Vector2(0.352745, 0.352745)
+texture = ExtResource("5_g07ae")
+
+[node name="Container" type="Control" parent="Game/Cards/Card2/CardImage"]
+layout_mode = 3
+anchor_left = 0.332343
+anchor_top = 0.642214
+anchor_right = 0.630954
+anchor_bottom = 0.868551
+offset_left = -432.144
+offset_top = -243.116
+offset_right = -432.144
+offset_bottom = -243.116
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Description" type="RichTextLabel" parent="Game/Cards/Card2/CardImage/Container"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.082
+anchor_right = 0.956
+anchor_bottom = 1.118
+offset_left = -3.0
+offset_top = 0.0199986
+offset_right = 0.0879974
+offset_bottom = 0.0200119
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_kn5up")
+theme_type_variation = &"main"
+theme_override_constants/line_separation = -2
+theme_override_fonts/normal_font = ExtResource("10_55s7r")
+theme_override_font_sizes/normal_font_size = 14
+fit_content = true
+scroll_active = false
+autowrap_mode = 2
+deselect_on_focus_loss_enabled = false
+
+[node name="Container2" type="Control" parent="Game/Cards/Card2/CardImage"]
+layout_mode = 3
+anchor_left = 0.332343
+anchor_top = 0.545476
+anchor_right = 0.624009
+anchor_bottom = 0.591
+offset_left = -432.144
+offset_top = -243.102
+offset_right = -432.144
+offset_bottom = -243.226
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Scientific" type="RichTextLabel" parent="Game/Cards/Card2/CardImage/Container2"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.38344
+offset_bottom = -3.38344
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_kn5up")
+theme_type_variation = &"main"
+theme_override_fonts/normal_font = ExtResource("10_55s7r")
+theme_override_fonts/italics_font = ExtResource("11_58ess")
+theme_override_fonts/bold_italics_font = ExtResource("12_00m0d")
+theme_override_fonts/bold_font = ExtResource("13_m1pwu")
+theme_override_font_sizes/bold_italics_font_size = 18
+theme_override_font_sizes/normal_font_size = 18
+theme_override_font_sizes/bold_font_size = 20
+scroll_active = false
+autowrap_mode = 0
+deselect_on_focus_loss_enabled = false
+
+[node name="Container3" type="Control" parent="Game/Cards/Card2/CardImage"]
+layout_mode = 3
+anchor_left = 0.332343
+anchor_top = 0.545476
+anchor_right = 0.624009
+anchor_bottom = 0.591
+offset_left = -432.136
+offset_top = -476.581
+offset_right = -432.136
+offset_bottom = -476.706
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+
+[node name="Name" type="RichTextLabel" parent="Game/Cards/Card2/CardImage/Container3"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.15201
+offset_bottom = -3.15201
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_kn5up")
+theme_type_variation = &"main"
+theme_override_fonts/normal_font = ExtResource("10_55s7r")
+theme_override_fonts/italics_font = ExtResource("11_58ess")
+theme_override_fonts/bold_italics_font = ExtResource("12_00m0d")
+theme_override_fonts/bold_font = ExtResource("13_m1pwu")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 25
+scroll_active = false
+autowrap_mode = 0
+deselect_on_focus_loss_enabled = false
+
+[node name="SelectButton" type="Button" parent="Game/Cards/Card2"]
+offset_left = -79.0
+offset_top = 153.0
+offset_right = 79.0
+offset_bottom = 176.0
+theme = ExtResource("14_o87vs")
+theme_override_fonts/font = ExtResource("10_55s7r")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qqigk")
+text = "SELECCIONAR"
+
+[node name="ExitButton" type="Button" parent="Game/Cards/Card2"]
+offset_left = 90.0
+offset_top = -170.0
+offset_right = 125.0
+offset_bottom = -139.0
+scale = Vector2(0.539376, 0.539376)
+theme = ExtResource("14_o87vs")
+theme_override_fonts/font = ExtResource("10_55s7r")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ab3v4")
+text = "X"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Game/Cards/Card2"]
+bus = &"SFX"
+
+[node name="Card3" type="Area2D" parent="Game/Cards"]
+position = Vector2(664, 263)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("4_aeab4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Game/Cards/Card3"]
+position = Vector2(0, -2.24548)
+scale = Vector2(9.24, 14.7509)
+shape = SubResource("RectangleShape2D_ghbw6")
+
+[node name="sizeAnimator" type="AnimationPlayer" parent="Game/Cards/Card3"]
+root_node = NodePath("../CardImage")
+libraries = {
+"": SubResource("AnimationLibrary_a2xb7")
+}
+
+[node name="CardImage" type="Sprite2D" parent="Game/Cards/Card3"]
+position = Vector2(12, -1.81251)
+scale = Vector2(0.634517, 0.634517)
+texture = ExtResource("9_fmxa3")
+
+[node name="Sprite" type="Sprite2D" parent="Game/Cards/Card3/CardImage"]
+position = Vector2(-20.6243, -85.3996)
+scale = Vector2(0.352745, 0.352745)
+texture = ExtResource("5_g07ae")
+
+[node name="Container" type="Control" parent="Game/Cards/Card3/CardImage"]
+layout_mode = 3
+anchor_left = 0.332343
+anchor_top = 0.642214
+anchor_right = 0.630954
+anchor_bottom = 0.868551
+offset_left = -432.144
+offset_top = -243.116
+offset_right = -432.144
+offset_bottom = -243.116
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Description" type="RichTextLabel" parent="Game/Cards/Card3/CardImage/Container"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.082
+anchor_right = 0.956
+anchor_bottom = 1.118
+offset_left = -3.0
+offset_top = 0.0199986
+offset_right = 0.0879974
+offset_bottom = 0.0200119
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_kn5up")
+theme_type_variation = &"main"
+theme_override_constants/line_separation = -2
+theme_override_fonts/normal_font = ExtResource("10_55s7r")
+theme_override_font_sizes/normal_font_size = 14
+fit_content = true
+scroll_active = false
+autowrap_mode = 2
+deselect_on_focus_loss_enabled = false
+
+[node name="Container2" type="Control" parent="Game/Cards/Card3/CardImage"]
+layout_mode = 3
+anchor_left = 0.332343
+anchor_top = 0.545476
+anchor_right = 0.624009
+anchor_bottom = 0.591
+offset_left = -432.144
+offset_top = -243.102
+offset_right = -432.144
+offset_bottom = -243.226
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Scientific" type="RichTextLabel" parent="Game/Cards/Card3/CardImage/Container2"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.38344
+offset_bottom = -3.38344
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_kn5up")
+theme_type_variation = &"main"
+theme_override_fonts/normal_font = ExtResource("10_55s7r")
+theme_override_fonts/italics_font = ExtResource("11_58ess")
+theme_override_fonts/bold_italics_font = ExtResource("12_00m0d")
+theme_override_fonts/bold_font = ExtResource("13_m1pwu")
+theme_override_font_sizes/bold_italics_font_size = 18
+theme_override_font_sizes/normal_font_size = 18
+theme_override_font_sizes/bold_font_size = 20
+scroll_active = false
+autowrap_mode = 0
+deselect_on_focus_loss_enabled = false
+
+[node name="Container3" type="Control" parent="Game/Cards/Card3/CardImage"]
+layout_mode = 3
+anchor_left = 0.332343
+anchor_top = 0.545476
+anchor_right = 0.624009
+anchor_bottom = 0.591
+offset_left = -432.136
+offset_top = -476.581
+offset_right = -432.136
+offset_bottom = -476.706
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Name" type="RichTextLabel" parent="Game/Cards/Card3/CardImage/Container3"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -3.15201
+offset_bottom = -3.15201
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_kn5up")
+theme_type_variation = &"main"
+theme_override_fonts/normal_font = ExtResource("10_55s7r")
+theme_override_fonts/italics_font = ExtResource("11_58ess")
+theme_override_fonts/bold_italics_font = ExtResource("12_00m0d")
+theme_override_fonts/bold_font = ExtResource("13_m1pwu")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 25
+scroll_active = false
+autowrap_mode = 0
+deselect_on_focus_loss_enabled = false
+
+[node name="SelectButton" type="Button" parent="Game/Cards/Card3"]
+offset_left = -79.0
+offset_top = 153.0
+offset_right = 79.0
+offset_bottom = 176.0
+theme = ExtResource("14_o87vs")
+theme_override_fonts/font = ExtResource("10_55s7r")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qqigk")
+text = "SELECCIONAR"
+
+[node name="ExitButton" type="Button" parent="Game/Cards/Card3"]
+offset_left = 90.0
+offset_top = -170.0
+offset_right = 125.0
+offset_bottom = -139.0
+scale = Vector2(0.539376, 0.539376)
+theme = ExtResource("14_o87vs")
+theme_override_fonts/font = ExtResource("10_55s7r")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ab3v4")
+text = "X"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Game/Cards/Card3"]
+bus = &"SFX"
+
+[node name="Graph" type="Node2D" parent="Game"]
+script = ExtResource("14_c5222")
+
+[node name="Background" type="Sprite2D" parent="Game/Graph"]
+visible = false
+z_index = -1
+texture = ExtResource("14_muqyq")
+offset = Vector2(432, 243)
+
+[node name="Urraca" type="Control" parent="Game/Graph"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 187.0
+offset_top = 172.0
+offset_right = 187.0
+offset_bottom = 172.0
+scale = Vector2(0.304817, 0.304817)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/Graph/Urraca"]
+texture = ExtResource("14_j21fi")
+
+[node name="Gaviota" type="Control" parent="Game/Graph"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 747.0
+offset_top = 233.0
+offset_right = 747.0
+offset_bottom = 233.0
+scale = Vector2(0.394737, 0.394737)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/Graph/Gaviota"]
+texture = ExtResource("15_gvgjg")
+
+[node name="Pato" type="Control" parent="Game/Graph"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 173.0
+offset_top = 356.0
+offset_right = 173.0
+offset_bottom = 356.0
+scale = Vector2(0.333143, 0.333143)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/Graph/Pato"]
+texture = ExtResource("16_p8wmv")
+
+[node name="Gorrion" type="Control" parent="Game/Graph"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 530.0
+offset_top = 303.0
+offset_right = 530.0
+offset_bottom = 303.0
+scale = Vector2(0.17032, 0.17032)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/Graph/Gorrion"]
+texture = ExtResource("17_lce8v")
+
+[node name="Colirrojo" type="Control" parent="Game/Graph"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 581.0
+offset_top = 135.0
+offset_right = 581.0
+offset_bottom = 135.0
+scale = Vector2(0.19615, 0.19615)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/Graph/Colirrojo"]
+texture = ExtResource("18_l46lv")
+
+[node name="Verdecillo" type="Control" parent="Game/Graph"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 679.0
+offset_top = 85.0
+offset_right = 679.0
+offset_bottom = 85.0
+scale = Vector2(0.168587, 0.168587)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/Graph/Verdecillo"]
+texture = ExtResource("19_s8tj4")
+
+[node name="Tortola" type="Control" parent="Game/Graph"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 612.0
+offset_top = 397.0
+offset_right = 612.0
+offset_bottom = 397.0
+scale = Vector2(0.28705, 0.28705)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/Graph/Tortola"]
+texture = ExtResource("20_427l8")
+
+[node name="Paloma" type="Control" parent="Game/Graph"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 390.0
+offset_top = 366.0
+offset_right = 390.0
+offset_bottom = 366.0
+scale = Vector2(0.301161, 0.301161)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/Graph/Paloma"]
+texture = ExtResource("21_raods")
+
+[node name="Abubilla" type="Control" parent="Game/Graph"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 412.0
+offset_top = 179.0
+offset_right = 412.0
+offset_bottom = 179.0
+scale = Vector2(0.326362, 0.326362)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/Graph/Abubilla"]
+texture = ExtResource("22_tutr5")
+
+[node name="Lavandera" type="Control" parent="Game/Graph"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 299.0
+offset_top = 67.0
+offset_right = 299.0
+offset_bottom = 67.0
+scale = Vector2(0.200956, 0.200956)
+
+[node name="Sprite2D" type="Sprite2D" parent="Game/Graph/Lavandera"]
+texture = ExtResource("23_irfci")
+
+[node name="ExitButton" type="Button" parent="Game/Graph"]
+visible = false
+offset_left = 712.0
+offset_top = 413.0
+offset_right = 841.0
+offset_bottom = 460.0
+theme = ExtResource("14_o87vs")
+theme_override_fonts/font = ExtResource("13_m1pwu")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_pcn4v")
+text = "SALIR"
+
+[node name="Titol" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(432, 243)
+script = ExtResource("25_emycy")
+
+[node name="bg" type="Sprite2D" parent="Titol"]
+texture = ExtResource("14_muqyq")
+
+[node name="nubes" type="Sprite2D" parent="Titol"]
+position = Vector2(0, -20)
+texture = ExtResource("27_3suha")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Titol/nubes"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_4pi66")
+}
+autoplay = "move"
+playback_auto_capture_transition_type = 8
+playback_auto_capture_ease_type = 3
+speed_scale = 0.75
+movie_quit_on_finish = true
+
+[node name="titol" type="Sprite2D" parent="Titol"]
+texture = ExtResource("28_4ai0b")
+
+[node name="Button" type="Button" parent="Titol"]
+offset_left = 252.0
+offset_top = 155.0
+offset_right = 403.0
+offset_bottom = 215.0
+theme = SubResource("Theme_swucb")
+theme_override_fonts/font = ExtResource("13_m1pwu")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_3rssd")
+text = "JUGAR"
+
+[node name="Traducciones" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(432, 243)
+script = ExtResource("29_dkbav")
+
+[node name="bg" type="Sprite2D" parent="Traducciones"]
+texture = ExtResource("30_7ffmr")
+
+[node name="VALENCIA" type="Button" parent="Traducciones"]
+offset_left = -432.0
+offset_top = -86.0
+offset_right = 432.0
+offset_bottom = -24.0
+theme = ExtResource("14_o87vs")
+theme_override_fonts/font = ExtResource("13_m1pwu")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ififr")
+text = "VALENCIÀ"
+
+[node name="CASTELLANO" type="Button" parent="Traducciones"]
+offset_left = -432.0
+offset_top = 28.0
+offset_right = 432.0
+offset_bottom = 90.0
+theme = ExtResource("14_o87vs")
+theme_override_fonts/font = ExtResource("13_m1pwu")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_0gpsw")
+text = "CASTELLANO"
+
+[node name="Logo" type="Node2D" parent="."]
+script = ExtResource("30_rhk2u")
+
+[node name="bg" type="Sprite2D" parent="Logo"]
+position = Vector2(432, 243)
+texture = ExtResource("30_7ffmr")
+
+[node name="LogoPunicGoose" type="Sprite2D" parent="Logo"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(433.5, 240.5)
+scale = Vector2(0.0885823, 0.0885823)
+texture = ExtResource("31_4u324")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Logo"]
+libraries = {
+"": SubResource("AnimationLibrary_fyx80")
+}
+autoplay = "logo"
+
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+
+[node name="ButtonSounds" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("8_a5oj8")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("33_4gu5c")
+volume_db = -15.0
+
+[connection signal="pressed" from="Game/Letter/Letter/Next" to="Game/Letter" method="_on_next_pressed"]
+[connection signal="mouse_shape_entered" from="Game/Cards/Card" to="Game/Cards/Card" method="_on_mouse_shape_entered"]
+[connection signal="pressed" from="Game/Cards/Card/SelectButton" to="Game/Letter" method="_on_select_button1_pressed"]
+[connection signal="pressed" from="Game/Cards/Card/ExitButton" to="Game/Cards/Card" method="_on_exit_button_pressed"]
+[connection signal="mouse_shape_entered" from="Game/Cards/Card2" to="Game/Cards/Card2" method="_on_mouse_shape_entered"]
+[connection signal="pressed" from="Game/Cards/Card2/SelectButton" to="Game/Letter" method="_on_select_button2_pressed"]
+[connection signal="pressed" from="Game/Cards/Card2/ExitButton" to="Game/Cards/Card2" method="_on_exit_button_pressed"]
+[connection signal="mouse_shape_entered" from="Game/Cards/Card3" to="Game/Cards/Card3" method="_on_mouse_shape_entered"]
+[connection signal="pressed" from="Game/Cards/Card3/SelectButton" to="Game/Letter" method="_on_select_button3_pressed"]
+[connection signal="pressed" from="Game/Cards/Card3/ExitButton" to="Game/Cards/Card3" method="_on_exit_button_pressed"]
+[connection signal="pressed" from="Game/Graph/ExitButton" to="Game/Graph" method="_on_exit_button_pressed"]
+[connection signal="pressed" from="Titol/Button" to="Titol" method="_on_button_pressed"]
+[connection signal="pressed" from="Traducciones/VALENCIA" to="Traducciones" method="_on_valencia_pressed"]
+[connection signal="pressed" from="Traducciones/CASTELLANO" to="Traducciones" method="_on_castellano_pressed"]
+[connection signal="finished" from="Music" to="Music" method="_on_finished"]

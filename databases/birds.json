@@ -1,0 +1,93 @@
+{ "birds":
+		[
+		  {
+			"id": 0,
+			"source": "sprites/birds/urraca.png",
+			"common_name": "URRACA",
+			"scientific_name": "Pica Pica",
+			"traits": ["URRACA_1","URRACA_2","URRACA_3"],
+			"sound": "urraca.mp3"
+		  },
+
+		  {
+			"id": 1,
+			"source": "sprites/birds/gaviota.png",
+			"common_name": "GAVIOTA",
+			"scientific_name": "Larus Michahellis",
+			"traits": ["GAVIOTA_1","GAVIOTA_2","GAVIOTA_3"],
+			"sound": "gaviota.mp3"
+		  },
+
+		  {
+			"id": 2,
+			"source": "sprites/birds/pato.png",
+			"common_name": "PATO",
+			"scientific_name": "Anas Platyrhynchos",
+			"traits": ["PATO_1","PATO_2","PATO_3"],
+			"sound": "pato.mp3"
+		  },
+
+		  {
+			"id": 3,
+			"source": "sprites/birds/gorrion.png",
+			"common_name": "GORRION",
+			"scientific_name": "Passer Domesticus",
+			"traits": ["GORRION_1","GORRION_2","GORRION_3"],
+			"sound": "gorrion.mp3"
+		  },
+
+		  {
+			"id": 4,
+			"source": "sprites/birds/colirrojo.png",
+			"common_name": "COLIRROJO",
+			"scientific_name": "Phoenicurus Ochruros",
+			  "traits": ["COLIRROJO_1","COLIRROJO_2","COLIRROJO_3"],
+			"sound": "colirrojo.mp3"
+		  },
+
+		  {
+			"id": 5,
+			"source": "sprites/birds/verdecillo.png",
+			"common_name": "VERDECILLO",
+			"scientific_name": "Serinus Serinus",
+			  "traits": ["VERDECILLO_1","VERDECILLO_2","VERDECILLO_3"],
+			"sound": "verdecillo.mp3"
+		  },
+
+		  {
+			"id": 6,
+			"source": "sprites/birds/paloma.png",
+			"common_name": "PALOMA",
+			"scientific_name": "Columba Livia",
+			  "traits": ["PALOMA_1","PALOMA_2","PALOMA_3"],
+			"sound": "paloma.mp3"
+		  },
+
+		  {
+			"id": 7,
+			"source": "sprites/birds/tortola.png",
+			"common_name": "TORTOLA",
+			"scientific_name": "Streptopelia Decaocto",
+			  "traits": ["TORTOLA_1","TORTOLA_2","TORTOLA_3"],
+			"sound": "tortola.mp3"
+		  },
+
+		  {
+			"id": 8,
+			"source": "sprites/birds/abubilla.png",
+			"common_name": "ABUBILLA",
+			"scientific_name": "Upupa Epops",
+			  "traits": ["ABUBILLA_1","ABUBILLA_2","ABUBILLA_3"],
+			"sound": "abubilla.mp3"
+		  },
+
+		  {
+			"id": 9,
+			"source": "sprites/birds/lavandera.png",
+			"common_name": "LAVANDERA",
+			"scientific_name": "Motacilla Alba",
+			  "traits": ["LAVANDERA_1","LAVANDERA_2","LAVANDERA_3"],
+			"sound": "lavandera.mp3"
+		  }
+		]
+}
